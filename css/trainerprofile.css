@@ -1,0 +1,23 @@
+body {
+    color: black;
+    margin: 0;
+}
+*{
+    outline:none;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+  }
+  .header{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 3px solid rgb(251, 127, 127);
+}
+h1{
+	color:rgb(251, 127, 127);
+}
+section{
+    padding: 100PX;
+    font-size: 100px;
+}

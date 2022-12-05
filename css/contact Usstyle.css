@@ -1,0 +1,98 @@
+body {
+    margin: 0px;
+}
+.header{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 3px solid rgb(251, 127, 127);
+}
+h1{
+	color:rgb(251, 127, 127);
+    margin-top: 50px;
+
+}
+*{
+    outline:none;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+  }
+.section{
+    width: 100%;
+    height: 78.5%;
+}
+.contactus{
+    font-size: 40px;
+    color: red;
+    font-weight: bold;
+    padding-top: 50px;
+    padding-left: 80px;
+}
+.dr{
+    border: 1.5px solid silver;
+    width: 90px;
+    margin-left: 100px;
+    margin-top: 15px;
+}
+.get{
+    font-size: 30px;
+    color: rgba(10, 10, 10, 0.589);
+    font-weight: bold;
+    padding-top: 25px;
+    padding-left: 80px;
+}
+.cnt{
+    font-size: 16px;
+    color: rgba(10, 10, 10, 0.349);
+    font-weight: bold;
+    padding-top: 25px;
+    padding-left: 80px;
+}
+.contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(212, 211, 211, 0.429);
+}
+button a{
+    text-decoration: none;
+    color: white;
+    margin: 20px;
+}
+button{
+    border: 0;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 80px;
+    margin-top: 50px;
+    background-color: rgb(69, 90, 100);
+    border-radius: 5px;
+    width: 350px;
+
+}
+.msg{
+    position: relative;
+    bottom: 10px;
+    left: 5px;
+}
+button:hover{
+    background-color: rgba(69, 90, 100, 0.744);
+}
+.cntr{
+    font-size: 20px;
+    margin-left: 80px;
+    margin-top: 50px;
+    font-weight: bold;
+}
+.address{
+    font-size: 18px;
+    margin-left: 80px;
+    margin-top: 50px;
+    font-weight: bold;
+}
+.number{
+    margin-left: 80px;
+    margin-top: 30px;
+}
