@@ -17,6 +17,7 @@ body {
 }
 span{
 	color:rgb(251, 127, 127);
+    text-shadow: 3px 3px 3px rgb(251, 127, 127);
 }
 section{
     width: 100%;

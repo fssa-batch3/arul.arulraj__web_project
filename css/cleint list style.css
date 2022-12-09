@@ -52,19 +52,36 @@ section{
 }
 
 .old{
-    padding: 10px;
-    background-color: red;
-    color: white;
-    border-radius: 25px;
-    border: 0px;
+    width: 150px;
+    height: 30px;
+    background-color: transparent;
+    color: red;
+    font-size: 20px;
+    border: 3px solid red;
+    border-radius: 15px;
+}
+.old:hover{
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 .new{
-    padding: 10px;
-    background-color: blue;
-    color: white;
-    border-radius: 25px;
-    border: 0px;
+    width: 150px;
+    height: 30px;
+    background-color: transparent;
+    color: green;
+    font-size: 20px;
+    border: 3px solid green;
+    border-radius: 15px;
+    font-size: 20px;
     margin-left: 5px;
+}
+.new:hover{
+  color: white;
+  background-color: green;
+  border: none;
+  cursor: pointer;
 }
 .container {
     position: relative;
@@ -118,4 +135,13 @@ section{
     background-color: white;
     width: 100%;
     height: 150%;
+  }
+  .cntbtn{
+    display: flex;
+    flex-direction: column;
+  }
+  .btn{
+    position: relative;
+    top: 10px;
+    left: 15%;
   }
