@@ -20,26 +20,21 @@ body {
   margin-left: 15px;
 }
 button{
-  margin-left: 20px;
-  margin-top: 30px;
-  cursor: pointer;
-}
-button{
   position: relative;
+  top: 20px;
   bottom: 20px;
+  right: 20px;
+  width: 200px;
     padding: 15px;
     background-color: black;
     color: white;
     border-radius: 25px;
     border: 0px;
-    width: 100px;
-
+    cursor: pointer;
 }
 button:hover{
-    transform: scale(1.0);
     background-color: white;
     color: black;
-    font-size: 19px;
 }
 .container {
     position: relative;

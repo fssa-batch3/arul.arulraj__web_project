@@ -24,14 +24,15 @@ section{
 }
 .section{
     position: relative;
-    top: 50px;
+    top: 100px;
     border-radius: 25px;
     box-shadow: 2px 2px 2px 2px silver;
     width: 300px;
     margin-left: 750px;
     font-size: 20px;
-    background-color: rgba(0, 0, 0, 0.326);
+    background-color: rgba(0, 0, 0, 0.564);
     color: rgb(248, 244, 244);
+    font-weight: bold;
 }
 .section:hover{
     transform: translateY(-10px);
@@ -41,17 +42,28 @@ section{
 form div{
     padding: 20px;
 }
-button{
-    margin-left: 70px;
+.button{
+    position: relative;
+    bottom: 10px;
+    left: 80px;
     background-color: black;
     border-radius: 25px;
-    width: 70px;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    padding: 10px;
 
 }
-button:hover{
-    
+.button:hover{
+    background-color: white;
+    color: white;
 }
 a{
+    position: relative;
+    bottom: 5px;
     text-decoration: none;
     color: white;
+}
+a:hover{
+    color: black;
 }
