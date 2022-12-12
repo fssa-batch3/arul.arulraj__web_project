@@ -29,12 +29,10 @@ body {
     color: red;
     font-weight: bold;
     padding-top: 50px;
-    padding-left: 80px;
 }
 .dr{
     border: 1.5px solid silver;
     width: 90px;
-    margin-left: 100px;
     margin-top: 15px;
 }
 .get{
@@ -42,14 +40,12 @@ body {
     color: rgba(10, 10, 10, 0.589);
     font-weight: bold;
     padding-top: 25px;
-    padding-left: 80px;
 }
 .cnt{
     font-size: 16px;
     color: rgba(10, 10, 10, 0.349);
     font-weight: bold;
     padding-top: 25px;
-    padding-left: 80px;
 }
 .contact{
     display: flex;
@@ -67,7 +63,6 @@ button{
     border: 0;
     font-weight: bold;
     font-size: 20px;
-    margin-left: 80px;
     margin-top: 50px;
     background-color: rgb(69, 90, 100);
     border-radius: 5px;
@@ -84,17 +79,42 @@ button:hover{
 }
 .cntr{
     font-size: 20px;
-    margin-left: 80px;
     margin-top: 50px;
     font-weight: bold;
 }
 .address{
     font-size: 18px;
-    margin-left: 80px;
     margin-top: 50px;
     font-weight: bold;
 }
 .number{
-    margin-left: 80px;
+
     margin-top: 30px;
 }
+.pg{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.instaimg{
+    position: relative;
+    top: 50px;
+    width: 400px;
+    background-image: url(../img/team/insta.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.instaimg button{
+    background-color: rgb(44, 149, 255);
+    color: white;
+    width: 150px;
+    position: relative;
+    left: 250px;
+    top: 510px;
+
+}
+.instaimg button:hover{
+    background-color: rgb(99, 176, 253);
+    color: white;
+}
+

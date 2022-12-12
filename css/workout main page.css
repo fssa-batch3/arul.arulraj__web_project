@@ -24,7 +24,7 @@ body {
     transform: translateY(-10px);
     transition: 0.5s;
     box-shadow: 7px 5px 18px skyblue;
-    border: 10px solid black;
+    border: 5px solid black;
 }
 .workout img{
     width: 500px;
@@ -36,4 +36,18 @@ body {
 }
 .workout{
     margin: auto;
+}
+.contact{
+    position: relative;
+    top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    background-color: rgba(212, 211, 211, 0.429);
+}
+.contact a{
+    position: relative;
+    right: 250px;
 }
