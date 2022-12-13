@@ -1,0 +1,120 @@
+body {
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+  }
+  *{
+  outline:none;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+  transition: all .2s ease-out;
+  }
+  .header{
+  background-color: rgba(180, 177, 177, 0.733);
+  }
+  .logo{
+  margin-left: 15px;
+  }
+*{
+    outline:none;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+  }
+.section{
+    width: 100%;
+    height: 84%;
+}
+.contactus{
+    font-size: 40px;
+    color: red;
+    font-weight: bold;
+    padding-top: 50px;
+}
+.dr{
+    border: 1.5px solid silver;
+    width: 90px;
+    margin-top: 15px;
+}
+.get{
+    font-size: 30px;
+    color: rgba(10, 10, 10, 0.589);
+    font-weight: bold;
+    padding-top: 25px;
+}
+.cnt{
+    font-size: 16px;
+    color: rgba(10, 10, 10, 0.349);
+    font-weight: bold;
+    padding-top: 25px;
+}
+.contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(212, 211, 211, 0.429);
+}
+button a{
+    text-decoration: none;
+    color: white;
+    margin: 20px;
+}
+button{
+    border: 0;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 50px;
+    background-color: rgb(69, 90, 100);
+    border-radius: 5px;
+    width: 350px;
+
+}
+.msg{
+    position: relative;
+    bottom: 10px;
+    left: 5px;
+}
+button:hover{
+    background-color: rgba(69, 90, 100, 0.744);
+}
+.cntr{
+    font-size: 20px;
+    margin-top: 50px;
+    font-weight: bold;
+}
+.address{
+    font-size: 18px;
+    margin-top: 50px;
+    font-weight: bold;
+}
+.number{
+
+    margin-top: 30px;
+}
+.pg{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.instaimg{
+    position: relative;
+    top: 50px;
+    width: 400px;
+    background-image: url(../img/team/insta.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.instaimg button{
+    background-color: rgb(44, 149, 255);
+    color: white;
+    width: 150px;
+    position: relative;
+    left: 250px;
+    top: 510px;
+
+}
+.instaimg button:hover{
+    background-color: rgb(99, 176, 253);
+    color: white;
+}
+
