@@ -20,13 +20,11 @@ width: 100%;
 margin-left: 15px;
 }
 .submit{
-margin-left: 20px;
-margin-top: 30px;
-cursor: pointer;
-}
-.submit{
-position: relative;
-bottom: 20px;
+  margin-left: 20px;
+  margin-top: 30px;
+  cursor: pointer;
+  position: relative;
+  bottom: 20px;
   padding: 15px;
   background-color: black;
   color: white;
@@ -42,7 +40,9 @@ bottom: 20px;
   font-size: 19px;
 }
 section{
-    background-color: white;
+  background-color: white;
+  width: 100%;
+  height: 100%;
 }
 .heading{
     font-size: 50px;
@@ -74,7 +74,6 @@ section{
     font-size: 20px;
     border: 3px solid green;
     border-radius: 15px;
-    font-size: 20px;
     margin-left: 5px;
 }
 .new:hover{
@@ -130,11 +129,6 @@ section{
     flex-direction: row;
     justify-content: center;
     padding: 30px;
-  }
-  section{
-    background-color: white;
-    width: 100%;
-    height: 100%;
   }
   .cntbtn{
     display: flex;
