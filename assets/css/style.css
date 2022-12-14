@@ -210,8 +210,6 @@ h4{
 
 }
 .cnt1{
-    position: relative;
-    bottom: 25px;
     width: 600px;
     padding-left: 25px;
 }
@@ -227,8 +225,7 @@ h4{
 }
 .cnt2{
     width: 600px;
-    position: relative;
-    bottom: 25px;
+
 }
 .sec2img{
     width: 600px;
