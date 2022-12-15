@@ -1,7 +1,7 @@
 body {
     margin: 0px;
     width: 100%;
-    height: 100%;
+    height: 96vh;
   }
   *{
   outline:none;
@@ -14,11 +14,6 @@ body {
   }
   .logo{
   margin-left: 15px;
-  }
-*{
-    outline:none;
-    box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
   }
 .section{
     width: 100%;
@@ -46,13 +41,6 @@ body {
     color: rgba(10, 10, 10, 0.349);
     font-weight: bold;
     padding-top: 25px;
-}
-.contact{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(212, 211, 211, 0.429);
 }
 button a{
     text-decoration: none;
@@ -117,4 +105,13 @@ button:hover{
     background-color: rgb(99, 176, 253);
     color: white;
 }
-
+.footerbtm{
+    background-color: rgb(125, 112, 112);
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 10vh;
+    
+}

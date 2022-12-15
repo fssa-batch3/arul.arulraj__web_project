@@ -6,7 +6,6 @@ body {
     background-size: cover;
     background-image: url(https://c4.wallpaperflare.com/wallpaper/906/909/125/food-still-life-vegetables-tomatoes-hd-wallpaper-preview.jpg);
 }
-
 *{
     outline:none;
     box-sizing:border-box;
@@ -25,6 +24,9 @@ body {
 }
 .logo{
     margin-left: 15px;
+}
+.section{
+    height: 100vh;
 }
 .food{
     text-align: center;
@@ -66,20 +68,15 @@ h2{
 }
 .wrkbox:hover{
     background-color: rgba(192, 192, 192, 0.772);
-    margin-bottom: 10px;
     border-radius: 15px;
 }
-.contact{
-    position: relative;
-    top: 68px;
+.footerbtm{
+    background-color: rgb(125, 112, 112);
+    text-align: center;
+    color: white;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    color: black;
-    background-color: rgba(212, 211, 211, 0.429);
-}
-.contact a{
-    position: relative;
-    right: 250px;
+    flex-direction: column;
+    justify-content: center;
+    height: 10vh;
+    
 }
