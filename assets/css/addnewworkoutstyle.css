@@ -6,7 +6,7 @@ body {
 section{
     background-image: url(../img/addworkoutback.webp);
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-size: cover;
     opacity: 0.8;
 }
