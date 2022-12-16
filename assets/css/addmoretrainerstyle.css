@@ -10,7 +10,6 @@ body {
     outline:none;
     box-sizing:border-box;
     font-family:'Poppins', sans-serif;
-    transition: all .2s ease-out;
   }
 .header{
     background-color: rgba(180, 177, 177, 0.475);
@@ -18,15 +17,6 @@ body {
 .logo{
     margin-left: 15px;
 }
-
-.details{
-    margin-top: 20px;
-}
-*{
-    outline:none;
-    box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
-  }
 h2{
     text-align: center;
     font-size: 40px;
@@ -35,6 +25,7 @@ h2{
     position: relative;
     top: 20px;
     font-size: 20px;
+    margin-top: 20px;
     margin: auto;
     width: 450px;
     background-image: url(../img/photo-1470468969717-61d5d54fd036.avif);

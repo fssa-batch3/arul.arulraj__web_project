@@ -61,11 +61,6 @@ body {
     background-color: rgb(125, 112, 112);
     text-align: center;
     color: white;
-}
-.footerbtm{
-    background-color: rgb(125, 112, 112);
-    text-align: center;
-    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;

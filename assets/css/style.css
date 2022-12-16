@@ -17,9 +17,12 @@ body {
 .navbar a {
     float: left;
     font-size: 16px;
-    color: rgb(231, 228, 228);
     text-align: center;
     border-right: 1px solid black;
+    text-decoration:none;
+    padding:10px;
+    color:rgb(8, 11, 12);
+    transition: all 0.5s;
   }
   .dropdown {
     float: left;
@@ -44,7 +47,7 @@ body {
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: black;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -107,13 +110,6 @@ h1{
 .navbar li{
 	display:inline;	
     position: relative;
-}
-.navbar a{
-    text-decoration:none;
-	padding:10px;
-	color:rgb(8, 11, 12);
-	font-size:25px;
-    transition: all 0.5s;
 }
 .quotehead{
     font-size: 55px;

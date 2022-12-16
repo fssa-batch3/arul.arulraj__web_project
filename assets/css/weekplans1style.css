@@ -11,17 +11,14 @@ body {
     box-sizing:border-box;
     font-family:'Poppins', sans-serif;
     transition: all .2s ease-out;
+    padding: 0;
+    margin: 0;
   }
 .header{
     background-color: rgba(180, 177, 177, 0.475);
 }
 .logo{
     margin-left: 15px;
-}
-*{
-    padding: 0;
-    margin: 0;
-    font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
 }
 section{
     position: relative;
