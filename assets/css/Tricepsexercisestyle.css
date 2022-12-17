@@ -23,27 +23,38 @@ h1{
 .workoutlist1{
     display: flex;
     flex-direction: row;
- 
+    justify-content: space-evenly;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 h2{
     color: rgb(253, 95, 95);
     text-align: center;
 }
 .workout{
-    width: 500px;
+    width: 300px;
     padding: 20px;
     font-weight: bold;
     border: 1px solid black;
 }
+.workout:hover{
+    transform: translateY(-10px);
+    transition: 0.5s;
+    box-shadow: 5px 5px 18px #888888;
+}
 .workoutlist2{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    margin-bottom: 10px;
  
 }
 .workoutlist3{
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 10px;
     margin-bottom: 25px;
 }
 .footerbtm{

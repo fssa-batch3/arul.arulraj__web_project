@@ -1,6 +1,7 @@
 body {
     margin: 0px;
     width: 100%;
+    background-color: black;
   }
 *{
   outline:none;
@@ -71,14 +72,14 @@ section{
     background-color: rgb(66, 63, 63);
     color: white;
     border: 0px;
-    border-radius: 20px;
+    border-radius: 15px;
 }
 .changebtn:hover{
     width: 100px;
     border: 0px;
     background-color: rgb(179, 177, 177);
     color: rgb(10, 9, 9);
-    border-radius: 20px;
+    border-radius: 15px;
 }
 .box{
     display: flex;

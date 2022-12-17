@@ -29,9 +29,10 @@ h2{
 .details{
     position: relative;
     top: 15%;
-    font-size: 20px;
+    font-size: 25px;
+    text-align: center;
     margin: auto;
-    width: 450px;
+    width: 300px;
     height: 450px;
     background-image: linear-gradient(to bottom, rgb(156, 153, 153),rgb(248, 247, 247));
     box-shadow: 3px 3px 3px white;
@@ -43,19 +44,15 @@ h2{
     transition: 0.5s;
     box-shadow: 5px 5px 18px #888888;
 }
-section div{
-    padding: 10px;
-}
 .input{
-    position: relative;
-    left: 25px;
-    height: 25px;
+    height: 30px;
     
 }
 .input2{
-    position: relative;
-    left: 25px;
-    height: 25px;
+    height: 30px;
+}
+section div{
+    padding: 10px;
 }
 .submit input{
     background-color: black;
@@ -64,7 +61,6 @@ section div{
     width: 70px;
     height: 30px;
     position: relative;
-    left: 42%;
     top: 20px;
 }
 .submit input:hover{

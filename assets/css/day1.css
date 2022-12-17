@@ -11,25 +11,86 @@ body {
     box-sizing:border-box;
     font-family:'Poppins', sans-serif;
   }
-  h1{
-    text-align: center;
-    font-size: 30px;
-    color: rgb(255, 128, 0);
-  }
-.section{
-    height: 100vh;
-  }
 .header{
     background-color: rgba(180, 177, 177, 0.475);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 }
 .logo{
     margin-left: 15px;
 }
+h1{
+    text-align: center;
+    font-size: 30px;
+    color: rgb(255, 128, 0);
+}
+.section{
+    height: 78vh;
+}
 .food{
     text-align: center;
+}
+.maincnt{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+h2{
+    text-align: center;
+}
+.workout{
+    background-image: linear-gradient(to bottom, rgb(255, 98, 0) , rgb(255, 196, 0));
+    width: 400px;
+    height: 500px;
+    border-radius: 25px;
+    overflow-x: scroll;
+}
+.workout:hover{
+    background-image: linear-gradient(to bottom , rgb(255, 196, 0), rgb(255, 98, 0));
+}
+.workout::-webkit-scrollbar{
+    width: 0px;
+}
+.workout div{
+    padding: 15px;
+    font-size: 20px;
+}
+.wrk{
+    display: flex;
+    flex-direction: column;
+}
+.diet{
+    background-image: linear-gradient(to bottom, rgb(0, 140, 255) , rgb(0, 247, 255));
+    width: 400px;
+    height: 500px;
+    border-radius: 25px;
+    overflow-x: scroll;
+}
+.diet:hover{
+    background-image: linear-gradient(to bottom , rgb(0, 247, 255), rgb(0, 140, 255));
+}
+.diet::-webkit-scrollbar{
+    width: 0px;
+}
+.diet div{
+    padding: 10px;
+    font-size: 20px;
+}
+.dietbox:hover{
+    background-color: rgba(192, 192, 192, 0.772);
+    border-radius: 15px;
+}
+.wrkbox:hover{
+    background-color: rgba(192, 192, 192, 0.772);
+    border-radius: 15px;
+}
+.footerbtm{
+    background-color: rgb(125, 112, 112);
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 10vh;
+    
 }
 .maincnt{
     display: flex;
@@ -69,48 +130,4 @@ body {
 .savebtn:hover{
     background-color: white;
     color: green;
-}
-h2{
-    text-align: center;
-}
-.workout{
-    background-image: linear-gradient(to bottom, rgb(255, 98, 0) , rgb(255, 196, 0));
-    width: 400px;
-    border-radius: 25px;
-}
-.workout div{
-    padding: 15px;
-    font-size: 20px;
-}
-.wrk{
-    display: flex;
-    flex-direction: column;
-}
-.diet{
-    background-image: linear-gradient(to bottom, rgb(0, 140, 255) , rgb(0, 247, 255));
-    height: 80%;
-    width: 400px;
-    border-radius: 25px;
-}
-.diet div{
-    padding: 10px;
-    font-size: 20px;
-}
-.dietbox:hover{
-    background-color: rgba(192, 192, 192, 0.772);
-    border-radius: 15px;
-}
-.wrkbox:hover{
-    background-color: rgba(192, 192, 192, 0.772);
-    border-radius: 15px;
-}
-.footerbtm{
-    background-color: rgb(125, 112, 112);
-    text-align: center;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 10vh;
-    
 }
