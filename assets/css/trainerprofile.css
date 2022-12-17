@@ -33,6 +33,20 @@ body {
     background-image: linear-gradient(to right,rgb(82, 69, 69),red);
     color: white;
 }
+.addwrkbtn{
+    background-image: linear-gradient(to right,rgb(82, 69, 69),red);
+    color: white;
+    margin-right: 10px;
+    width: 200px;
+    height: 40px;
+    font-weight: bold;
+    border: 0px;
+    border-radius: 10px;
+}
+.addwrkbtn:hover{
+    background-image: linear-gradient(to right,red,rgb(82, 69, 69));
+    color: white;
+}
   .logo{
   margin-left: 15px;
   }
@@ -77,7 +91,7 @@ section{
     width: 65%;
     height: 550px;
     border-radius: 25px;
-    background-color: rgba(234, 196, 196, 0.566);
+    background-color: rgba(222, 213, 213, 0.566);
 }
 
 .usericon:hover{
@@ -94,10 +108,9 @@ section{
 }
 
 .cnt{
-    background-color: rgb(250, 168, 168);
+    background-color: rgb(163, 157, 157);
     border-radius: 10px;
 }
-
 .btns{
     display: flex;
     flex-direction: column;
@@ -119,6 +132,7 @@ section{
 .editbtn:hover{
     background-color: white;
     color: red;
+    border: 0.5px solid gray;
 }
 .savebtn{
 
@@ -133,6 +147,7 @@ section{
 .savebtn:hover{
     background-color: white;
     color: green;
+    border: 0.5px solid gray;
 }
 .logoutbtn{
 
@@ -148,6 +163,7 @@ section{
 .logoutbtn:hover{
     background-color: white;
     color: rgb(255, 128, 0);
+    border: 0.5px solid gray;
 }
 .footerbtm{
     background-color: rgb(125, 112, 112);

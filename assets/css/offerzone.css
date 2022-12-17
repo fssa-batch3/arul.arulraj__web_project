@@ -1,0 +1,115 @@
+body {
+    color: black;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+}
+*{
+
+    outline:none;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+  }
+.header{
+    background-color: rgba(180, 177, 177, 0.906);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    margin-left: 15px;
+}
+.headings{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    width: 1000px;
+    
+}
+.headings a{
+    position: relative;
+    right: 100px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid rgb(255, 98, 0);
+    font-weight: 600;
+    font-size: 20px;
+    
+}
+.headings a:hover{
+    color: rgb(255, 98, 0);
+    border-bottom: 2px solid black;
+}
+.offer{
+    background-image: linear-gradient(to right, black,rgb(185, 9, 9),black);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 30vh;
+}
+h1{
+    font-size: 65px;
+    color: white;
+}
+.border{
+
+}
+.h1{
+    font-size: 40px;
+    text-align: center;
+    padding: 20px;
+    color: black;
+}
+h2{
+    font-size: 30px;
+    color: white;
+}
+.border{
+    border-bottom: 1px solid black;
+    width: 100px;
+    margin-left: 45%;
+}
+.ongoing{
+
+    height: 100px;
+    background-color: rgb(187, 185, 185);
+}
+.sec3{
+    text-align: center;
+    height: 470px;
+    background-color: rgba(199, 197, 197, 0.495);
+}
+.h3{
+    position: relative;
+    top: 5px;
+    bottom: 20px;
+    font-size: 50px;
+    color: rgb(240, 5, 5);
+}
+.sec4{
+    text-align: center;
+}
+.sec5{
+    text-align: center;
+    background-color: rgba(199, 197, 197, 0.495);
+    height: 400px;
+}
+.sec6{
+    text-align: center;
+}
+.footerbtm{
+    margin-top: 20px;
+    background-color: rgb(125, 112, 112);
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 10vh;
+    
+}

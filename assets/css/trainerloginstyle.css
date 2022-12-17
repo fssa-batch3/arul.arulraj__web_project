@@ -33,7 +33,7 @@ h2{
     margin: auto;
     width: 450px;
     height: 450px;
-    background-image: url(../img/photo-1470468969717-61d5d54fd036.avif);
+    background-image: linear-gradient(to bottom, rgb(156, 153, 153),rgb(248, 247, 247));
     box-shadow: 3px 3px 3px white;
     color: black;
     border-radius: 25px;

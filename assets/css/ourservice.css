@@ -1,0 +1,132 @@
+body {
+    color: black;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+}
+*{
+
+    outline:none;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+  }
+.header{
+    background-color: rgba(180, 177, 177, 0.906);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    margin-left: 15px;
+}
+.headings{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    width: 1000px;
+    
+}
+.headings a{
+    position: relative;
+    right: 100px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid rgb(255, 98, 0);
+    font-weight: 600;
+    font-size: 20px;
+    
+}
+.headings a:hover{
+    color: rgb(255, 98, 0);
+    border-bottom: 2px solid black;
+}
+.service{
+    color: red;
+    font-size: 40px;
+    margin-left: 30px;
+}
+h3{
+    font-size: 30px;
+    border-bottom: 2px solid rgb(251, 127, 127);
+}
+.sec{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+
+}
+.img{
+    width: 500px;
+}
+.ourservice1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+h4{
+    font-size: 20px;
+}
+
+.sect{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(192, 192, 192, 0.358);
+}
+.section2{
+    background-color: rgba(192, 192, 192, 0.479);
+    width: 100%;
+    height: 100%;
+
+}
+.cnt1{
+    width: 600px;
+    padding-left: 25px;
+    position: relative;
+    bottom: 25px;
+}
+.sec2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 30px;
+    font-size: 20px;
+}
+.sec1img{
+    width: 660px;
+}
+.cnt2{
+    width: 600px;
+    position: relative;
+    bottom: 25px;
+}
+.sec2img{
+    width: 660px;
+    padding-left: 30px;
+}
+.sec3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 20px;
+    padding-top: 50px;
+}
+.section3{
+    width: 100%;
+    height: 140vh;
+}
+.footerbtm{
+    margin-top: 20px;
+    background-color: rgb(125, 112, 112);
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 10vh;
+    
+}
