@@ -21,10 +21,25 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-.logo{
+    align-items: center;
+  }
+  .logo{
     margin-left: 15px;
-}
+  }
+  .headings a{
+      position: relative;
+      right: 50px;
+      text-decoration: none;
+      color: black;
+      border-bottom: 2px solid rgb(255, 98, 0);
+      font-weight: 600;
+      font-size: 20px;
+      
+  }
+  .headings a:hover{
+      color: rgb(255, 98, 0);
+      border-bottom: 2px solid black;
+  }
 .section{
     height: 78vh;
 }
