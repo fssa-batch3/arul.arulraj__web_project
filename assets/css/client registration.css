@@ -36,7 +36,7 @@ h2{
     font-size: 20px;
     margin: auto;
     width: 450px;
-    background-image: url(../img/photo-1470468969717-61d5d54fd036.avif);
+    background-image: linear-gradient(to bottom, rgb(156, 153, 153),rgb(248, 247, 247));
     box-shadow: 3px 3px 3px white;
     color: black;
     border-radius: 25px;
@@ -102,7 +102,7 @@ section div{
     background-color: black;
     color: white;
     height: 30px;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 .submit input:hover{
     background-color: white;

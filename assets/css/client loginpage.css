@@ -32,6 +32,7 @@ h2{
     font-size: 20px;
     margin: auto;
     width: 400px;
+    height: 450px;
     background-image: linear-gradient(to bottom, rgb(156, 153, 153),rgb(248, 247, 247));
     box-shadow: 3px 3px 3px white;
     color: black;
@@ -47,7 +48,7 @@ section div{
 }
 .input{
     position: relative;
-    left: 99px;
+    left: 95px;
     height: 25px;
 }
 .input2{
@@ -58,7 +59,7 @@ section div{
 .submit input{
     background-color: black;
     color: white;
-    border-radius: 15px;
+    border-radius: 10px;
     width: 70px;
     height: 30px;
     position: relative;
@@ -75,13 +76,14 @@ section div{
     top: 20px;
 }
 button{
-    width: 70px;
-    height: 40px;
-    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
     background-color: black;
     color: white;
     position: relative;
-    left: 42%;
+    left: 37%;
+    top: 20px;
 }
 button:hover{
     background-color: white;

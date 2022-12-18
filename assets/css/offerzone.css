@@ -44,6 +44,9 @@ body {
     color: rgb(255, 98, 0);
     border-bottom: 2px solid black;
 }
+.headings a .ofr{
+    color: rgb(255, 98, 0);
+}
 .offer{
     background-image: url(https://media.tenor.com/erbfpVT0mPUAAAAC/red-and-black-red.gif);
     text-align: center;

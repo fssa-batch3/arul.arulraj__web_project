@@ -19,6 +19,10 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+.headings a .abus{
+    color: rgb(255, 98, 0);
+}
+
 .logo{
     margin-left: 15px;
 }
