@@ -45,7 +45,7 @@ body {
     border-bottom: 2px solid black;
 }
 .offer{
-    background-image: linear-gradient(to right, black,rgb(185, 9, 9),black);
+    background-image: url(https://media.tenor.com/erbfpVT0mPUAAAAC/red-and-black-red.gif);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -55,9 +55,6 @@ body {
 h1{
     font-size: 65px;
     color: white;
-}
-.border{
-
 }
 .h1{
     font-size: 40px;
