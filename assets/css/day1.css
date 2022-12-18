@@ -92,11 +92,6 @@ h2{
     height: 10vh;
     
 }
-.maincnt{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
 .btns{
     display: flex;
     flex-direction: column;

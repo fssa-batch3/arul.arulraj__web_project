@@ -11,15 +11,15 @@ body {
     outline:none;
     box-sizing:border-box;
     font-family:'Poppins', sans-serif;
-  }
-  .section{
+}
+.section{
     height: 78vh;
 }
   h1{
     text-align: center;
     font-size: 30px;
     color: rgb(255, 128, 0);
-  }
+}
 .header{
     background-color: rgba(180, 177, 177, 0.475);
     display: flex;
@@ -29,9 +29,7 @@ body {
 .logo{
     margin-left: 15px;
 }
-.section{
-    height: 78vh;
-}
+
 .maincnt{
     display: flex;
     flex-direction: row;
