@@ -26,6 +26,18 @@ body {
   .logo{
     margin-left: 15px;
   }
+  .search{
+    height: 35px;
+    width: 350px;
+    border-radius: 15px;
+}
+.fafa{
+    height: 30px;
+    border-radius: 15px;
+    position: relative;
+    right: 35px;
+    border: none;
+}
   .headings a{
       position: relative;
       right: 50px;

@@ -33,7 +33,10 @@ body {
   border-bottom: 2px solid black;
 }
 section{
-    background-image: url(https://wallpaperaccess.com/full/1225778.jpg);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-image: url(https://wallpaperaccess.com/full/625254.png);
     background-size: cover;
     width: 100%;
     height: 90%;
@@ -63,11 +66,29 @@ section{
     border-radius: 25px;
     box-shadow: 5px 5px 5px gray;
     color: white;
-    background-color: rgba(4, 4, 4, 0.74);
+    background-color: rgba(10, 10, 10, 0.74);
 }
-.changebtn{
+.box2{
     position: relative;
     top: 250px;
+    top: 30px;
+    right: 3%;
+    width: 30%;
+    height: 750px;
+    border-radius: 25px;
+    font-size: 20px;
+    box-shadow: 5px 5px 5px 5px gray;
+    color: white;
+    background-color: rgba(12, 12, 12, 0.74);
+    overflow: scroll;
+}
+.box2::-webkit-scrollbar{
+    width: 0px;
+}
+.box2 p{
+    padding: 5px;
+}
+.changebtn{
     width: 100px;
     background-color: black;
     color: white;
