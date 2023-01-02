@@ -1,0 +1,243 @@
+body {
+    margin: 0px;
+    width: 100%;
+    height: 100vh;
+  }
+  *{
+  outline:none;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+  }
+.header{
+    background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo{
+  margin-left: 30px;
+  padding: 5px;
+}
+.headings a{
+  position: relative;
+  right: 50px;
+  text-decoration: none;
+  color: rgb(255, 98, 0);
+  font-weight: 600;
+  font-size: 20px;
+    
+}
+::placeholder{
+    color: white;
+}
+.headings a:hover{
+  color: white;
+}
+.search{
+    height: 35px;
+    width: 350px;
+    background-color: rgba(192, 192, 192, 0.621);
+    border-radius: 5px;
+    border: none;
+}
+.fafa{
+    height: 30px;
+    border-radius: 15px;
+    position: relative;
+    right: 35px;
+    background-color: rgba(192, 192, 192, 0.621);
+    border: none;
+}
+section{
+    display: flex;
+    flex-direction: row;
+    height: 82%;
+}
+aside{
+    height: 100%;
+    width: 15%;
+    color: white;
+    background-color: black;
+    font-size: 20px;
+}
+.asidebar1 div:hover{
+    background-color: silver;
+    color: black;
+}
+.home{
+    background-color: silver;
+    color: black;
+}
+.asidebar1 div{
+
+    padding: 10px;
+}
+.asidebar1 i{
+    padding: 10px;
+}
+.sec2{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    height: 100%;
+}
+.sec3{
+    background-color: rgb(5, 4, 4);
+    height: 50%;
+    width: 100%;
+    overflow: scroll;
+}
+.sec3::-webkit-scrollbar{
+    width: 5px;
+}
+.sec3::-webkit-scrollbar-thumb {
+    background: rgb(101, 98, 98); 
+    border-radius: 10px;
+}
+.sec3::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+}
+.sec3 div{
+    width: 1000px;
+    height: 100px;
+    background-color: aliceblue;
+    padding: 10px;
+}
+.songlist{
+
+}
+.video{
+    background-image: url(https://i.pinimg.com/originals/b8/cc/5f/b8cc5f574c3cc95709100564ff6fbf0e.gif);
+    width: 100%;
+    height: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+}
+.video div{
+    padding-left: 20px;
+}
+.plybtn{
+    background-color: black;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+}
+.plybtn i{
+    position: relative;
+    top: 25%;
+    right: 25%;
+}
+.plybtn i:hover{
+    color: silver;
+}
+.shrbtn{
+    background-color: black;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+}
+.shrbtn i{
+    position: relative;
+    top: 25%;
+    right: 40%;
+}
+.shrbtn i:hover{
+    color: silver;
+}
+.dwnldbtn{
+    background-color: black;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+}
+.dwnldbtn i{
+    position: relative;
+    top: 25%;
+    right: 40%;
+}
+.dwnldbtn i:hover{
+    color: silver;
+}
+.vcbtns{
+    position: relative;
+    top: 60%;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.musicplayer{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100px;
+}
+.musicdetails{
+    padding: 10px;
+}
+.cntrlbtn{
+    position: relative;
+    left: 50px;
+}
+.cntrlbtn i{
+    padding: 10px;
+}
+.cntrlbtn i:hover{
+    color: rgba(192, 192, 192, 0.749);
+}
+.playbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 700px;
+    position: relative;
+    left: 100px;
+}
+.bar{
+    position: relative;
+    top: 8px;
+    width: 600px;
+    height: 5px;
+    background-color: silver;
+    border-radius: 2px;
+}
+.played{
+    width: 250px;
+    height: 5px;
+    border-radius: 2px;
+    background-color: white;
+}
+.played:hover{
+    color: green;
+}
+.vlmbtn{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 120px;
+}
+.volumebar{
+    position: relative;
+    top: 6px;
+    left: 5px;
+    width: 100px;
+    height: 5px;
+    background-color: silver;
+    border-radius: 2px;
+
+}
+.vlmdwn{
+    width: 50px;
+    height: 5px;
+    background-color: white;
+    border-radius: 2px;
+}
