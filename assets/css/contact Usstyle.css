@@ -44,6 +44,67 @@ body {
 .headings a .cntus{
     color: rgb(255, 98, 0);
 }
+.menu{
+    display: none;
+    position: absolute;
+    right: 20px;
+}
+.navbar2 a{
+    float: left;
+    text-align: center;
+    text-decoration:none;
+    padding:10px;
+    color:rgb(226, 237, 240);
+    font-weight: 600;
+    font-size: 3vw;
+    border-bottom: 2px solid rgb(255, 98, 0);
+    transition: all 0.5s;
+}
+.dropdown {
+    float: left;
+    overflow: hidden;
+} 
+.dropdown .dropbtn {
+    font-size: 27px;  
+    border: none;
+    outline: none;
+    color: rgb(6, 7, 7);
+
+    margin-top: 9px;
+}
+  
+.navbar2 a:hover, .dropdown:hover .dropbtn {
+    color: rgb(255, 98, 0);
+    border-bottom: 3px solid rgb(4, 4, 4);
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    float: none;
+    color: rgb(247, 240, 240);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    
+}
+.dropdown-content a:hover {
+    background-color: black;
+} 
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropbtn{
+    background-color: transparent;
+    width: auto;
+}
 .section{
     width: 100%;
     height: 84%;
@@ -134,13 +195,27 @@ button:hover{
     background-color: rgb(99, 176, 253);
     color: white;
 }
-.footerbtm{
-    background-color: rgb(125, 112, 112);
-    text-align: center;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 10vh;
-    
+@media (max-width:420px){
+    .menu{
+        display: flex;
+    }
+    .headings{
+        display: none;
+    }
+    .pg{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .footerbtm{
+        position: relative;
+        top: 0px;
+    }
+    .instaimg{
+        width: 400px;
+        height: 70vh;
+        background-image: url(../img/team/insta.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 }
