@@ -83,5 +83,31 @@ body {
     flex-direction: column;
     justify-content: center;
     height: 10vh;
-    
+}
+@media (max-width:420px){
+    body{
+        background-image: url(https://wallpapers.com/images/file/lion-animal-in-dark-screen-uryhqjsmcthkrfhk.jpg);
+        background-size: cover;
+        height: 90vh;
+    }
+    .condainer1{
+        display: flex;
+        flex-direction: column;
+        margin-top: 100px;
+        margin-left: 110px;
+    }
+    .condainer2{
+        display: flex;
+        flex-direction: column;
+        margin-left: 110px;
+    }
+    .footerbtm{
+        display: none;
+    }
+    .section{
+        overflow-y: scroll;
+    }
+    .section::-webkit-scrollbar{
+        width: 0px;
+    }
 }

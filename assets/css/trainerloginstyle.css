@@ -54,7 +54,7 @@ h2{
 section div{
     padding: 10px;
 }
-.submit input{
+.submit{
     background-color: black;
     color: white;
     border-radius: 10px;
@@ -63,7 +63,7 @@ section div{
     position: relative;
     top: 20px;
 }
-.submit input:hover{
+.submit:hover{
     background-color: white;
     color: black;
 }
@@ -71,19 +71,6 @@ section div{
     text-align: center;
     position: relative;
     top: 20px;
-}
-button{
-    width: 70px;
-    height: 40px;
-    border-radius: 5px;
-    background-color: black;
-    color: white;
-    position: relative;
-    left: 42%;
-}
-button:hover{
-    background-color: white;
-    color: black;
 }
 .footerbtm{
     background-color: rgb(125, 112, 112);

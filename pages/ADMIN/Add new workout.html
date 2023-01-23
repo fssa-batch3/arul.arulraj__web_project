@@ -17,7 +17,7 @@
                 <label>Workout :</label>
             </div>
                 <div>
-                 <select>
+                 <select id="workout">
                     <option>Select</option>
                     <option>Chest Workout</option>
                     <option>Back Workout</option>
@@ -32,25 +32,25 @@
              <label>Workout Name :</label>
             </div>
             <div>
-             <input type="name" id="name" required="true" placeholder="name" />
+             <input type="name" required="true" placeholder="name" id="name" value="workoutname" />
             </div>
             <div>
                 <label>Reps :</label>
             </div>
             <div>
-                <input type="number" placeholder="Reps"/>
+                <input type="number" placeholder="Reps" id="rep" value="15"/>
             </div>
             <div>
                 <label>Sets :</label>
             </div>
             <div>
-                <input type="number" placeholder="Sets" />
+                <input type="number" placeholder="Sets" id="sets" value="04"/>
             </div>
             <div>
                 <label>Benifits :</label>
             </div>
             <div>
-                <textarea></textarea>
+                <textarea id="textarea" value=""></textarea>
             </div>
 
         <div>
@@ -64,5 +64,22 @@
         </div>
         </form>
     </section>
+
+    <script>
+
+        const workout = document.getElementById("workout").value 
+        const name = document.getElementById("name").value 
+        const rep = document.getElementById("rep").value 
+        const sets = document.getElementById("sets").value 
+        const textarea = document.getElementById("textarea").value 
+    
+        console.log(workout)
+        console.log(name)
+        console.log(rep)
+        console.log(sets)
+        console.log(textarea)
+
+    </script>
+
     </body>
     </html>

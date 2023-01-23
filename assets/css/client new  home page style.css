@@ -53,10 +53,8 @@ body {
     border: none;
     outline: none;
     color: rgb(6, 7, 7);
-
     margin-top: 9px;
 }
-  
 .navbar2 a:hover, .dropdown:hover .dropbtn {
     color: rgb(255, 98, 0);
     border-bottom: 3px solid rgb(4, 4, 4);
@@ -65,6 +63,7 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
+    right: 0;
     background-color: black;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -337,6 +336,12 @@ footer{
     color: white;
 }
 @media (max-width:420px){
+    .dropbtn{
+        background-color: transparent;
+    }
+    .section1{
+        background-image: url(https://wallpapers.com/images/file/lion-animal-in-dark-screen-uryhqjsmcthkrfhk.jpg);
+    }
     .menu{
         display: flex;
     }

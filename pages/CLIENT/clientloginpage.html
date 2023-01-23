@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login page</title>
         <link rel="stylesheet" href="../../assets/css/client loginpage.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -16,23 +19,41 @@
     </div>
         <div>
             <label>Client ID :</label>
-            <input class="input" placeholder="Client ID" type="text" required="true" >
+            <input class="input" placeholder="Client ID" type="text" required="true" id="clientid">
        </div>
        <div>
           <label>Client Password :</label>
-          <input class="input2" placeholder="Client Password" type="text" required="true" >
+          <input class="input2" placeholder="Client Password" type="text" required="true" id="password">
        </div>
        <div class="submit">
-          <a href="../CLIENT/client main page.html"><input type="submit"/></a>
+          <button type="button" onclick="login()">Submit</button>
        </div>
        <div class="or">(OR)</div>
     <div class="rgstr">
-        <a href="../CLIENT/user Registraion page.html"><button>Register Here</button></a>
+        <button type="button" onclick="register()">Register Here</button>
     </div>
    </div>
 </section>
-</body>
 <footer>
-<div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun</div>
-</footer>
+    <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun</div>
+    </footer>
+<script>
+
+function login(){
+    const clientid = document.getElementById("clientid").value 
+    const password = document.getElementById("password").value 
+
+    console.log(clientid)
+    console.log(password)
+
+    window.location.href="../CLIENT/client main page.html"
+
+}
+
+function register(){
+    window.location.href="../CLIENT/user Registraion page.html"
+}
+</script>
+</body>
+
 </html>

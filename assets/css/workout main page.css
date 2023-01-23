@@ -60,3 +60,24 @@ section{
     height: 10vh;
     
 }
+@media (max-width:420px){
+    body{
+        background-image: url(https://wallpapers.com/images/file/lion-animal-in-dark-screen-uryhqjsmcthkrfhk.jpg);
+        background-size: cover;
+        height: 90vh;
+    }
+    .footerbtm{
+        display: none;
+    }
+    .workoutslist{
+        display: flex;
+        flex-direction: column;
+    }
+    h2{
+        color: rgb(255, 98, 0);
+    }
+    .workout img{
+        width: 300px;
+    
+    }
+}

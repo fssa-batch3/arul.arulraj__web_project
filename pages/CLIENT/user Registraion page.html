@@ -2,6 +2,9 @@
 <html lang="en">
     <head>
         <title>fitnesswebsite</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../../assets/css/client registration.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
@@ -11,22 +14,21 @@
                 <img class="logo" src="../../assets/img/logonew2.png" width="200px" alt="logo"/>
      </header>
     <body>
-
         <div class="details">
             <div>
                 <h2>Registration</h2>
             </div>
             <div>
              <label>Client Name :</label>
-             <input class="input1" type="name" placeholder="Client Name" id="name" required="true" />
+             <input class="input1" type="name" placeholder="Client Name" id="user_name" required="true" />
             </div>
             <div>
                 <label>Age :</label>
                 <input placeholder="Age" class="input2" type="number" id="age" />
             </div>
             <div>
-            <label>Gender :</label>
-            <select class="input3">
+            <label >Gender :</label>
+            <select class="input3" id="Gender">
             <option>Select</option>
             <option>Male</option>
             <option>Female</option>
@@ -34,20 +36,20 @@
            </div>
             <div>
                 <label>Weight :</label>
-                <input class="input4" type="number" placeholder="In KG" />
+                <input class="input4" type="number" placeholder="In KG" id="weight" />
             </div>
             <div>
                 <label>Height:</label>
-                <input class="input5" type="number" placeholder="In CM" />
+                <input class="input5" type="number" placeholder="In CM" id="height" />
             </div>
             <div>
             <label>Phone number :</label>
-            <input class="input6" type="number" required= "true" placeholder="Contact number"/>
+            <input class="input6" type="number" required= "true" placeholder="Contact number" id="number" />
             </div>
             <div>
             <label>Service :</label>
             
-             <select class="input7">
+             <select class="input7" id="service" >
                 <option>Select</option>
                 <option>Weight Lose</option>
                 <option>Weight Gain</option>
@@ -56,25 +58,85 @@
             <div>
                 <label>Package :</label>
                 
-                 <select class="input8">
+                 <select class="input8" id="package">
                     <option>Select</option>
                     <option>Weight Training (700 rps)</option>
-                    <option>weight Training + Cardio (1000 rps)</option>
+                    <option>+ Cardio(1000 rps)</option>
                  </select>
                 </div>
                 <div>
-                    <label>Creat Password :</label>
-                    <input class="input9" type="password" placeholder= "**********" />
+                    <label>Create Password :</label>
+                    <input class="input9" type="password" placeholder= "**********" id="password"/>
                    </div>
         <div>
-            <label>Upload Photo :</label><input class="input10" type="file"/>
+            <label>Upload Photo :</label><input class="input10" type="file" id="photoupload"/>
         </div>
             <div class="submit">
-             <a href="../CLIENT/contactpage.html"><input style="position: relative;left: 45%;" type="submit"/></a>
+         <button class="btn" style="position: relative;left: 45%;" onclick="registration()" type="button">submit</button>
             </div>
     </section>
-    </body>
+
     <footer>
         <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun</div>
     </footer>
+
+    <script>
+
+function registration(){
+    
+        const user_name = document.getElementById("user_name").value
+        const age = document.getElementById("age").value
+        const number = document.getElementById("number").value  
+        const weight = document.getElementById("weight").value  
+        const height = document.getElementById("height").value  
+        const password = document.getElementById("password").value 
+        const package = document.getElementById("package").value
+        const service = document.getElementById("service").value
+        const Gender = document.getElementById("Gender").value
+
+        console.log(user_name)
+        console.log(age)
+        console.log(number)
+        console.log(weight)
+        console.log(height)
+        console.log(password)
+        console.log(package)
+        console.log(service)
+        console.log(Gender)
+
+        localStorage.setItem("user_name", user_name)
+        localStorage.setItem("user_age", age)
+        localStorage.setItem("phone_number", number)
+        localStorage.setItem("body_weight", weight)
+        localStorage.setItem("user_Gender", Gender)
+        localStorage.setItem("user_height", height)
+        localStorage.setItem("user_password", password)
+        localStorage.setItem("user_package", package)
+        localStorage.setItem("user_service", service)
+
+    window.location.href="./client main page.html"
+    
+    document.getElementsByClassName("user_name")
+
+    document
+
+    DocumentFragment
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+    </script>
+    
+
+    </body>
 </html>

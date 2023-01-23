@@ -23,13 +23,13 @@
             </div>
             </div>
             <div class="details">
-                <div class="cnt">Client : Thamim</div>
-                <div>Age : 18</div>
-                <DIV class="cnt">Address : 82,nehru street,coiambathor</DIV>
+                <div class="cnt" >Client : <b id="user_name" style="font-size: 18px;"> </b></div>
+                <div>Age : <b id="user_name" style="font-size: 18px;"> </b></div>
+                <DIV class="cnt">Address : <b id="user_name" style="font-size: 18px;"> </b></DIV>
                 <div>Weight & Height : 78kg , 178cm</div>
-                <div class="cnt">Traine Name : Karukkuvel Raj</div>
+                <div class="cnt">Traine Name : <b id="user_name" style="font-size: 18px;"> </b></div>
                 <div>Phone Number : 7589807867</div>
-                <div class="cnt">Password : *************</div>
+                <div class="cnt">Password : <b id="user_name" style="font-size: 18px;"> </b></div>
                 <div><button class="editbtn">Edit</button><button class="savebtn">Save</button><a href="../../index.html"><button class="logoutbtn">Log Out</button></a></div>
             </div>
     </div>
@@ -72,4 +72,16 @@
      <footer>
         <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun</div>
     </footer>
+
+    <script>
+
+        const user_name = localStorage.getItem("user_name");
+
+        console.log(user_name);
+
+        document.getElementById("user_name").innerText = user_name
+
+    </script>
+
+    </body>
 </html>

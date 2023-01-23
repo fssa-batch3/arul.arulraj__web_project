@@ -82,6 +82,7 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
+    right: 0;
     background-color: black;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -191,6 +192,9 @@ h4{
     height: 10vh; 
 }
 @media (max-width:420px){
+    .dropbtn{
+        background-color: transparent;
+    }
     .menu{
         display: flex;
     }

@@ -120,5 +120,49 @@ h2{
     flex-direction: column;
     justify-content: center;
     height: 10vh;
-    
+}
+@media (max-width:420px){
+    body{
+        background-image: url(https://wallpapers.com/images/file/lion-animal-in-dark-screen-uryhqjsmcthkrfhk.jpg);
+        background-size: cover;
+        height: 90vh;
+    }
+    .headings{
+        display: none;
+    }
+    .search{
+        height: 35px;
+        width: 150px;
+        border-radius: 15px;
+    }
+    .fafa{
+        height: 30px;
+        border-radius: 15px;
+        position: relative;
+        right: 35px;
+        border: none;
+    }
+    .maincnt{
+        display: flex;
+        flex-direction: column;
+    }
+    .workout{
+        width: 300px;
+        height: 500px;
+        margin-left: 50px;
+        border-radius: 25px;
+        overflow-x: scroll;
+    }
+    .diet{
+        background-image: linear-gradient(to bottom, rgb(0, 140, 255) , rgb(0, 247, 255));
+        width: 300px;
+        height: 500px;
+        margin-left: 50px;
+        margin-top: 30px;
+        border-radius: 25px;
+        overflow-x: scroll;
+    }
+    .footerbtm{
+        display: none;
+    }
 }

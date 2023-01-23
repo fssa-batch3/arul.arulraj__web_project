@@ -98,13 +98,14 @@ section div{
     position: relative;
     left: 30px;
 }
-.submit input{
+.submit .btn{
     background-color: black;
     color: white;
     height: 30px;
+    width: 80px;
     border-radius: 10px;
 }
-.submit input:hover{
+.submit .btn:hover{
     background-color: white;
     color: black;
 }
@@ -119,5 +120,28 @@ section div{
     flex-direction: column;
     justify-content: center;
     height: 10vh;
-    
+}
+@media (max-width:420px){
+    .header{
+        display: none;
+    }
+    section{
+        background-image: url(../img/team/login\ background.jpg);
+    }
+    .details{
+        position: relative;
+        top: 15%;
+        font-size: 20px;
+        margin: auto;
+        width: 400px;
+        background-image: linear-gradient(to bottom, rgb(156, 153, 153),rgb(248, 247, 247));
+        box-shadow: 3px 3px 3px white;
+        color: black;
+        border-radius: 25px;
+    }
+    .details:hover{
+        transform: translateY(-10px);
+        transition: 0.5s;
+        box-shadow: 5px 5px 18px #888888;
+    }
 }
