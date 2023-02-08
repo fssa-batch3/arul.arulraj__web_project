@@ -13,7 +13,7 @@
         <header class="header">
                 <img class="logo" src="../../assets/img/logonew2.png" width="200px" alt="logo"/>
      </header>
-    <body>
+     <form role="form" onsubmit="registration(event)">
         <div class="details">
             <div>
                 <h2>Registration</h2>
@@ -44,7 +44,7 @@
             </div>
             <div>
             <label>Phone number :</label>
-            <input class="input6" type="number" required= "true" placeholder="Contact number" id="number" />
+            <input class="input6" type="" required= "true" placeholder="Contact number" id="number" />
             </div>
             <div>
             <label>Service :</label>
@@ -72,8 +72,9 @@
             <label>Upload Photo :</label><input class="input10" type="file" id="photoupload"/>
         </div>
             <div class="submit">
-         <button class="btn" style="position: relative;left: 45%;" onclick="registration()" type="button">submit</button>
+         <button class="btn" style="position: relative;left: 45%;"  type="submit">submit</button>
             </div>
+        </form>
     </section>
 
     <footer>
@@ -82,61 +83,85 @@
 
     <script>
 
-function registration(){
+const registration = e => {
+
+    e.preventDefault();
     
-        const user_name = document.getElementById("user_name").value
-        const age = document.getElementById("age").value
-        const number = document.getElementById("number").value  
-        const weight = document.getElementById("weight").value  
-        const height = document.getElementById("height").value  
-        const password = document.getElementById("password").value 
-        const package = document.getElementById("package").value
-        const service = document.getElementById("service").value
-        const Gender = document.getElementById("Gender").value
+    let user_name = document.getElementById("user_name").value;
+        user_age = document.getElementById("age").value;
+        user_number = document.getElementById("number").value;  
+        user_weight = document.getElementById("weight").value;  
+        user_height = document.getElementById("height").value;  
+        user_password = document.getElementById("password").value; 
+        user_package = document.getElementById("package").value;
+        user_service = document.getElementById("service").value;
+        user_Gender = document.getElementById("Gender").value;
 
-        console.log(user_name)
-        console.log(age)
-        console.log(number)
-        console.log(weight)
-        console.log(height)
-        console.log(password)
-        console.log(package)
-        console.log(service)
-        console.log(Gender)
-
-        localStorage.setItem("user_name", user_name)
-        localStorage.setItem("user_age", age)
-        localStorage.setItem("phone_number", number)
-        localStorage.setItem("body_weight", weight)
-        localStorage.setItem("user_Gender", Gender)
-        localStorage.setItem("user_height", height)
-        localStorage.setItem("user_password", password)
-        localStorage.setItem("user_package", package)
-        localStorage.setItem("user_service", service)
-
-    window.location.href="./client main page.html"
-    
-    document.getElementsByClassName("user_name")
-
-    document
-
-    DocumentFragment
-
-
-
-
-
-
-
-
-
-
+    let user_data = JSON.parse(localStorage.getItem('user_data')) || [];
+    let exist = user_data.length &&
+        JSON.parse(localStorage.getItem('user_data')).some(data =>
+            data.user_number.toLowerCase() == user_number.toLowerCase()
+        );
+    if(!exist){
+        user_data.push({ user_name,  user_age,user_number,user_weight,user_height,
+                        user_password, user_package,user_service,user_Gender });
+        localStorage.setItem('user_data', JSON.stringify(user_data));
+        console.log(localStorage.getItem('user_data'));
+        document.querySelector('form').reset();
+        document.getElementById('number').focus();
+        alert('Account created Successfully');
+        location.href = "./clientloginpage.html";
+    }
+    else{
+        alert('Sorry the User already Exist!! \n Try with different Phone number or email');
+        document.querySelector('form').reset();
+    }
 
 
 }
 
-    </script>
-    
+//         let userData=[]
 
-    </body>
+// function registration(){
+    
+//         const user_name = document.getElementById("user_name").value
+//         const age = document.getElementById("age").value
+//         const number = document.getElementById("number").value  
+//         const weight = document.getElementById("weight").value  
+//         const height = document.getElementById("height").value  
+//         const password = document.getElementById("password").value 
+//         const package = document.getElementById("package").value
+//         const service = document.getElementById("service").value
+//         const Gender = document.getElementById("Gender").value
+
+//         userData.push({user_name,age,number,weight,height,password,package,service,Gender})
+
+//         const jsonData=JSON.stringify(userData);
+
+//         localStorage.setItem("userData",jsonData);
+
+        
+    //     console.log(user_name)
+    //     console.log(age)
+    //     console.log(number)
+    //     console.log(weight)
+    //     console.log(height)
+    //     console.log(password)
+    //     console.log(package)
+    //     console.log(service)
+    //     console.log(Gender)
+
+    //     localStorage.setItem("user_name", user_name)
+    //     localStorage.setItem("user_age", age)
+    //     localStorage.setItem("phone_number", number)
+    //     localStorage.setItem("body_weight", weight)
+    //     localStorage.setItem("user_Gender", Gender)
+    //     localStorage.setItem("user_height", height)
+    //     localStorage.setItem("user_password", password)
+    //     localStorage.setItem("user_package", package)
+    //     localStorage.setItem("user_service", service)
+
+
+</script>
+</body>
 </html>

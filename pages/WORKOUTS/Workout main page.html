@@ -16,44 +16,101 @@
          </header>
      <section>
         <div class="workoutslist">
-            <div class="workout">
-                <h2>Chest</h2>
-                <a href="../WORKOUTS/ChestWorkout page.html"><img src="../../assets/img/10-best-chest-exercises.jpg" alt="image"/></a>
-            </div>
-            <div class="workout">
-                <h2>Back</h2>
-                <a href="../WORKOUTS/Back workout.html"><img src="../../assets/img/10-best-back-exercises.jpg" alt="image"/></a>
-            </div>
         </div>
-        <div class="workoutslist">
-            <div class="workout">
-                <h2>Shoulders</h2>
-                <a href="../WORKOUTS/Shoulder Workout page.html"><img src="../../assets/img/10-best-shoulder-exercises-for-muscle-skinny-v2-830x467.jpg" alt="image"/></a>
-            </div>
-            <div class="workout">
-                <h2>Biceps</h2>
-                <a href="../WORKOUTS/Biceps workout.html"><img src="../../assets/img/10-best-biceps-exercises-for-muscle-skinny-830x467.jpg" alt="image"/></a>
-            </div>
-        </div>
-        <div class="workoutslist">
-            <div class="workout">
-                <h2>Triceps</h2>
-                <a href="../WORKOUTS/Triceps Exercisespage.html"><img src="../../assets/img/10-best-triceps-exercises-for-muscle-skinny-830x467.jpg" alt="image"/></a>
-            </div>
-            <div class="workout">
-                <h2>Legs</h2>
-                <a href="../WORKOUTS/Leg workout page.html"><img src="../../assets/img/10-best-leg-exercises-for-muscle-skinny-830x467.jpg" alt="image"/></a>
-            </div>
-        </div>
-        <div class="workoutslist">
-            <div class="workout">
-                <h2>Abs</h2>
-                <a href="../WORKOUTS/Abs workout page.html"><img src="../../assets/img/10-best-ab-exercises-for-muscle-skinny-830x467.jpg" alt="image"/></a>
-            </div>
-            </div>
      </section>
      <footer>
         <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun</div>
     </footer>
 </body>
 </html>
+
+    <script>
+
+const workout_list =
+                                    [
+                                    {
+                                            "workoutname" : "Chest",
+                                            "link" : "../WORKOUTS/ChestWorkout page.html",
+                                            "image" : {
+                                               "source" : "../../assets/img/10-best-chest-exercises.jpg",
+                                               "alt" : "image",
+                                            },
+                                        },
+                                        
+                                        {
+                                            "workoutname" : "Back",
+                                            "link" : "../WORKOUTS/Back workout.html",
+                                            "image" : {
+                                               "source" : "../../assets/img/10-best-back-exercises.jpg",
+                                               "alt" : "image",
+                                            },
+                                        },
+                                        
+                                        {
+                                            "workoutname" : "Shoulders",
+                                            "link" : "../WORKOUTS/Shoulder Workout page.html",
+                                            "image" : {
+                                               "source" : "../../assets/img/10-best-shoulder-exercises-for-muscle-skinny-v2-830x467.jpg",
+                                               "alt" : "image",
+                                            },
+                                        },
+
+                                        {
+                                            "workoutname" : "Biceps",
+                                            "link" : "../WORKOUTS/Biceps workout.html",
+                                            "image" : {
+                                               "source" : "../../assets/img/10-best-biceps-exercises-for-muscle-skinny-830x467.jpg",
+                                               "alt" : "image",
+                                            },
+                                        },
+                                        
+                                        {
+                                            "workoutname" : "Triceps",
+                                            "link" : "../WORKOUTS/Triceps Exercisespage.html",
+                                            "image" : {
+                                               "source" : "../../assets/img/10-best-triceps-exercises-for-muscle-skinny-830x467.jpg",
+                                               "alt" : "image",
+                                            },
+                                        },
+                                        {
+                                            "workoutname" : "Legs",
+                                            "link" : "../WORKOUTS/Leg workout page.html",
+                                            "image" : {
+                                               "source" : "../../assets/img/10-best-leg-exercises-for-muscle-skinny-830x467.jpg",
+                                               "alt" : "image",
+                                            },
+                                        },
+                                        {
+                                            "workoutname" : "Abs",
+                                            "link" : "../WORKOUTS/Abs workout page.html",
+                                            "image" : {
+                                               "source" : "../../assets/img/10-best-ab-exercises-for-muscle-skinny-830x467.jpg",
+                                               "alt" : "image",
+                                            },
+                                        },
+
+                                        ]
+                
+                        for (let i = 0; i < 7; i++) {
+                
+
+                            workout = document.createElement("div");
+                            workout.setAttribute("class", "workout");
+                            
+                            
+                            title = document.createElement("h2");
+                            title.innerText=workout_list[i]["workoutname"];
+                            workout.append(title);
+
+                            link = document.createElement("a");
+                            link.setAttribute("href",workout_list[i]["link"]);
+                            workout.append(link);
+                            
+                            workoutImg = document.createElement("img");
+                            workoutImg.setAttribute("src", workout_list[i]["image"]["source"]);
+                            link.append(workoutImg);
+                
+                            document.querySelector("div.workoutslist").append(workout);
+                
+                        }
+    </script>

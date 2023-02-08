@@ -24,12 +24,10 @@
             </div>
             <div class="details">
                 <div class="cnt" >Client : <b id="user_name" style="font-size: 18px;"> </b></div>
-                <div>Age : <b id="user_name" style="font-size: 18px;"> </b></div>
-                <DIV class="cnt">Address : <b id="user_name" style="font-size: 18px;"> </b></DIV>
-                <div>Weight & Height : 78kg , 178cm</div>
-                <div class="cnt">Traine Name : <b id="user_name" style="font-size: 18px;"> </b></div>
-                <div>Phone Number : 7589807867</div>
-                <div class="cnt">Password : <b id="user_name" style="font-size: 18px;"> </b></div>
+                <div>Age : <b id="user_age" style="font-size: 18px;"> </b></div>
+                <div>Weight & Height : <b id="body_weight" style="font-size: 18px;"> kg</b>KG,<b id="user_height" style="font-size: 18px;"> </b>CM</div>
+                <div>Phone Number : <b id="phone_number" style="font-size: 18px;"> </b></div>
+                <div class="cnt">Password : <b id="user_password" type="password" style="font-size: 18px;"> </b></div>
                 <div><button class="editbtn">Edit</button><button class="savebtn">Save</button><a href="../../index.html"><button class="logoutbtn">Log Out</button></a></div>
             </div>
     </div>
@@ -76,10 +74,25 @@
     <script>
 
         const user_name = localStorage.getItem("user_name");
+        const user_age = localStorage.getItem("user_age")
+        const phone_number = localStorage.getItem("phone_number")
+        const body_weight = localStorage.getItem("body_weight")
+        const user_height = localStorage.getItem("user_height")
+        const user_password = localStorage.getItem("user_password")
 
         console.log(user_name);
+        console.log(user_age);
+        console.log(phone_number);
+        console.log(body_weight);
+        console.log(user_height);
+        console.log(user_password);
 
         document.getElementById("user_name").innerText = user_name
+        document.getElementById("user_age").innerText = user_age
+        document.getElementById("phone_number").innerText = phone_number
+        document.getElementById("body_weight").innerText = body_weight
+        document.getElementById("user_height").innerText = user_height
+        document.getElementById("user_password").innerText = user_password
 
     </script>
 

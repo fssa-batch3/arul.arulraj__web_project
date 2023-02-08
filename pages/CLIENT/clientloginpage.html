@@ -13,46 +13,65 @@
     <header class="header">
            <a href="../CLIENT/newhomepage.html"> <img class="logo" src="../../assets/img/logonew2.png" width="200px" alt="logo"/></a>
     </header>
+    <form role="form" onsubmit="signIn(event)">
       <div class="details">
        <div>
         <h2>LOGIN</h2>
     </div>
         <div>
             <label>Client ID :</label>
-            <input class="input" placeholder="Client ID" type="text" required="true" id="clientid">
+            <input class="input" placeholder="Client ID" type="text" required="true" id="number">
        </div>
        <div>
           <label>Client Password :</label>
-          <input class="input2" placeholder="Client Password" type="text" required="true" id="password">
+          <input class="input2" type="password" placeholder="Client Password" type="text" required="true" id="password">
        </div>
        <div class="submit">
-          <button type="button" onclick="login()">Submit</button>
+          <button type="submit" >Submit</button>
        </div>
        <div class="or">(OR)</div>
     <div class="rgstr">
-        <button type="button" onclick="register()">Register Here</button>
+        <a href="../CLIENT/user Registraion page.html"><button type="button" >Register Here</button></a>
     </div>
    </div>
+</form>
 </section>
 <footer>
     <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun</div>
     </footer>
 <script>
 
-function login(){
-    const clientid = document.getElementById("clientid").value 
-    const password = document.getElementById("password").value 
-
-    console.log(clientid)
-    console.log(password)
-
-    window.location.href="../CLIENT/client main page.html"
-
+const signIn = e =>{
+    let user_number = document.getElementById('number').value,
+        user_password = document.getElementById('password').value;
+    let user_data = JSON.parse(localStorage.getItem('user_data')) || [];
+    let exist = user_data.length &&
+    JSON.parse(localStorage.getItem('user_data')).some(data => data.user_number.toLowerCase() == user_number && data.user_password.toLowerCase() == user_password);
+    if(!exist){
+        alert("Incorrect login credentials");
+    }
+    else{
+        alert("Your login in successful");
+        location.href = "./client main page.html";
+        
+    }
+    e.preventDefault();
 }
 
-function register(){
-    window.location.href="../CLIENT/user Registraion page.html"
-}
+// function login(){
+//     const clientid = document.getElementById("clientid").value 
+//     const password = document.getElementById("password").value 
+
+//     console.log(clientid)
+//     console.log(password)
+
+//     window.location.href="../CLIENT/client main page.html"
+
+// }
+
+// function register(){
+//     window.location.href="../CLIENT/user Registraion page.html"
+// }
 </script>
 </body>
 

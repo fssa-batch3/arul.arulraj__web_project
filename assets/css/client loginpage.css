@@ -18,7 +18,7 @@ body {
     margin-left: 15px;
 }
 .section{
-    background-image: url(../img/danielle-cerullo-CQfNt66ttZM-unsplash.jpg);
+    background-image: linear-gradient(to bottom, rgb(156, 153, 153),rgb(248, 247, 247));
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -26,9 +26,11 @@ body {
 h2{
     text-align: center;
 }
-.details{
+form{
     position: relative;
     top: 15%;
+}
+.details{
     font-size: 20px;
     margin: auto;
     width: 400px;
@@ -105,9 +107,12 @@ button:hover{
     .section{
         background-image: url(../img/team/login\ background.jpg);
     }
-    .details{
+    form{
         position: relative;
         top: 25%;
+    }
+    .details{
+
         font-size: 20px;
         margin: auto;
         width: 350px;
