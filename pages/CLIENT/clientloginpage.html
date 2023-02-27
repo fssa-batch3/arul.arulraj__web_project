@@ -14,26 +14,38 @@
            <a href="../CLIENT/newhomepage.html"> <img class="logo" src="../../assets/img/logonew2.png" width="200px" alt="logo"/></a>
     </header>
     <form role="form" onsubmit="signIn(event)">
-      <div class="details">
+    <div class="details">
+      <div class="logindetails">
        <div>
         <h2>LOGIN</h2>
     </div>
         <div>
-            <label>Client ID :</label>
-            <input class="input" placeholder="Client ID" type="text" required="true" id="number">
+          
+            <input class="input" placeholder="Client ID" type="text" required="true" id="user_number">
        </div>
        <div>
-          <label>Client Password :</label>
-          <input class="input2" type="password" placeholder="Client Password" type="text" required="true" id="password">
+          
+          <input class="input2" type="password" placeholder="Client Password" type="text" required="true" id="user_password">
        </div>
        <div class="submit">
-          <button type="submit" >Submit</button>
+          <button class="btn" type="submit" >Submit</button>
        </div>
-       <div class="or">(OR)</div>
+       </div>
+       <div class="registerdetails">
+        <div>
+            <h1>Welcome To Fit Expert</h1>
+        </div>
+        
+        <div>
+            <h3>Enter your personal details and start journey with us</h3>
+        </div>
+        
+      
     <div class="rgstr">
-        <a href="../CLIENT/user Registraion page.html"><button type="button" >Register Here</button></a>
+        <a href="../CLIENT/user Registraion page.html"><button class="btn2" type="button" >Register Here</button></a>
     </div>
    </div>
+</div>
 </form>
 </section>
 <footer>
@@ -42,36 +54,29 @@
 <script>
 
 const signIn = e =>{
-    let user_number = document.getElementById('number').value,
-        user_password = document.getElementById('password').value;
+
+    e.preventDefault();
+
+    let user_number = document.getElementById('user_number').value,
+        user_password = document.getElementById('user_password').value;
     let user_data = JSON.parse(localStorage.getItem('user_data')) || [];
-    let exist = user_data.length &&
-    JSON.parse(localStorage.getItem('user_data')).some(data => data.user_number.toLowerCase() == user_number && data.user_password.toLowerCase() == user_password);
+    let exist = 
+    JSON.parse(localStorage.getItem('user_data')).some(data => data.user_number.toLowerCase() == user_number && data.user_password == user_password);
     if(!exist){
         alert("Incorrect login credentials");
     }
     else{
-        alert("Your login in successful");
-        location.href = "./client main page.html";
+        localStorage.setItem("number_id",JSON.stringify(user_number))
+        alert("Login Successful..");
+        location.href = "../CLIENT/client main profile.html";
         
     }
-    e.preventDefault();
+
 }
 
-// function login(){
-//     const clientid = document.getElementById("clientid").value 
-//     const password = document.getElementById("password").value 
-
-//     console.log(clientid)
-//     console.log(password)
-
-//     window.location.href="../CLIENT/client main page.html"
-
-// }
-
-// function register(){
-//     window.location.href="../CLIENT/user Registraion page.html"
-// }
+function register(){
+    window.location.href="../CLIENT/user Registraion page.html"
+}
 </script>
 </body>
 

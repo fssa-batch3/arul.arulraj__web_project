@@ -12,33 +12,67 @@ body {
     transition: all .2s ease-out;
   }
 .header{
-    background-color: rgba(180, 177, 177, 0.475);
+    background-color: rgba(180, 177, 177, 0);
 }
 .logo{
     margin-left: 15px;
 }
 .section{
-    background-image: linear-gradient(to bottom, rgb(156, 153, 153),rgb(248, 247, 247));
+    background-image: linear-gradient(to bottom, rgb(139, 137, 137),rgb(248, 247, 247));
     width: 100%;
     height: 100%;
     background-size: cover;
 }
+h1{
+    font-weight: bolder;
+}
 h2{
     text-align: center;
+}
+h3{
+    font-size: 20px;
+    font-weight: 200;
 }
 form{
     position: relative;
     top: 15%;
 }
 .details{
+    position: relative;
+    left: 20%;
+    padding: 0%;
+    width: 800px;
+    height: 450px;
+    display: flex;
+    flex-direction: row;
+    background-image: linear-gradient(to bottom, rgb(156, 153, 153),rgb(248, 247, 247));
+    border-radius: 25px;
+
+}
+.logindetails{
+    padding: 0%;
     font-size: 20px;
-    margin: auto;
     width: 400px;
     height: 450px;
-    background-image: linear-gradient(to bottom, rgb(156, 153, 153),rgb(248, 247, 247));
-    box-shadow: 3px 3px 3px white;
     color: black;
-    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.registerdetails{
+    padding: 0%;
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    background-color: aliceblue;
+    width: 400px;
+    height: 450px;
+    color: black;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 .details:hover{
     transform: translateY(-10px);
@@ -49,45 +83,52 @@ section div{
     padding: 10px;
 }
 .input{
-    position: relative;
-    left: 95px;
-    height: 25px;
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
 }
 .input2{
-    position: relative;
-    left: 25px;
-    height: 25px;
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
 }
-.submit input{
+.input::placeholder{
+    font-size: 20px;
+ 
+}
+.input:focus{
+    border: solid 2px rgb(0, 255, 106);
+}
+.input2::placeholder{
+    font-size: 20px;
+}
+.input2:focus{ 
+    border: solid 2px rgb(0, 255, 106);
+}
+.btn{
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
     background-color: black;
     color: white;
-    border-radius: 10px;
-    width: 70px;
-    height: 30px;
-    position: relative;
-    left: 42%;
     top: 20px;
+    position: relative;
+    left: 25%;
 }
-.submit input:hover{
+.btn:hover{
     background-color: white;
     color: black;
 }
-.or{
-    text-align: center;
-    position: relative;
-    top: 20px;
-}
-button{
+.btn2{
     width: 100px;
     height: 30px;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: black;
     color: white;
-    position: relative;
-    left: 37%;
-    top: 20px;
 }
-button:hover{
+.btn2:hover{
     background-color: white;
     color: black;
 }
@@ -112,28 +153,26 @@ button:hover{
         top: 25%;
     }
     .details{
-
+        position: relative;
+        left: 0px;
         font-size: 20px;
+        display: flex;
+        flex-direction: column;
         margin: auto;
         width: 350px;
-        height: 450px;
+        height: 550px;
         background-image: linear-gradient(to bottom, rgb(156, 153, 153),rgb(248, 247, 247));
         box-shadow: 3px 3px 3px white;
         color: black;
-        border-radius: 25px;
     }
-    .input{
+    .logindetails{
         position: relative;
-        top: 20px;
-        left: 25px;
-        margin-bottom: 10px;
-        width: 250px;
-        height: 35px;
+        left: 0px;
+        border-top-right-radius: 0px;
     }
-    .input2{
-        position: relative;
-        top: 10px;
-        width: 250px;
-        height: 35px;
+    .registerdetails{
+        width: 350px;
+        height: 450px;
+        border-top-right-radius: 0px;
     }
 }

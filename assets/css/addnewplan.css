@@ -1,0 +1,141 @@
+body {
+    color: black;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-image: url(https://c1.wallpaperflare.com/preview/112/406/444/food-diet-keto-ketodieta.jpg);
+}
+*{
+    outline:none;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+  }
+.header{
+    background-color: rgba(180, 177, 177, 0.475);
+}
+.logo{
+    margin-left: 15px;
+}
+h1{
+    text-align: center;
+    font-size: 30px;
+    color: rgb(255, 128, 0);
+}
+.daysel{
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+}
+.wrksel{
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+}
+.section{
+    height: 78vh;
+}
+.food{
+    text-align: center;
+}
+.maincnt{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+h2{
+    text-align: center;
+}
+textarea{
+    width: 300px;
+}
+.workout{
+    background-image: linear-gradient(to bottom, rgb(255, 98, 0) , rgb(255, 196, 0));
+    width: 400px;
+    height: 500px;
+    border-radius: 25px;
+    overflow-x: scroll;
+}
+.workout:hover{
+    background-image: linear-gradient(to bottom , rgb(255, 196, 0), rgb(255, 98, 0));
+}
+.workout::-webkit-scrollbar{
+    width: 0px;
+}
+.workout div{
+    padding: 15px;
+    font-size: 20px;
+}
+.wrk{
+    display: flex;
+    flex-direction: column;
+}
+.diet{
+    background-image: linear-gradient(to bottom, rgb(0, 140, 255) , rgb(0, 247, 255));
+    width: 400px;
+    height: 500px;
+    border-radius: 25px;
+    overflow-x: scroll;
+}
+.diet:hover{
+    background-image: linear-gradient(to bottom , rgb(0, 247, 255), rgb(0, 140, 255));
+}
+.diet::-webkit-scrollbar{
+    width: 0px;
+}
+.diet div{
+    padding: 10px;
+    font-size: 20px;
+}
+.dietbox:hover{
+    background-color: rgba(192, 192, 192, 0.772);
+    border-radius: 15px;
+}
+.wrkbox:hover{
+    background-color: rgba(192, 192, 192, 0.772);
+    border-radius: 15px;
+}
+.footerbtm{
+    background-color: rgb(125, 112, 112);
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 10vh;
+    
+}
+.btns{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+.editbtn{
+    width: 100px;
+    height: 40px;
+    border: 0px;
+    font-weight: bold;
+    background-color: rgb(250, 6, 6);
+    color: white;
+    border-radius: 10px;
+}
+.editbtn:hover{
+    background-color: white;
+    color: red;
+}
+.savebtn{
+    position: relative;
+    top: 10px;
+    width: 100px;
+    height: 40px;
+    border: 0px;
+    font-weight: bold;
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+}
+.savebtn:hover{
+    background-color: white;
+    color: green;
+}

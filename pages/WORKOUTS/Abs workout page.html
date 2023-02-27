@@ -178,7 +178,18 @@
                     document.querySelector("div.workoutlist").append(workout_card);
         
                 }
-        
+
+                let add_workout = JSON.parse(localStorage.getItem('add_workout'));
+            // array.filter()
+            const Abs_Workout = add_workout.filter(function category(type){
+                return add_workout.category === "Abs Workout"
+            })
+
+                document.getElementById("category").innerText = user_plan['category'];
+                document.getElementById("workoutname").innerText = user_plan["workoutname"];
+                document.getElementById("rep").innerText = user_plan["rep"];
+                document.getElementById("sets").innerText = user_plan["sets"];
+                document.getElementById("benifits").innerText = user_plan["benifits"];
         
             </script>
 

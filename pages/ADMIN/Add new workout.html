@@ -12,12 +12,12 @@
                 <a href="../ADMIN/Home page.html"><img src="../../assets/img/logonew2.png" width="200px" alt="logo"/></a>
             </div>
          </header>
-        <form class="box">
+        <form role="form" onsubmit="add_workout(event)" class="box">
             <div>
                 <label>Workout :</label>
             </div>
                 <div>
-                 <select id="workout">
+                 <select id="category">
                     <option>Select</option>
                     <option>Chest Workout</option>
                     <option>Back Workout</option>
@@ -32,25 +32,25 @@
              <label>Workout Name :</label>
             </div>
             <div>
-             <input type="name" required="true" placeholder="name" id="name" value="workoutname" />
+             <input type="text" required="true" placeholder="name" id="workoutname"/>
             </div>
             <div>
                 <label>Reps :</label>
             </div>
             <div>
-                <input type="number" placeholder="Reps" id="rep" value="15"/>
+                <input placeholder="Reps" id="rep"/>
             </div>
             <div>
                 <label>Sets :</label>
             </div>
             <div>
-                <input type="number" placeholder="Sets" id="sets" value="04"/>
+                <input placeholder="Sets" id="sets"/>
             </div>
             <div>
                 <label>Benifits :</label>
             </div>
             <div>
-                <textarea id="textarea" value=""></textarea>
+                <textarea id="benifits"></textarea>
             </div>
 
         <div>
@@ -59,25 +59,39 @@
         <div>
             <input type="file">
         </div>
-        <div class="button">
-            <a href="../WORKOUTS/Workout main page.html">SAVE</a>
+        <div>
+            <button type="submit">ADD</button>
         </div>
         </form>
     </section>
 
     <script>
+         function add_workout(e){
 
-        const workout = document.getElementById("workout").value 
-        const name = document.getElementById("name").value 
-        const rep = document.getElementById("rep").value 
-        const sets = document.getElementById("sets").value 
-        const textarea = document.getElementById("textarea").value 
-    
-        console.log(workout)
-        console.log(name)
-        console.log(rep)
-        console.log(sets)
-        console.log(textarea)
+        e.preventDefault();
+
+        let category = document.getElementById("category").value;
+        let workoutname = document.getElementById("workoutname").value;
+        let rep = document.getElementById("rep").value;
+        let sets = document.getElementById("sets").value;
+        let benifits = document.getElementById("benifits").value;
+
+        let add_workout = JSON.parse(localStorage.getItem('add_workout')) || [];
+
+        add_workout.push({
+            category: category,
+            workoutname:  workoutname,
+            rep: rep,
+            sets: sets,
+            benifits: benifits,
+
+        });
+
+        localStorage.setItem('add_workout', JSON.stringify(add_workout));
+        alert("New plan uploaded successfully");
+        window.location.href = "../WORKOUTS/Workout main page.html";
+        }
+
 
     </script>
 

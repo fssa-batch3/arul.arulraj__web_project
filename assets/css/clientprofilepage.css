@@ -32,131 +32,202 @@ body {
   color: rgb(255, 98, 0);
   border-bottom: 2px solid black;
 }
-section{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-image: url(https://wallpaperaccess.com/full/625254.png);
-    background-size: cover;
-    width: 100%;
-    height: 90%;
+.buyer{
+    width: 80px;
+    height: auto;
 }
-.usericon{
-    display: flex;
-    flex-direction: column;
-    background-image: url(https://st.depositphotos.com/2101611/4338/v/600/depositphotos_43381243-stock-illustration-male-avatar-profile-picture.jpg);
-    background-size: cover;
-    width: 300px;
-    height: 300px;
-    font-size: 20px;
-    box-shadow: 5px 5px 5px gray;
-    border-radius: 15px;
-    
+.main{
+    text-align: center;
+    margin-top: 50px;
 }
-.box{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+.profile_img{
+    width: 200px;
+    border-radius: 100px;
+}
+.contact{
+    border: 1px solid rgb(195, 195, 195);
+    background-color: rgb(46, 46, 46);
+    color: white;
+    width: 400px;
+    margin-left: 36%;
+    z-index: -1;
+    padding: 50px 0px 20px 0px;
     position: relative;
-    top: 30px;
-    left: 3%;
-    width: 30%;
-    height: 750px;
-    border-radius: 25px;
-    box-shadow: 5px 5px 5px gray;
-    color: white;
-    background-color: rgba(10, 10, 10, 0.74);
-}
-.box2{
-    position: relative;
-    top: 250px;
-    top: 30px;
-    right: 3%;
-    width: 30%;
-    height: 750px;
-    border-radius: 25px;
-    font-size: 20px;
-    box-shadow: 5px 5px 5px 5px gray;
-    color: white;
-    background-color: rgba(12, 12, 12, 0.74);
-    overflow: scroll;
-}
-.box2::-webkit-scrollbar{
-    width: 0px;
-}
-.box2 p{
-    padding: 5px;
-}
-.changebtn{
-    width: 100px;
-    background-color: black;
-    color: white;
+    bottom:50px;
     border-radius: 20px;
+    box-shadow:  22px 22px 44px #C3C3C3,-22px -22px 44px #FDFDFD;
 }
-.changebtn:hover{
-    background-color: white;
+.contact i{
+    color: white;
+    font-size: 22px;
+}
+.contact p{
+    font-size: 20px;
+}
+.middle_section{
+    background-color: #E2E2E2;
+    display: flex;
+    align-content: space-evenly;
+    justify-content:space-evenly;
+}
+.line{
+    margin:20px 0px ;
+    border: 1px solid rgb(144, 144, 144);
+}
+.input_feild{
+    width: 500px;
+    padding: 30px 0px 30px 0px;
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: rgb(82, 82, 82);
+}
+.input_feild1{
+    width: 500px;
+    padding: 30px 0px 30px 0px;
+}
+.input:hover{
+    border:2px solid #FCFCFC;
+    border-color: rgb(18, 18, 17);
+    background-color: rgb(248, 246, 246);
+    transition: 300ms ease-in-out;
+    color: rgb(10, 9, 8);
+}
+.input{
+    width: 300px;
+    height: 40px;
+    border-radius: 15px;
     color: black;
+    border:2px solid #B0AFAF;
+    background-color: whitesmoke;
+    transition: 300ms ease-in-out;
 }
-.usericon:hover{
-    transform: translateY(-10px);
-    transition: 0.5s;
-    box-shadow: 7px 5px 18px rgb(102, 102, 103);
-}
-.border{
-    border: 1px solid orange;
-    height: 300px;
-}
-.details div{
-    padding: 15px;
-}
-
-.cnt{
-    background-color: rgb(94, 91, 91);
+.input1{
+    width: 400px;
+    height: 25px;
+    padding: 10px;
     border-radius: 10px;
+    margin: 5px 10px;
 }
-.editbtn{
-    width: 50px;
-    height: 40px;
-    border: 0px;
-    font-weight: bold;
-    background-color: rgb(250, 6, 6);
+.input1:hover{
+    border:2px solid #FCFCFC;
+    border-color: white;
+    background-color: rgb(249, 209, 136);
+    transition: 300ms ease-in-out;
+    color: rgb(15, 15, 15);
+}
+.input2{
+    width: 230px;
+    height: 25px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 15px 15px;
+}
+.input2:hover{
+    border:2px solid #FCFCFC;
+    border-color: white;
+    background-color: rgb(250, 208, 132);
+    transition: 300ms ease-in-out;
+    color: rgb(15, 15, 15);
+}
+.bottom_section{
+    margin-top: 50px;
+    padding-bottom: 20px;
+}
+.btn{
+    margin: 50px 0PX;
+}
+.delete{
+    color: #f0eded;
+}
+.cntbtn{
+    /* display: flex;
+    flex-direction: column; */
+    width: 30px;
+    height: 30px;
+  }
+.container {
+    text-align: center;
+    width: 30px;
+    height: 30px;
+  }
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 200px;
+    width: 350px;
+    left: 0;
+    right: 0;
+    background-color: rgba(192, 192, 192, 0.858);
+    overflow: hidden;
+    width: 100%;
+    height:0;
+    transition: .5s ease;
+    border-radius: 25px;
+  }
+  
+.container:hover .overlay {
+    bottom: 0;
+    width: 300px;
+    height: 200px;
+  }
+.text {
+    color: rgb(7, 7, 7);
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+.button1 {
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-right: 10px;
+    border: none;
+    outline: none;
+    -webkit-transition: .4s ease-in-out;
+    transition: .4s ease-in-out;
+    background-color: #252525;
     color: white;
-    border-radius: 10px;
-}
-.editbtn:hover{
-    background-color: white;
-    color: red;
-}
-.savebtn{
-    position: relative;
-    left: 20px;
-    width: 50px;
-    height: 40px;
-    border: 0px;
-    font-weight: bold;
-    background-color: green;
+  }
+  .button1:hover {
+    background-color: rgb(93, 220, 93);
     color: white;
-    border-radius: 10px;
-}
-.savebtn:hover{
-    background-color: white;
-    color: green;
-}
-.logoutbtn{
-    position: relative;
-    left: 100px;
-    width: 70px;
-    height: 40px;
-    font-weight: bold;
-    background-color: rgb(255, 128, 0);
+  }
+  .button2 {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    -webkit-transition: .4s ease-in-out;
+    transition: .4s ease-in-out;
+    background-color: #252525;
     color: white;
-    border: 0px;
-    border-radius: 10px;
-}
-.logoutbtn:hover{
-    background-color: white;
-    color: rgb(255, 128, 0);
+  }
+  .button2:hover {
+    background-color: rgb(241, 66, 66);
+    color: white;
+  }
+  .del{
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    -webkit-transition: .4s ease-in-out;
+    transition: .4s ease-in-out;
+    background-color: #252525;
+  }
+  .del:hover {
+    background-color: rgb(241, 66, 66);
+    color: white;
+  }
+h3{
+    color:rgb(57, 57, 57);
 }
 .footerbtm{
     background-color: rgb(125, 112, 112);

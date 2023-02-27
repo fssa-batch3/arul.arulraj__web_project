@@ -44,7 +44,7 @@ section{
 form div{
     padding: 10px;
 }
-.button{
+/* .button{
     position: relative;
     top: 10px;
     bottom: 10px;
@@ -60,13 +60,19 @@ form div{
 .button:hover{
     background-color: white;
     color: white;
-}
-a{
+} */
+button{
+    background-color: black;
+    border-radius: 25px;
+    width: 100px;
+    height: 30px;
+    text-align: center;
     position: relative;
     bottom: 5px;
     text-decoration: none;
     color: white;
 }
-a:hover{
+button:hover{
+    background-color: white;
     color: black;
 }

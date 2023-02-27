@@ -13,19 +13,90 @@ body {
     transition: all .2s ease-out;
   }
 .header{
-    background-color: rgba(180, 177, 177, 0.475);
+    background-color: rgba(180, 177, 177, 0);
 }
 .logo{
     margin-left: 15px;
 }
 
 section{
-    background-image: url(../img/2591617.webp);
+    background-image: linear-gradient(to bottom, rgb(252, 250, 250),rgb(248, 247, 247));
     width: 100%;
-    height: 100%;
+    height: 93%;
     background-size: cover;
 }
+/* .details{
+    position: relative;
+    left: 20%;
+    padding: 0%;
+    width: 800px;
+    height: 450px;
+    display: flex;
+    flex-direction: row;
+    background-image: linear-gradient(to bottom, rgb(156, 153, 153),rgb(248, 247, 247));
+    border-radius: 25px;
 
+} */
+.details:hover{
+    transform: translateY(-10px);
+    transition: 0.5s;
+    box-shadow: 5px 5px 18px #888888;
+}
+section div{
+    padding: 10px;
+}
+.input{
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+}
+.input2{
+    margin-top: 10px;
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+}
+.input::placeholder{
+    font-size: 20px;
+ 
+}
+.input:focus{
+    border: solid 2px rgb(0, 255, 106);
+}
+.input2::placeholder{
+    font-size: 20px;
+}
+.input2:focus{ 
+    border: solid 2px rgb(0, 255, 106);
+}
+.input3{
+
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+}
+.input3::placeholder{
+    font-size: 20px;
+}
+.input3:focus{ 
+    border: solid 2px rgb(0, 255, 106);
+}
+.input4{
+
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+}
+.input4::placeholder{
+    font-size: 20px;
+}
+.input4:focus{ 
+    border: solid 2px rgb(0, 255, 106);
+}
 h2{
     text-align: center;
     font-size: 40px;
@@ -36,7 +107,7 @@ h2{
     font-size: 20px;
     margin: auto;
     width: 450px;
-    background-image: linear-gradient(to bottom, rgb(156, 153, 153),rgb(248, 247, 247));
+    background-color: rgb(151, 152, 153);
     box-shadow: 3px 3px 3px white;
     color: black;
     border-radius: 25px;
@@ -48,55 +119,6 @@ h2{
 }
 section div{
     padding: 10px;
-}
-.input1{
-    position: relative;
-    left: 37px;
-    height: 25px;
-}
-.input2{
-    position: relative;
-    left: 112px;
-    height: 25px;
-}
-.input3{
-    position: relative;
-    left: 80px;
-    height: 25px;
-}
-.input4{
-    position: relative;
-    left: 88px;
-    height: 25px;
-}
-.input5{
-    position: relative;
-    left: 95px;
-    height: 25px;
-}
-.input6{
-    position: relative;
-    left: 12px;
-    height: 25px;
-}
-.input7{
-    position: relative;
-    left: 77px;
-    height: 25px;
-}
-.input8{
-    position: relative;
-    left: 67px;
-    height: 25px;
-}
-.input9{
-    position: relative;
-    left: 5px;
-    height: 25px;
-}
-.input10{
-    position: relative;
-    left: 30px;
 }
 .submit .btn{
     background-color: black;

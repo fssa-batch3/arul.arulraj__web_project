@@ -21,31 +21,31 @@
         </div>
     </header>
         <section class="section">
-                            <h1>Monday</h1>
-                        <h1>Chest Workout</h1>
+                            <h1 id="day"></h1>
+                        <h1 id="Workouts"></h1>
                         
                 <div class="maincnt">
                     <div class="workout">
                         <h2>Workouts</h2>
                     <div class="wrk">
                         <div class="wrkbox">
-                            1.Barbell Bench Press : 4 sets of 6-12 reps
+                            <b id="workout_one"></b>
                         </div>
 
                         <div class="wrkbox">
-                            2.Incline DB Bench Press : 4 sets of 6-12 reps
+                            <b id="workout_two"></b>
                         </div>
                         <div class="wrkbox">
-                            3.Weighted Dips : 3 sets of 8-12 reps
+                            <b id="workout_three"></b>
                         </div>
                         <div class="wrkbox">
-                            4.Weighted Pushups : 3 sets of 8-12 reps
+                            <b id="workout_four"></b>
                         </div>
                         <div class="wrkbox">
-                            5.Chest Fly : 4 sets of 6-12 reps
+                            <b id="workout_five"></b>
                         </div>
                         <div class="wrkbox">
-                            6.Machine Fly : 3 sets of 8-12 reps
+                            <b id="workout_six"></b>
                         </div>
                         </div>
                 </div>
@@ -53,28 +53,53 @@
                     <h2>Diet</h2>
                     <div class="dietbox">
                         <div class="food">Breakfast</div>
-                        <div>Scrambled eggs, stir-fried veggies, and oatmeal</div>
+                        <div>
+                            <b id="Breakfast"></b>
+                        </div>
                     </div>
                     <div class="dietbox">
                         <div class="food">Snack</div>
-                        <div>Whey protein shake</div>
+                        <div>
+                            <b id="Snack_one"></b>
+                        </div>
                     </div>
                     <div class="dietbox">
                         <div class="food"> Lunch</div>
-                        <div>Grilled chicken breast, mixed greens, and baked sweet potato</div>
+                        <div>
+                            <b id="Lunch"></b>
+                        </div>
                     </div>
                     <div class="dietbox">
                         <div class="food">Snack</div>
-                        <div>Hard-boiled egg(s) and carrot sticks</div>
+                        <div>
+                            <b id="Snack_two"></b>
+                        </div>
                     </div>
                     <div class="dietbox">
                         <div class="food">Dinner</div>
-                        <div>Broiled fish, green beans with brown rice</div>
+                        <div>
+                            <b id="Dinner"></b>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         </body>
+
+        <script>
+
+
+              let user_plan = JSON.parse(localStorage.getItem('user_plan'));
+
+
+            //   user_plan.find(function)
+                // let  user_beta = user_plan.find();
+
+                document.getElementById("day").innerHTML = user_plan['day'];
+                document.getElementById("Workouts").innerText = user_plan["Workouts"];
+                document.getElementById("workout_one").innerText = user_plan["workout_one"];
+
+        </script>
         <footer>
             <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun</div>
         </footer>
