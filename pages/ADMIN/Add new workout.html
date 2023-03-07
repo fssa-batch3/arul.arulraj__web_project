@@ -19,13 +19,13 @@
                 <div>
                  <select id="category">
                     <option>Select</option>
-                    <option>Chest Workout</option>
-                    <option>Back Workout</option>
-                    <option>Shoulders Workout</option>
-                    <option>Biceps Workout</option>
-                    <option>Triceps Workout</option>
-                    <option>Legs Workout</option>
-                    <option>Abs Workout</option>
+                    <option>chest_workout</option>
+                    <option>back_workout</option>
+                    <option>shoulder_workout</option>
+                    <option>bicep_workout</option>
+                    <option>tricep_workout</option>
+                    <option>leg_workout</option>
+                    <option>abs_workout</option>
                  </select>
                 </div>
             <div>
@@ -75,8 +75,9 @@
         let rep = document.getElementById("rep").value;
         let sets = document.getElementById("sets").value;
         let benifits = document.getElementById("benifits").value;
+        let workout_uuid=uuidv4();
 
-        let add_workout = JSON.parse(localStorage.getItem('add_workout')) || [];
+        let add_workout = JSON.parse(localStorage.getItem('catagory_id'))||[];
 
         add_workout.push({
             category: category,
@@ -84,16 +85,16 @@
             rep: rep,
             sets: sets,
             benifits: benifits,
-
+            workout_uuid : workout_uuid,
         });
 
-        localStorage.setItem('add_workout', JSON.stringify(add_workout));
+        localStorage.setItem('catagory_id', JSON.stringify(add_workout));
         alert("New plan uploaded successfully");
         window.location.href = "../WORKOUTS/Workout main page.html";
         }
 
 
     </script>
-
+<script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
     </body>
     </html>

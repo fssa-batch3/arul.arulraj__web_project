@@ -12,56 +12,90 @@
             </div>
          </header>
     <section>
-    <form>
+    <form role="form" onsubmit="trainerregistration(event)" >
     <div  class="details">
         <div>
              <label>Trainer Name :</label>
-             <input type="name" id="name" required="true" placeholder="name" />
+             <input id="trainer_name" type="name" id="name" required="true" placeholder="name" />
         </div>
         <div>
                 <label>age :</label>
-                <input type="number" id="age" placeholder="age"/>
+                <input type="number" id="trainer_age" placeholder="age"/>
         </div>
         <div>
             <label>Gender :</label>
-            <select>
-            <option></option>
+            <select id="Trainer_gender" >
+            <option>Select</option>
             <option>Male</option>
             <option>Female</option>
             </select>
         </div>
             <div>
                 <label>Address :</label>
-                <textarea></textarea>
+                <textarea id="Trainer_address"></textarea>
             </div>
             <div>
                 <label>Experience :</label>
-                <textarea></textarea>
+                <textarea id="Trainer_Experience"></textarea>
                </div>
             <div>
                 <label>Achivements :</label>
-                <textarea></textarea>
-            </div>
-            <div>
-                <label>Asign Client :</label>
-                <input placeholder="client name" />
+                <textarea id="Trainer_Achivements"></textarea>
             </div>
             <div>
             <label>PHONE NUMBER :</label>
-            <input type="number" required= "true" placeholder="Contact number"/>
+            <input id="trainer_number" type="number" required= "true" placeholder="Contact number"/>
             </div>
             <div>
                 <label>CREATE PASSWORD :</label>
-                <input type="password" required= "true" placeholder="#PASSWORD"/>
+                <input id="trainer_password" type="password" required= "true" placeholder="#PASSWORD"/>
             </div>
             <div>
             <label>Upload profile photo :</label>
             <input type="file" />
             <div>
-            <button><a href="../ADMIN/trainerlist.html">Submit</a> </button>
+            <button type="submit">Submit</button>
+            <!-- <a href="../ADMIN/trainerlist.html"></a> -->
             </div>
             </div>
         </form>
     </section>
+    <script>
+
+        function trainerregistration(e){
+        
+            e.preventDefault();
+            
+            let trainer_name = document.getElementById("trainer_name").value;
+                trainer_age = document.getElementById("trainer_age").value;  
+                trainer_number = document.getElementById("trainer_number").value; 
+                trainer_password = document.getElementById("trainer_password").value; 
+                Trainer_address = document.getElementById("Trainer_address").value;
+                Trainer_gender = document.getElementById("Trainer_gender").value;
+                Trainer_Experience = document.getElementById("Trainer_Experience").value;
+                Trainer_Achivements = document.getElementById("Trainer_Achivements").value;
+                trainer_uuid=uuidv4();
+        
+            let trainer_data = JSON.parse(localStorage.getItem('trainer_data')) || [];
+
+            trainer_data.push({
+            trainer_name: trainer_name,
+            trainer_age:  trainer_age,
+            trainer_number: trainer_number,
+            trainer_password: trainer_password,
+            Trainer_address: Trainer_address,
+            Trainer_gender: Trainer_gender,
+            Trainer_Experience: Trainer_Experience,
+            trainer_uuid: trainer_uuid,
+        });
+
+        localStorage.setItem('trainer_data', JSON.stringify(trainer_data));
+        alert("New Trainer Added successfully");
+        window.location.href = "../ADMIN/trainerlist.html";
+        }
+
+        
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
     </body>
     </html>

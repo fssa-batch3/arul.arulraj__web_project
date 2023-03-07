@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Chest Workout</title>
+        <title>Workouts</title>
         <link rel="stylesheet" href="../../assets/css/workout style.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
@@ -224,26 +224,32 @@
                 //                         },
                 //                     ]
                 
-                            let workout_card;
-                            let workout_title;
-                            let title;
-                            let imageContainer;
-                            let workoutImg;
-                            let detailContainer;
-                            let counts;
-                            let benifitsTitle;
-                            let benifitContainer;
-                            let benifit;
+                            // let workout_card;
+                            // let workout_title;
+                            // let title;
+                            // let imageContainer;
+                            // let workoutImg;
+                            // let detailContainer;
+                            // let counts;
+                            // let benifitsTitle;
+                            // let benifitContainer;
+                            // let benifit;
 
-                            let add_workout = JSON.parse(localStorage.getItem('add_workout'));
+                            const queryString = window.location.search;
+                            const urlParams = new URLSearchParams(queryString);
+                            const catagory_id = urlParams.get('catagory_id');
+                            
+                             let add_workout = JSON.parse(localStorage.getItem('catagory_id'));
+                             const workout_Id= add_workout["workout_uuid"]
+                            
 
                             // array.filter()
-                            const Chest_Workout = add_workout.filter( function find(category){
-                            return category.find === "Chest Workout"
+                            const Workout = add_workout.filter( function find(e){
+                            return e.category === catagory_id
                         })
-                        console.log(Chest_Workout)
-                
-                        for (let i = 0; i < 12; i++) {
+                        // console.log(Chest_Workout)
+                        
+                        for (let i = 0; i < Workout.length ; i++) {
                 
                             workout_card = document.createElement("div");
                             workout_card.setAttribute("class", "workout");
@@ -253,14 +259,14 @@
                             workout_card.append(workout_title);
                 
                             title = document.createElement("h2");
-                            title.innerText=add_workout[i]["workoutname"];
+                            title.innerText=Workout[i]["workoutname"];
                             workout_title.append(title);
                 
                             imageContainer = document.createElement("div");
                             workout_card.append(imageContainer);
                 
                             // workoutImg = document.createElement("img");
-                            // workoutImg.setAttribute("src", add_workout[i]["image"]["source"]);
+                            // workoutImg.setAttribute("src", Workout[i]["image"]["source"]);
                             // workoutImg.setAttribute("width", "250px");
                             // workoutImg.setAttribute("alt", "image");
                             // imageContainer.append(workoutImg);
@@ -269,7 +275,7 @@
                             workout_card.append(detailContainer);
                 
                             counts = document.createElement("p");
-                            counts.innerText= "SETS AND REPS" + ":" + "sets" + ":" + add_workout[i]["sets"] + ","+ "reps" + ":" + add_workout[i]["rep"];
+                            counts.innerText= "SETS AND REPS" + ":" + "sets" + ":" + Workout[i]["sets"] + ","+ "reps" + ":" + Workout[i]["rep"];
                             detailContainer.append(counts);
                 
                             benifitsTitle = document.createElement("p");
@@ -280,18 +286,56 @@
                             detailContainer.append(benifitContainer);
                 
                             benifit = document.createElement("b");
-                            benifit.innerText=add_workout[i]["benifits"];
+                            benifit.innerText=Workout[i]["benifits"];
                             benifitContainer.append(benifit);
-                
+
+                            delContainer = document.createElement("div");
+                            workout_card.append(delContainer);
+
+                            delbtn = document.createElement("button");
+                            delbtn.setAttribute("class", "delbtn");
+                            delbtn.setAttribute("data-id",Workout[i]["workout_uuid"])
+                            delContainer.append(delbtn);
+
+                            delbtnicon = document.createElement("i");
+                            delbtnicon.setAttribute("class", "fa fa-trash");
+                            delbtn.append(delbtnicon);
+
                             document.querySelector("div.workoutlist").append(workout_card);
                 
                         }
 
-                document.getElementById("category").innerHTML = user_plan['category'];
-                document.getElementById("workoutname").innerText = user_plan["workoutname"];
-                document.getElementById("rep").innerText = user_plan["rep"];
-                document.getElementById("sets").innerText = user_plan["sets"];
-                document.getElementById("benifits").innerText = user_plan["benifits"];
+
+                        let delt = document.querySelector(".delbtn")
+
+                        delt.addEventListener("click",del)
+
+                        
+
+                        function del(e){
+                            let workoutId=this.dataset.id
+                            
+                            
+                if(confirm("Are you sure you want to delete the workout"))
+                {
+                    console.log(workoutId)
+                    let category = JSON.parse(localStorage.getItem("catagory_id"));
+                    function delwrk(e){
+                        return e.workout_uuid==workoutId
+                        
+                    }
+                    
+                    add_workout = category.find(delwrk);
+            const removedata = category.indexOf(add_workout);
+            category.splice(removedata,1);
+            localStorage.setItem("catagory_id",JSON.stringify(category));
+                }
+            
+            // window.location.href = "../../index.html";
+                }
+
+               
+            
                 
             </script>
 
