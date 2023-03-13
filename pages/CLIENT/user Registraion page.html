@@ -72,10 +72,25 @@ function registration(e){
         JSON.parse(localStorage.getItem('user_data')).some(data =>data.user_number.toLowerCase() == user_number.toLowerCase());
     if(!exist){
         if(user_password == user_confirmpassword){
-            user_data.push({ user_firstname,user_lastname, user_number,user_confirmpassword,
-                        user_password,user_age,user_weight,user_height,user_package,user_service,user_gender,addressline1,addressline2,pincode,city,state,user_uuid});
+            user_data.push({ user_firstname,
+                             user_lastname,     
+                             user_number,
+                             user_confirmpassword,
+                             user_password,
+                             user_age,
+                             user_weight,
+                             user_height,
+                             user_package,
+                             user_service,
+                             user_gender,
+                             addressline1,
+                             addressline2,
+                             pincode,
+                             city,
+                             state,
+                             user_uuid});
+                             
         localStorage.setItem('user_data', JSON.stringify(user_data));
-        // console.log(localStorage.getItem('user_data'));
         document.querySelector('form').reset();
         document.getElementById('user_number').focus();
         alert('Account created Successfully');
