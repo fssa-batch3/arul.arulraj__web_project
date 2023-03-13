@@ -26,7 +26,7 @@
             </div>
             <div class="border"></div>
             <div class="details">
-                <div class="cnt">Traine Name : <b id="trainer_name"></b></div>
+                <div class="cnt">Trainer Name : <b id="trainer_name"></b></div>
                 <div>Age : <b id="trainer_age"></b></div>
                 <DIV class="cnt">Address : <b id="Trainer_address"></b></DIV>
                 <div>Achivement : <b id="Trainer_Achivements"></b> </div>
@@ -36,7 +36,7 @@
             </div>
             <div class="border"></div>
         <div class="btns">
-            <div class="btnag"><button class="editbtn">Edit</button></div>
+            <div class="btnag"><a href="../TRAINER/trainer profile edit.html"><button class="editbtn">Edit</button></a></div>
             <div onclick="del(event)" class="btnag"><button class="savebtn">Delete</button></div>
             <div class="btnag"><a href="../../index.html"><button class="logoutbtn">Log out</button></a></div>
         </div>
@@ -71,7 +71,7 @@
                     let trainer_data = JSON.parse(localStorage.getItem("trainer_data"));
                     function login_data(e){
                         return e.trainer_number == trainer_number;
-                    }
+                     }
             person_data = trainer_data.find(login_data);
             const removedata = trainer_data.indexOf(person_data);
             trainer_data.splice(removedata,1);

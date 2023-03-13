@@ -107,7 +107,27 @@ section{
 .details div{
     padding: 15px;
 }
-
+.input{
+    margin-left: 13px;
+}
+.input1{
+    margin-left: 85px;
+}
+.input2{
+    margin-left: 57px;
+}
+.input3{
+    margin-left: 35px;
+}
+.input4{
+    margin-left: 40px;
+}
+.input5{
+    margin-left: 10px;
+}
+.input6{
+    margin-left: 10px;
+}
 .cnt{
     background-color: rgb(163, 157, 157);
     border-radius: 10px;
@@ -126,7 +146,7 @@ section{
     height: 40px;
     border: 0px;
     font-weight: bold;
-    background-color: rgb(250, 6, 6);
+    background-color: green;
     color: white;
     border-radius: 10px;
 }
@@ -141,7 +161,7 @@ section{
     height: 40px;
     border: 0px;
     font-weight: bold;
-    background-color: green;
+    background-color: rgb(250, 6, 6);
     color: white;
     border-radius: 10px;
 }
