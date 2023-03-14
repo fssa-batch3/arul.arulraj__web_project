@@ -90,14 +90,18 @@
 
 
               let user_plan = JSON.parse(localStorage.getItem('user_plan'));
-
+ 
+            //   function new_plan_update(e){
+            //   return e.trainer_number == trainer_number;
+            //   }
 
             //   user_plan.find(function)
-                // let  user_beta = user_plan.find();
+            // let  user_data = user_plan.find();
 
-                document.getElementById("day").innerHTML = user_plan['day'];
-                document.getElementById("Workouts").innerText = user_plan["Workouts"];
-                document.getElementById("workout_one").innerText = user_plan["workout_one"];
+                document.getElementById("day").innerText = user_plan[0]['day'];
+                document.getElementById("Workouts").innerHTML = user_plan[0]["Workouts"];
+                document.getElementById("workout_one").innerHTML = user_plan[0]["workout_one"];
+                console.log(user_plan)
 
         </script>
         <footer>

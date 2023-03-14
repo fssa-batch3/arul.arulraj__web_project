@@ -13,6 +13,9 @@
  </header>
         <section class="section">
             <form onsubmit="new_plan_update(event)" role="form">
+                <h1>
+                    <input id="client_id" placeholder="client_id">
+                </h1>
             <h1>
                 <select id="day" class="daysel">
                     <option>DAY</option>
@@ -116,6 +119,7 @@
 
             e.preventDefault();
 
+            let client_id = document.getElementById("client_id").value;
             let day = document.getElementById("day").value;
             let Workouts = document.getElementById("Workouts").value;
             let workout_one = document.getElementById("workout_one").value;
@@ -134,6 +138,7 @@
             let user_plan = JSON.parse(localStorage.getItem('user_plan')) || [];
 
             user_plan.push({
+                client_id: client_id,
                 day: day,
                 Workouts:  Workouts,
                 workout_one: workout_one,
@@ -148,7 +153,6 @@
                 Snack_two: Snack_two,
                 Dinner: Dinner,
                 user_plan_uuid: user_plan_uuid,
-
             });
 
             localStorage.setItem('user_plan', JSON.stringify(user_plan));
