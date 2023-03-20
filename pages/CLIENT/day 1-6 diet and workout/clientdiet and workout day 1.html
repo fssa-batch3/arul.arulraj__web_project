@@ -88,20 +88,27 @@
 
         <script>
 
+                const queryString = window.location.search;
+                const urlParams = new URLSearchParams(queryString);
+                const unique_id = urlParams.get('user_plan');
 
-              let user_plan = JSON.parse(localStorage.getItem('user_plan'));
+              let add_plan = JSON.parse(localStorage.getItem('user_plan'));
+              const plan_id = add_plan["user_plan_uuid"]
+
+              const user_plan = add_plan.filter( function find(e){
+                            return e.day === unique_id
+                        })
+            
+                for (let i = 0; i < user_plan.length ; i++) {
  
-            //   function new_plan_update(e){
-            //   return e.trainer_number == trainer_number;
-            //   }
-
-            //   user_plan.find(function)
-            // let  user_data = user_plan.find();
-
-                document.getElementById("day").innerText = user_plan[0]['day'];
-                document.getElementById("Workouts").innerHTML = user_plan[0]["Workouts"];
-                document.getElementById("workout_one").innerHTML = user_plan[0]["workout_one"];
-                console.log(user_plan)
+                document.getElementById("day").innerText = user_plan[i]['day'];
+                document.getElementById("Workouts").innerHTML = user_plan[i]["Workouts"];
+                document.getElementById("workout_one").innerHTML = user_plan[i]["workout_one"];
+                document.getElementById("workout_two").innerHTML = user_plan[i]["workout_two"];
+                document.getElementById("workout_three").innerHTML = user_plan[i]["workout_three"];
+                document.getElementById("workout_four").innerHTML = user_plan[i]["workout_four"];
+                
+            }
 
         </script>
         <footer>

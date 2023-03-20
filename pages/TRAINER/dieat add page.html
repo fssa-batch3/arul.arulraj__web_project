@@ -19,12 +19,13 @@
             <h1>
                 <select id="day" class="daysel">
                     <option>DAY</option>
-                    <option>Monday</option>
-                    <option>Tuesday</option>
-                    <option>Wednesday</option>
-                    <option>Thursday</option>
-                    <option>Friday</option>
-                    <option>Saturday</option>
+                    <option>Monday_plan</option>
+                    <option>Tuesday_plan</option>
+                    <option>Wednesday_plan</option>
+                    <option>Thursday_plan</option>
+                    <option>Friday_plan</option>
+                    <option>Saturday_plan</option>
+                    <option>Sunday_plan</option>
                 </select>
             </h1>
 
@@ -135,9 +136,9 @@
             let Dinner = document.getElementById("Dinner").value;
             user_plan_uuid = uuidv4();
 
-            let user_plan = JSON.parse(localStorage.getItem('user_plan')) || [];
+            let add_plan = JSON.parse(localStorage.getItem('user_plan')) || [];
 
-            user_plan.push({
+            add_plan.push({
                 client_id: client_id,
                 day: day,
                 Workouts:  Workouts,
@@ -155,7 +156,7 @@
                 user_plan_uuid: user_plan_uuid,
             });
 
-            localStorage.setItem('user_plan', JSON.stringify(user_plan));
+            localStorage.setItem('user_plan', JSON.stringify(add_plan));
             alert("New plan uploaded successfully");
             window.location.href = "../TRAINER/dieat add page.html";
         }
