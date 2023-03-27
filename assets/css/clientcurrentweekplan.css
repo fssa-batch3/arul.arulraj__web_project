@@ -1,7 +1,7 @@
 body {
     color: rgb(11, 6, 6);
     margin: 0;
-    background-image: url(https://c1.wallpaperflare.com/preview/1018/868/905/fitness-dumbbell-vegetables-exercise.jpg);
+    background-image: url(../img/Desktop\ -\ 1background2.jpg);
     width: 100%;
     height: 95vh;
     background-size: cover;
@@ -13,7 +13,7 @@ body {
     transition: all .2s ease-out;
   }
 .header{
-    background-color: rgba(180, 177, 177, 0.747);
+    background-color: rgba(220, 217, 217, 0.299);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -41,8 +41,7 @@ body {
 }
  .old{
     position: relative;
-    color: white;
-    background-color: black;
+    color: rgb(16, 15, 15);
     top: 30px;
     left: 60px;
     font-size: 50px;
@@ -82,7 +81,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 10vh;
+    height: 3vh;
 }
 @media (max-width:420px){
     body{

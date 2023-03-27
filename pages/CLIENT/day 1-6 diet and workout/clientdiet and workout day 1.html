@@ -1,117 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Workout and Diet</title>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../../../assets/css/client plan day1.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
-    <body>
+
+<head>
+    <title>Workout and Diet</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../assets/css/client plan day1.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
     <header class="header">
         <div class="logo">
-            <a href="../../CLIENT/currentweekplan.html"><img src="../../../assets/img/logonew2.png" width="200px" alt="logo"/></a>
+            <a href="../../CLIENT/currentweekplan.html"><img src="../../../assets/img/logonew2.png" width="200px"
+                    alt="logo" /></a>
         </div>
         <div>
-           <input class="search"  placeholder="Search" ><button class="fafa"><i class="fa fa-search" style="font-size:15px;color: rgb(14, 14, 14);"></i></button>
+            <input class="search" placeholder="Search"><button class="fafa"><i class="fa fa-search"
+                    style="font-size:15px;color: rgb(14, 14, 14);"></i></button>
         </div>
         <div class="headings">
-            <a href="../../CLIENT/client main page.html"><div>HOME</div></a>
+            <a href="../../CLIENT/client main page.html">
+                <div>HOME</div>
+            </a>
         </div>
     </header>
-        <section class="section">
-                            <h1 id="day"></h1>
-                        <h1 id="Workouts"></h1>
-                        
-                <div class="maincnt">
-                    <div class="workout">
-                        <h2>Workouts</h2>
-                    <div class="wrk">
-                        <div class="wrkbox">
-                            <b id="workout_one"></b>
-                        </div>
+    <section class="section">
+        <h1 id="day"></h1>
+        <h1 id="Workouts"></h1>
 
-                        <div class="wrkbox">
-                            <b id="workout_two"></b>
-                        </div>
-                        <div class="wrkbox">
-                            <b id="workout_three"></b>
-                        </div>
-                        <div class="wrkbox">
-                            <b id="workout_four"></b>
-                        </div>
-                        <div class="wrkbox">
-                            <b id="workout_five"></b>
-                        </div>
-                        <div class="wrkbox">
-                            <b id="workout_six"></b>
-                        </div>
-                        </div>
-                </div>
-                <div class="diet">
-                    <h2>Diet</h2>
-                    <div class="dietbox">
-                        <div class="food">Breakfast</div>
-                        <div>
-                            <b id="Breakfast"></b>
-                        </div>
+        <div class="maincnt">
+            <div class="workout">
+                <h2>Workouts</h2>
+                <div class="wrk">
+                    <div class="wrkbox">
+                        <b id="workout_one"></b>
                     </div>
-                    <div class="dietbox">
-                        <div class="food">Snack</div>
-                        <div>
-                            <b id="Snack_one"></b>
-                        </div>
+
+                    <div class="wrkbox">
+                        <b id="workout_two"></b>
                     </div>
-                    <div class="dietbox">
-                        <div class="food"> Lunch</div>
-                        <div>
-                            <b id="Lunch"></b>
-                        </div>
+                    <div class="wrkbox">
+                        <b id="workout_three"></b>
                     </div>
-                    <div class="dietbox">
-                        <div class="food">Snack</div>
-                        <div>
-                            <b id="Snack_two"></b>
-                        </div>
+                    <div class="wrkbox">
+                        <b id="workout_four"></b>
                     </div>
-                    <div class="dietbox">
-                        <div class="food">Dinner</div>
-                        <div>
-                            <b id="Dinner"></b>
-                        </div>
+                    <div class="wrkbox">
+                        <b id="workout_five"></b>
+                    </div>
+                    <div class="wrkbox">
+                        <b id="workout_six"></b>
                     </div>
                 </div>
             </div>
-        </section>
-        </body>
+            <div class="diet">
+                <h2>Diet</h2>
+                <div class="dietbox">
+                    <div class="food">Breakfast</div>
+                    <div>
+                        <b id="Breakfast"></b>
+                    </div>
+                </div>
+                <div class="dietbox">
+                    <div class="food">Snack</div>
+                    <div>
+                        <b id="Snack_one"></b>
+                    </div>
+                </div>
+                <div class="dietbox">
+                    <div class="food"> Lunch</div>
+                    <div>
+                        <b id="Lunch"></b>
+                    </div>
+                </div>
+                <div class="dietbox">
+                    <div class="food">Snack</div>
+                    <div>
+                        <b id="Snack_two"></b>
+                    </div>
+                </div>
+                <div class="dietbox">
+                    <div class="food">Dinner</div>
+                    <div>
+                        <b id="Dinner"></b>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun</div>
+    </footer>
+<script>
 
-        <script>
+    const number_id = JSON.parse(localStorage.getItem('number_id'));
 
-                const queryString = window.location.search;
-                const urlParams = new URLSearchParams(queryString);
-                const unique_id = urlParams.get('user_plan');
+    const user_plan_details = JSON.parse(localStorage.getItem('user_plan'));
 
-              let add_plan = JSON.parse(localStorage.getItem('user_plan'));
-              const plan_id = add_plan["user_plan_uuid"]
+    
 
-              const user_plan = add_plan.filter( function find(e){
-                            return e.day === unique_id
-                        })
-            
-                for (let i = 0; i < user_plan.length ; i++) {
- 
-                document.getElementById("day").innerText = user_plan[i]['day'];
-                document.getElementById("Workouts").innerHTML = user_plan[i]["Workouts"];
-                document.getElementById("workout_one").innerHTML = user_plan[i]["workout_one"];
-                document.getElementById("workout_two").innerHTML = user_plan[i]["workout_two"];
-                document.getElementById("workout_three").innerHTML = user_plan[i]["workout_three"];
-                document.getElementById("workout_four").innerHTML = user_plan[i]["workout_four"];
-                
-            }
+    let plan = user_plan_details.filter(e => e.client_id === number_id);
+    console.log(plan);
 
-        </script>
-        <footer>
-            <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun</div>
-        </footer>
-    </html>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const unique_id = urlParams.get('user_plan');
+    console.log(unique_id);
+
+
+    let user_plan = plan.filter(e => e.day === unique_id);
+    console.log(user_plan);
+    // function getDate(){
+    //     return day = unique_id
+    // }
+    // user_plan = plan.filter(getDate)
+    // console.log(user_plan)
+    // console.log(unique_id)
+    // let add_plan = JSON.parse(plan);
+    // const plan_id = add_plan["user_plan_uuid"]
+    
+    
+
+
+
+    for (let i = 0; i < user_plan.length; i++) {
+
+        document.getElementById("day").innerText = user_plan[i]['day'];
+        document.getElementById("Workouts").innerHTML = user_plan[i]["Workouts"];
+        document.getElementById("workout_one").innerHTML = user_plan[i]["workout_one"];
+        document.getElementById("workout_two").innerHTML = user_plan[i]["workout_two"];
+        document.getElementById("workout_three").innerHTML = user_plan[i]["workout_three"];
+        document.getElementById("workout_four").innerHTML = user_plan[i]["workout_four"];
+        document.getElementById("workout_five").innerHTML = user_plan[i]["workout_five"];
+        document.getElementById("workout_six").innerHTML = user_plan[i]["workout_six"];
+        document.getElementById("Breakfast").innerHTML = user_plan[i]["Breakfast"];
+        document.getElementById("Snack_one").innerHTML = user_plan[i]["Snack_one"];
+        document.getElementById("Lunch").innerHTML = user_plan[i]["Lunch"];
+        document.getElementById("Snack_two").innerHTML = user_plan[i]["Snack_two"];
+        document.getElementById("Dinner").innerHTML = user_plan[i]["Dinner"];
+
+    }   
+
+</script>
+</body>
+
+</html>

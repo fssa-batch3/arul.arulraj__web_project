@@ -17,7 +17,7 @@
                 <label>Workout :</label>
             </div>
                 <div>
-                 <select id="category">
+                 <select required="true" id="category">
                     <option>Select</option>
                     <option>chest_workout</option>
                     <option>back_workout</option>
@@ -38,26 +38,26 @@
                 <label>Reps :</label>
             </div>
             <div>
-                <input placeholder="Reps" id="rep"/>
+                <input required="true" placeholder="Reps" id="rep"/>
             </div>
             <div>
                 <label>Sets :</label>
             </div>
             <div>
-                <input placeholder="Sets" id="sets"/>
+                <input required="true" placeholder="Sets" id="sets"/>
             </div>
             <div>
                 <label>Benifits :</label>
             </div>
             <div>
-                <textarea id="benifits"></textarea>
+                <textarea required="true" id="benifits"></textarea>
             </div>
 
         <div>
-            <label>Video (or) Photo</label>
+            <label required="true">Video (or) Photo</label>
         </div>
         <div>
-            <input type="file">
+            <input id="workoutphoto" placeholder="photo link">
         </div>
         <div>
             <button type="submit">ADD</button>
@@ -75,6 +75,7 @@
         let rep = document.getElementById("rep").value;
         let sets = document.getElementById("sets").value;
         let benifits = document.getElementById("benifits").value;
+        let workoutphoto = document.getElementById("workoutphoto").value;
         let workout_uuid=uuidv4();
 
         let add_workout = JSON.parse(localStorage.getItem('catagory_id'))||[];
@@ -85,6 +86,7 @@
             rep: rep,
             sets: sets,
             benifits: benifits,
+            workoutphoto: workoutphoto,
             workout_uuid : workout_uuid,
         });
 

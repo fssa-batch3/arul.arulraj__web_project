@@ -489,18 +489,8 @@
                 "oldplan_btnlink" : "../CLIENT/old plan/oldplanweeklist.html",
                 "newplan_btnlink" : "",
         },
-      ]
+      ] 
 
-                    let clientlist_card;
-                    let clientlist_cntbtn;
-                    let title;
-                    let imageContainer;
-                    let trainerImg;
-                    let oldplan_btnlink;
-                    let counts;
-                    let benifitsTitle;
-                    let benifitContainer;
-                    let benifit;
                     let user_data = JSON.parse(localStorage.getItem('user_data'));
 
                 for (let i = 0; i < 10; i++) {
@@ -519,7 +509,7 @@
                     clientlist_cntbtn.append(trainerlist_container);
 
                     trainerImg = document.createElement("img");
-                    // trainerImg.setAttribute("src", client_list[i]["image"]["source"]);
+                    trainerImg.setAttribute("src", user_data[i]["user_photo"]);
                     trainerImg.setAttribute("width", "350px");
                     trainerImg.setAttribute("class", "image");
                     trainerImg.setAttribute("alt", "image");
@@ -554,7 +544,7 @@
                     trainerlist_containerText.append(user_pakage);
 
                     user_trainer = document.createElement("p");
-                    user_trainer.innerText= client_list[i]["user_trainer"]["title"] + ":" + client_list[i]["user_trainer"]["trainername"];
+                    user_trainer.innerText= client_list[i]["user_trainer"]["title"] + ":" + user_data[i]["asign_trainer"];
                     trainerlist_containerText.append(user_trainer);
 
                     plan_btn = document.createElement("div");
@@ -582,30 +572,6 @@
                     document.querySelector("div.list").append(clientlist_card);
         
                 }
-
-                // let number_id = JSON.parse(localStorage.getItem('number_id'));
-
-
-        // function login_data(e){
-        // return e.user_number == number_id;
-        // }
-
-  //  let  person_data = user_data.find(login_data);
-
-        // document.getElementById("user_firstname").innerText = user_data['user_firstname']+" "+person_data['user_lastname'];
-        // document.getElementById("user_number").innerText = user_data["user_number"];
-        // document.getElementById("user_age").value = user_data["user_age"];
-        // document.getElementById("user_weight").value = person_data["user_weight"];
-        // document.getElementById("user_height").value = person_data["user_height"];
-        // document.getElementById("user_package").value = person_data["user_package"];
-        // document.getElementById("user_service").value = person_data["user_service"];
-        // document.getElementById("user_gender").value = person_data["user_gender"];
-        // document.getElementById("addressline1").value = person_data["addressline1"];
-        // document.getElementById("addressline2").value = person_data["addressline2"];
-        // document.getElementById("pincode").value = person_data["pincode"];
-        // document.getElementById("city").value = person_data["city"];
-        // document.getElementById("state").value = person_data["state"];
-        
         
             </script>
 

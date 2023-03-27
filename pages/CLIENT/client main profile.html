@@ -16,7 +16,7 @@
      </header>
      <main class="main">
         <section class="top_section">
-            <img src="https://st.depositphotos.com/2101611/4338/v/600/depositphotos_43381243-stock-illustration-male-avatar-profile-picture.jpg" alt="profile_image" class="profile_img">
+            <img id="user_photo" alt="profile_image" class="profile_img">
             <div  class="contact">
                 <b readonly id="user_firstname"></b><b readonly id="user_lastname"></b>
                 <div ><i  class="fa fa-phone"></i><p readonly id="user_number"></p></div>
@@ -25,12 +25,15 @@
         <section class="middle_section">
             <article class="left_content">
                 <div class="input_feild">
+                    <label>Age : </label>
                     <input id="user_age" readonly type="number" class="input" placeholder="Age">
                 </div>
                 <div class="input_feild">
+                    <label>Height : </label>
                     <input id="user_height" readonly type="number" class="input" placeholder="Height In Cm">
                 </div>
                 <div class="input_feild1">
+                    <label>Weight : </label>
                     <input id="user_weight" readonly type="number" class="input" placeholder="Weight In Kg">
                 </div>
             </article>
@@ -61,12 +64,13 @@
                 <input id="city" readonly type="text" class="input2" placeholder="City">
                 <input id="state" readonly type="text" class="input2" placeholder="State">
             </div>
-        </section>
+        
         <div class="btn">
             <a href="../CLIENT/cilent profile edit page.html"><button class="button1">Edit</button></a>
             <a href="../../index.html"><button class="button2">Log Out</button></a>
             <button onclick="del(event)" class="del"><i  class="fa fa-trash" style="color: white;"></i></button>
         </div>
+    </section>
     </main>
      <footer>
         <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun</div>
@@ -93,6 +97,9 @@
         document.getElementById("user_gender").value = person_data["user_gender"];
         document.getElementById("addressline1").value = person_data["addressline1"];
         document.getElementById("addressline2").value = person_data["addressline2"];
+       let a= document.getElementById("user_photo")
+       a.setAttribute("src", person_data["user_photo"])
+       console.log(a)
         document.getElementById("pincode").value = person_data["pincode"];
         document.getElementById("city").value = person_data["city"];
         document.getElementById("state").value = person_data["state"];

@@ -1,7 +1,8 @@
 body {
     margin: 0px;
     width: 100%;
-    background-color: whitesmoke;
+    height: 100%;
+    background-image: url(../img/MacBook\ Pro\ 16_\ -\ 2\ \(1\).png);
   }
 *{
   outline:none;
@@ -15,7 +16,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-content: center;
-    background-color: rgba(180, 177, 177, 0.733);
+    background-color: rgba(180, 177, 177, 0.379);
   }
 .clientlistbtn{
     position: relative;
@@ -53,7 +54,7 @@ body {
   margin-left: 15px;
   }
 section{
-    height: 81vh;
+    height: 88vh;
 
 }
 .usericon{
@@ -194,6 +195,6 @@ section{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 10vh;
+    height: 3vh;
     
 }

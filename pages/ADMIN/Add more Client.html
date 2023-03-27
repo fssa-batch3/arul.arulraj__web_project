@@ -1,115 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>fitnesswebsite</title>
-        <link rel="stylesheet" href="../../assets/css/Add More Client style.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
-    <body>
-        <header class="header">
-            <div class="logo">
-                <img src="../../assets/img/logonew2.png" width="200px" alt="logo"/>
-            </div>
-         </header>
+
+<head>
+    <title>fitnesswebsite</title>
+    <link rel="stylesheet" href="../../assets/css/Add More Client style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="../../assets/img/logonew2.png" width="200px" alt="logo" />
+        </div>
+    </header>
 
     <section>
-        <div class="details">
-            <div>
-                <h2>Add more Client</h2>
+        <form onsubmit="registration(event)">
+            <div class="details">
+                <div>
+                    <h2>Add more Client</h2>
+                </div>
+                <div>
+                    <input class="input" pattern="[a-zA-Z{12}]+" type="text" placeholder="First Name"
+                        id="user_firstname" required="true" />
+                </div>
+                <div>
+                    <input class="input" pattern="[a-zA-Z{12}]+" type="text" placeholder="Last Name" id="user_lastname"
+                        required="true" />
+                </div>
+                <div>
+                    <input id="user_age" type="number" class="input" placeholder="Age" />
+                </div>
+                <div>
+                    <select class="input" id="user_gender">
+                        <option>Gender</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                </div>
+                <div>
+                    <input id="user_weight" type="number" class="input" placeholder="Weight In Kg" />
+                </div>
+                <div>
+                    <input id="user_height" type="number" class="input" placeholder="Height In Cm" />
+                </div>
+                <div>
+                    <select class="input" id="user_package">
+                        <option>Package</option>
+                        <option>Weight Training (700 rps)</option>
+                        <option>+ Cardio(1000 rps)</option>
+                    </select>
+                </div>
+                <div>
+                    <select class="input" id="user_service">
+                        <option>Service</option>
+                        <option>Weight Lose</option>
+                        <option>Weight Gain</option>
+                    </select>
+                </div>
+                <div>
+                    <input class="input" placeholder="trainer_id" id="asign_trainer">
+                </div>
+                <div>
+                    <input class="input" pattern="[0-9{10}]+" required="true" placeholder="Contact number"
+                        id="user_number" />
+                </div>
+                <div>
+                    <input class="input" pattern="[a-zA-Z0-9!@#$$%^&*()_+:>?|\]+" type="password"
+                        placeholder="Enter Password" id="user_password" />
+                </div>
+                <div>
+                    <input class="input" pattern="[a-zA-Z0-9!@#$$%^&*()_+:>?|\]+" type="password"
+                        placeholder="Confirm Password" id="user_confirmpassword" />
+                </div>
+                <div>
+                    <input class="input" id="user_photo" placeholder="Photo Link">
+                </div>
+                <div>
+                    <button type="submit">submit</button>
+                </div>
             </div>
-            <div>
-             <label>Client Name :</label>
-             </div>
-             <div>
-             <input type="name" placeholder="Client Name" id="name" required="true" />
-            </div>
-            <div>
-                <label>Age :</label>
-            </div>
-            <div>
-                <input type="number" placeholder="Age" id="age" />
-            </div>
-            <div>
-            <label>Gender :</label>
-            </div>
-            <div>
-            <select>
-                <option>Select</option>
-            <option>Male</option>
-            <option>Female</option>
-            </select>
-           </div>
-            <div>
-                <label>Weight :</label>
-            </div>
-            <div>
-                <input type="number" placeholder="In KG" />
-            </div>
-            <div>
-                <label>Height:</label>
-            </div>
-            <div>
-                <input type="number" placeholder="In CM" />
-            </div>
-            <div>
-                <label>Pakage :</label>
-            </div>
-            <div>
-                <select>
-                <option>Select</option>
-                <option>Weight Gain</option>
-                <option>Weight Lose</option>
-                </select>
-            </div>
-            <div>
-                <label>Trainer :</label>
-            </div>
-            <div>
-                <select>
-                <option>Select</option>
-                <option>Tamil</option>
-                <option>Kishor</option>
-                <option>Viknesh</option>
-                </select>
-            </div>
-            <div>
-             <label>Phone Number :</label>
-             </div>
-             <div>
-             <input type="text" placeholder="+91 **********" />
-            </div>
-
-            <div>
-            <label>Create Password :</label>
-            </div>
-            <div>
-            <input type="password" required= "true" placeholder="********"/>
-            </div>
-            <div>
-            <label>Photo : </label><input type="file" />
-        </div>
-            <div class="submit">
-             <a href="../ADMIN/client listpage.html"><input type="submit"/></a>
-            </div>
-        </div>
+        </form>
     </section>
 
     <script>
 
-        const workout = document.getElementById("workout").value 
-        const name = document.getElementById("name").value 
-        const rep = document.getElementById("rep").value 
-        const sets = document.getElementById("sets").value 
-        const textarea = document.getElementById("textarea").value 
-    
-        console.log(workout)
-        console.log(name)
-        console.log(rep)
-        console.log(sets)
-        console.log(textarea)
+        function registration(e) {
+
+            e.preventDefault();
+
+            let user_firstname = document.getElementById("user_firstname").value;
+            user_lastname = document.getElementById("user_lastname").value;
+            user_number = document.getElementById("user_number").value;
+            user_password = document.getElementById("user_password").value;
+            user_confirmpassword = document.getElementById("user_confirmpassword").value;
+            asign_trainer = document.getElementById("asign_trainer").value;
+            user_age = document.getElementById("user_age").value;
+            user_weight = document.getElementById("user_weight").value;
+            user_height = document.getElementById("user_height").value;
+            user_package = document.getElementById("user_package").value;
+            user_service = document.getElementById("user_service").value;
+            user_gender = document.getElementById("user_gender").value;
+            user_photo = document.getElementById("user_photo").value;
+            addressline1 = "";
+            addressline2 = "";
+            pincode = "";
+            city = "";
+            state = "";
+            user_uuid = uuidv4();
+
+
+            let user_data = JSON.parse(localStorage.getItem('user_data')) || [];
+
+            let exist = user_data.length &&
+                JSON.parse(localStorage.getItem('user_data')).some(data => data.user_number.toLowerCase() == user_number.toLowerCase());
+            if (!exist) {
+                if (user_password == user_confirmpassword) {
+                    user_data.push({
+                        user_firstname,
+                        user_lastname,
+                        user_number,
+                        user_confirmpassword,
+                        user_password,
+                        user_age,
+                        asign_trainer,
+                        user_weight,
+                        user_height,
+                        user_package,
+                        user_service,
+                        user_photo,
+                        user_gender,
+                        addressline1,
+                        addressline2,
+                        pincode,
+                        city,
+                        state,
+                        user_uuid
+                    });
+
+                    localStorage.setItem('user_data', JSON.stringify(user_data));
+                    document.querySelector('form').reset();
+                    document.getElementById('user_number').focus();
+                    alert('Account created Successfully');
+                    location.href = "../ADMIN/client listpage.html";
+                }
+                else {
+                    alert("Confirmpassword is not correct!!!")
+                }
+            }
+            else {
+                alert('Sorry the User already Exist!! \n Try with different Phone number or email');
+                document.querySelector('form').reset();
+            }
+
+        }
 
     </script>
+<script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
 
+</body>
 
-    </body>
-    </html>
+</html>
