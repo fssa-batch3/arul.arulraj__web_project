@@ -1,7 +1,7 @@
 @import "normalize.css";
 
 body {
-    color: black;
+    color: rgb(75, 74, 74);
     margin: 0px;
     padding: 0px;
     width: 100%;
@@ -10,7 +10,7 @@ body {
 }
 a{
     text-decoration: none;
-    color: black;
+    color: rgb(9, 9, 9);
 }
 *{
     outline:none;
@@ -64,7 +64,7 @@ a{
     background-repeat: no-repeat;
 }
 .header{
-    background-color: rgba(180, 177, 177, 0.906);
+    background-color: rgba(180, 177, 177, 0.205);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -178,7 +178,7 @@ a{
 }
 .navbar a{
     text-decoration: none;
-    color: black;
+    color: rgb(241, 238, 238);
     border-bottom: 2px solid rgb(255, 98, 0);
     font-weight: 600;
     font-size: 20px;
