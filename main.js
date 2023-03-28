@@ -29,7 +29,7 @@ const trainer_details = [{Trainer_Achivements
     : 
     "0960bb6a-1b07-45fe-b3fb-e1d9b1b6f176"}]
 
-const trainer_detail =JASON.parse(localStorage.getItem("trainer_data"));
+const trainer_detail =JSON.parse(localStorage.getItem("trainer_data"));
 
 if(!trainer_detail){
     localStorage.setItem("trainer_data",JSON.stringify(trainer_detail))
