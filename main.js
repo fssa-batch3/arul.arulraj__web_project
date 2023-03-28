@@ -1,4 +1,5 @@
-const trainer_details = [{Trainer_Achivements
+const trainer_details = [{
+    Trainer_Achivements
     : 
     "Mr.Tamilnadu ",
     Trainer_Experience
@@ -32,7 +33,7 @@ const trainer_details = [{Trainer_Achivements
 const trainer_detail =JSON.parse(localStorage.getItem("trainer_data"));
 
 if(!trainer_detail){
-    localStorage.setItem("trainer_data",JSON.stringify(trainer_detail))
+    localStorage.setItem("trainer_data",JSON.stringify(trainer_details))
 }
 
 // benifits
