@@ -9,7 +9,7 @@ USERfLOW : https://drive.google.com/drive/folders/1-MprEGyNgsnMAy0D3QrPJ5L4TfcsW
 
 Wireframe : https://drive.google.com/drive/folders/1CrvQ0dVlHeLwo5UpDrkyt2SsHzzGgM2R
 
-user CRUD
+USER CRUD
 *registor
 *Login
 *profile 
@@ -19,9 +19,10 @@ user CRUD
 CLIENT LIST IN TRAINER PAGE
 *ADD NEW client
 *read client
-*delete client
 
 TRAINER
+*create
+*Read
 *Edit
 *Delete
 
@@ -71,6 +72,16 @@ Workout list
        6. Click the "Home" button which in top-right corner.
 
    • Expected Result:
+       • The user is redirected to the Home page.
+
+       ###Update your profile
+
+####• Scenario 1: Successfully update your profile
+   • Steps:
+       1. Navigate to the profile page.
+       2. 
+
+    • Expected Result:
        • The user is redirected to the Home page.
 
 ###User current plan
