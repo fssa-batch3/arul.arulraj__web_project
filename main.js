@@ -78,7 +78,7 @@ const user_details = [{
         "church street, vaniyakudi",
     asign_trainer
         :
-        "",
+        "Aravin",
     city
         :
         "colachel",
@@ -137,7 +137,7 @@ const user_details = [{
         "west street, perungudi",
     asign_trainer
         :
-        "",
+        "Aravin",
     city
         :
         "chennai",
@@ -152,7 +152,7 @@ const user_details = [{
         "21",
     user_confirmpassword
         :
-        "12345",
+        "1234567",
     user_firstname
         :
         "tommy",
@@ -176,7 +176,7 @@ const user_details = [{
         "12345",
     user_photo
         :
-        "https://source.unsplash.com/random/200x200?sig=${i}",
+        "https://iili.io/HvJFkdv.md.jpg",
     user_service
         :
         "Weight Lose",
@@ -186,6 +186,124 @@ const user_details = [{
     user_weight
         :
         "79",
+},
+{
+    addressline1
+        :
+        "No - 01",
+    addressline2
+        :
+        "West street",
+    asign_trainer
+        :
+        "Aravin",
+    city
+        :
+        "Thirunelveli",
+    pincode
+        :
+        "1234",
+    state
+        :
+        "tamilnadu",
+    user_age
+        :
+        "18",
+    user_confirmpassword
+        :
+        "123",
+    user_firstname
+        :
+        "Sesslyn",
+    user_gender
+        :
+        "Female",
+    user_height
+        :
+        "158",
+    user_lastname
+        :
+        "Johnson",
+    user_number
+        :
+        "123456",
+    user_package
+        :
+        "+ Cardio(1000 rps)",
+    user_password
+        :
+        "123",
+    user_photo
+        :
+        "https://iili.io/HvJx407.md.jpg",
+    user_service
+        :
+        "Weight Gain",
+    user_uuid
+        :
+        "14030c01-7530-4c4b-a2c8-fd3a0e10",
+    user_weight
+        :
+        "51",
+},
+{
+    addressline1
+        :
+        "No - 16",
+    addressline2
+        :
+        "South street",
+    asign_trainer
+        :
+        "Aravin",
+    city
+        :
+        "chennai",
+    pincode
+        :
+        "1234",
+    state
+        :
+        "tamilnadu",
+    user_age
+        :
+        "20",
+    user_confirmpassword
+        :
+        "123",
+    user_firstname
+        :
+        "Dhanush",
+    user_gender
+        :
+        "Male",
+    user_height
+        :
+        "168",
+    user_lastname
+        :
+        "Kowmart",
+    user_number
+        :
+        "1234567",
+    user_package
+        :
+        "+ Cardio(1000 rps)",
+    user_password
+        :
+        "123",
+    user_photo
+        :
+        "https://iili.io/HvJFkdv.md.jpg",
+    user_service
+        :
+        "Weight Gain",
+    user_uuid
+        :
+        "14030c01-7530-4c4b-a2c8-bd4afd3a0e10",
+    user_weight
+        :
+        "67",
 },]
 
 const user_detail = JSON.parse(localStorage.getItem("user_data"));
