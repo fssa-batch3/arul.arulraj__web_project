@@ -30,38 +30,7 @@ const trainer_details = [{
         :
         "0960bb6a-1b07-45fe-b3fb-e1d9b1b6f176"
 },
-{
-    Trainer_Achivements
-        :
-        "Mr.India ",
-    Trainer_Experience
-        :
-        "5-years",
-    Trainer_address
-        :
-        "no-10,marthandam,kanniyakumari",
-    Trainer_gender
-        :
-        "Male",
-    trainer_age
-        :
-        "33",
-    trainer_confirmpassword
-        :
-        "1234",
-    trainer_name
-        :
-        "aravin A",
-    trainer_number
-        :
-        "1234",
-    trainer_password
-        :
-        "1234",
-    trainer_uuid
-        :
-        "0960bb6a-1b07-45fe-b3fb-e1d1b6f176"
-}]
+]
 
 const trainer_detail = JSON.parse(localStorage.getItem("trainer_data"));
 
@@ -167,7 +136,7 @@ const user_details = [{
         "thamim",
     user_number
         :
-        "123456",
+        "123",
     user_package
         :
         "+ Cardio(1000 rps)",
