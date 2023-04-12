@@ -22,15 +22,15 @@
             </div>
             <div class="border"></div>
             <div class="details">
-                <div class="cnt">Trainer Name : <input class="input" id="trainer_name"></div>
-                <div>Age : <input class="input1" id="trainer_age"></div>
-                <div class="cnt">Address : <input class="input2" id="Trainer_address"></div>
-                <div>Achivement : <input class="input3" id="Trainer_Achivements"> </div>
-                <div class="cnt">Experience : <input class="input4" id="Trainer_Experience"></div>
-                <div>Phone Number : <input class="input5" id="trainer_number"></div>
+                <div class="cnt">Trainer Name : <input pattern="[a-zA-Z0-9!@#$$%^&*()_+:>?|\]+" required="true" class="input" id="trainer_name"></div>
+                <div>Age : <input pattern="[a-zA-Z0-9!@#$$%^&*()_+:>?|\]+" required="true" class="input1" id="trainer_age"></div>
+                <div class="cnt">Address : <input pattern="[a-zA-Z0-9!@#$$%^&*()_+:>?|\]+" required="true" class="input2" id="Trainer_address"></div>
+                <div>Achivement : <input pattern="[a-zA-Z0-9!@#$$%^&*()_+:>?|\]+" required="true" class="input3" id="Trainer_Achivements"> </div>
+                <div class="cnt">Experience : <input pattern="[a-zA-Z0-9!@#$$%^&*()_+:>?|\]+" required="true" class="input4" id="Trainer_Experience"></div>
+                <div>Phone Number : <input required="true" class="input5" id="trainer_number"></div>
                 <div class="cnt">
                     <label>Gender : </label>
-                    <select class="input6" id="Trainer_gender">
+                    <select required="true" class="input6" id="Trainer_gender">
                         <option>Gender</option>
                         <option>Male</option>
                         <option>Female</option>

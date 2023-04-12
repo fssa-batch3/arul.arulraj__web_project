@@ -36,20 +36,20 @@
             <section class="middle_section">
                 <article class="left_content">
                     <div class="input_feild">
-                        <input id="user_age" type="number" class="input" placeholder="Age">
+                        <input required="true" id="user_age" type="number" class="input" placeholder="Age">
                     </div>
                     <div class="input_feild">
-                        <input id="user_height" type="number" class="input" placeholder="Height In Cm">
+                        <input required="true" id="user_height" type="number" class="input" placeholder="Height In Cm">
                     </div>
                     <div class="input_feild1">
-                        <input id="user_weight" type="number" class="input" placeholder="Weight In Kg">
+                        <input required="true" id="user_weight" type="number" class="input" placeholder="Weight In Kg">
                     </div>
                 </article>
                 <article class="line"></article>
                 <article class="right_content">
                     <div class="input_feild">
                         <label>Gender : </label>
-                        <select class="input" id="user_gender">
+                        <select required="true" class="input" id="user_gender">
                             <option>Gender</option>
                             <option>Male</option>
                             <option>Female</option>
@@ -57,7 +57,7 @@
                     </div>
                     <div class="input_feild">
                         <label>Service : </label>
-                        <select class="input" id="user_service">
+                        <select required="true" class="input" id="user_service">
                             <option>Service</option>
                             <option>Weight Lose</option>
                             <option>Weight Gain</option>
@@ -65,7 +65,7 @@
                     </div>
                     <div class="input_feild1">
                         <label>Package : </label>
-                        <select class="input" id="user_package">
+                        <select required="true" class="input" id="user_package">
                             <option>Package</option>
                             <option>Weight Training (700 rps)</option>
                             <option>+ Cardio(1000 rps)</option>
@@ -76,13 +76,13 @@
             <section class="bottom_section">
                 <h3>address</h3>
                 <div>
-                    <input id="addressline1" type="text" class="input1" placeholder="House no, Building name....">
-                    <input id="addressline2" type="text" class="input1" placeholder="Road name, Area, Colony....">
+                    <input pattern="[a-zA-Z0-9!@#$$%^&*()_+:>?|\]+" required="true" id="addressline1" type="text" class="input1" placeholder="House no, Building name....">
+                    <input pattern="[a-zA-Z0-9!@#$$%^&*()_+:>?|\]+" required="true" id="addressline2" type="text" class="input1" placeholder="Road name, Area, Colony....">
                 </div>
                 <div>
-                    <input id="pincode" type="number" class="input2" placeholder="Pincode">
-                    <input id="city" type="text" class="input2" placeholder="City">
-                    <input id="state" type="text" class="input2" placeholder="State">
+                    <input pattern="[a-zA-Z0-9!@#$$%^&*()_+:>?|\]+" required="true" id="pincode" type="number" class="input2" placeholder="Pincode">
+                    <input pattern="[a-zA-Z0-9!@#$$%^&*()_+:>?|\]+" required="true" id="city" type="text" class="input2" placeholder="City">
+                    <input pattern="[a-zA-Z0-9!@#$$%^&*()_+:>?|\]+" required="true" id="state" type="text" class="input2" placeholder="State">
                     
                 </div>
                 <div>

@@ -265,11 +265,12 @@
                             imageContainer = document.createElement("div");
                             workout_card.append(imageContainer);
                 
-                            // workoutImg = document.createElement("img");
-                            // workoutImg.setAttribute("src", Workout[i]["image"]["source"]);
-                            // workoutImg.setAttribute("width", "250px");
-                            // workoutImg.setAttribute("alt", "image");
-                            // imageContainer.append(workoutImg);
+                            workoutImg = document.createElement("img");
+                            workoutImg.setAttribute("id", "workoutphoto")
+                            workoutImg.setAttribute("src", Workout[i]["workoutphoto"]);
+                            workoutImg.setAttribute("width", "250px");
+                            workoutImg.setAttribute("alt", "image");
+                            imageContainer.append(workoutImg);
                 
                             detailContainer = document.createElement("div");
                             workout_card.append(detailContainer);
