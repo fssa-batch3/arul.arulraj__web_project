@@ -36,13 +36,16 @@
             <section class="middle_section">
                 <article class="left_content">
                     <div class="input_feild">
-                        <input required="true" maxlength="2" id="user_age" type="number" class="input" placeholder="Age">
+                        <label>Age : </label>
+                        <input required="true" maxlength="2" id="user_age" pattern="[0-9{10}]+" class="input" placeholder="Age">
                     </div>
                     <div class="input_feild">
-                        <input required="true" id="user_height" type="number" class="input" placeholder="Height In Cm">
+                        <label>Height : </label>
+                        <input required="true" maxlength="3" id="user_height" pattern="[0-9{10}]+" class="input" placeholder="Height In Cm">
                     </div>
                     <div class="input_feild1">
-                        <input required="true" id="user_weight" type="number" class="input" placeholder="Weight In Kg">
+                        <label>Weight : </label>
+                        <input required="true" maxlength="3" id="user_weight" pattern="[0-9{10}]+" class="input" placeholder="Weight In Kg">
                     </div>
                 </article>
                 <article class="line"></article>
@@ -80,9 +83,9 @@
                     <input pattern="[a-zA-Z0-9!@#$$%^&*()_+:>?|\]+" required="true" id="addressline2" type="text" class="input1" placeholder="Road name, Area, Colony....">
                 </div>
                 <div>
-                    <input pattern="[a-zA-Z0-9!@#$$%^&*()_+:>?|\]+" required="true" id="pincode" type="number" class="input2" placeholder="Pincode">
-                    <input pattern="[a-zA-Z0-9!@#$$%^&*()_+:>?|\]+" required="true" id="city" type="text" class="input2" placeholder="City">
-                    <input pattern="[a-zA-Z0-9!@#$$%^&*()_+:>?|\]+" required="true" id="state" type="text" class="input2" placeholder="State">
+                    <input required="true" id="pincode" maxlength="6" pattern="[0-9{10}]+"class="input2" placeholder="Pincode">
+                    <input pattern="[a-zA-Z]+" required="true" id="city" type="text" class="input2" placeholder="City">
+                    <input pattern="[a-zA-Z]+" required="true" id="state" type="text" class="input2" placeholder="State">
                     
                 </div>
                 <div>

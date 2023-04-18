@@ -29,7 +29,7 @@
                         required="true" />
                 </div>
                 <div>
-                    <input id="user_age" type="number" class="input" placeholder="Age" />
+                    <input id="user_age" maxlength="2" pattern="[0-9{10}]+" type="number" class="input" placeholder="Age" />
                 </div>
                 <div>
                     <select class="input" id="user_gender">
@@ -39,10 +39,10 @@
                     </select>
                 </div>
                 <div>
-                    <input id="user_weight" type="number" class="input" placeholder="Weight In Kg" />
+                    <input id="user_weight" maxlength="3" pattern="[0-9{10}]+" class="input" placeholder="Weight In Kg" />
                 </div>
                 <div>
-                    <input id="user_height" type="number" class="input" placeholder="Height In Cm" />
+                    <input id="user_height" maxlength="3" pattern="[0-9{10}]+" class="input" placeholder="Height In Cm" />
                 </div>
                 <div>
                     <select class="input" id="user_package">

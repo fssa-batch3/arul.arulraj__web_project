@@ -29,12 +29,19 @@
                         required="true" />
                 </div>
                 <div>
-                    <input class="input" pattern="[0-9{10}]+" required="true" placeholder="Contact number"
+                    <input class="input" maxlength="10" pattern="[0-9{10}]+" required="true" placeholder="Contact number"
                         id="user_number" />
                 </div>
                 <div>
                     <input required="true" class="input" pattern="[a-zA-Z0-9!@#$$%^&*()_+:>?|\]+" type="password"
                         placeholder="Enter Password" id="user_password" />
+                </div>
+                <div id="pattern">
+                    <span class="number_pass">(Must contain at least one number,</span>
+                    <span class="upper_pass">one uppercase,</span>
+                    <span class="lower_pass">one lowercase,</span>
+                    <span class="symbol_pass">one symbol,</span>
+                    <span class="char_pass">and at least 8 or more characters)</span>
                 </div>
                 <div>
                     <input required="true" class="input" pattern="[a-zA-Z0-9!@#$$%^&*()_+:>?|\]+" type="password"
@@ -53,6 +60,57 @@
     </footer>
 
     <script>
+
+        // password pattern recognization
+        let user_password = document.getElementById("user_password");
+        let number_pass = document.querySelector(".number_pass");
+        let upper_pass = document.querySelector(".upper_pass");
+        let lower_pass = document.querySelector(".lower_pass");
+        let symbol_pass = document.querySelector(".symbol_pass");
+        let char_pass = document.querySelector(".char_pass");
+        user_password.addEventListener("input", () => {
+            const password_value = user_password.value;
+            // check upper case
+            const has_upper = /[A-Z]/.test(password_value);
+            if (has_upper == true) {
+                upper_pass.style.color = "green";
+            }
+            else{
+                upper_pass.style.color = "var(--second-color)"
+            }
+            // check lower case
+            const has_lower = /[a-z]/.test(password_value);
+            if (has_lower == true) {
+                lower_pass.style.color = "green";
+            }
+            else{
+                lower_pass.style.color = "var(--second-color)";
+            }
+            // check number
+            const has_symbol = /[!@#$$%^&*()_+:>?|\"' ]/.test(password_value);
+            if (has_symbol == true) {
+                symbol_pass.style.color = "green";
+            }
+            else{
+                symbol_pass.style.color = "var(--second-color)";
+            }
+            // check char
+            const has_number = /\d/.test(password_value);
+            if (has_number == true) {
+                number_pass.style.color = "green";
+            }
+            else{
+                number_pass.style.color = "var(--second-color)";
+            }
+            // check length
+            const char_length = password_value.length >= 8;
+            if (char_length == true) {
+                char_pass.style.color = "green";
+            }
+            else{
+                char_pass.style.color = "var(--second-color)";
+            }
+        })
 
         function registration(e) {
 

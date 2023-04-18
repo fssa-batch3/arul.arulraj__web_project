@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Next Week Plans</title>
-        <link rel="stylesheet" href="../../assets/css/addnewplan.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
+
+<head>
+    <title>Next Week Plans</title>
+    <link rel="stylesheet" href="../../assets/css/addnewplan.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
 <body>
     <header class="header">
         <div class="logo">
-            <img src="../../../assets/img/logonew2.png" width="200px" alt="logo"/>
+            <img src="../../../assets/img/logonew2.png" width="200px" alt="logo" />
         </div>
- </header>
-        <section class="section">
-            <form onsubmit="new_plan_update(event)" role="form">
-                <h1>
-                    <input required="true" id="client_id" placeholder="client_id">
-                </h1>
+    </header>
+    <section class="section">
+        <form onsubmit="new_plan_update(event)" role="form">
+            <h1>
+                <input required="true" maxlength="10" id="client_id" placeholder="client_id">
+            </h1>
             <h1>
                 <select required="true" id="day" class="daysel">
                     <option>DAY</option>
@@ -41,79 +43,80 @@
                     <option>Leg workout</option>
                 </select>
             </h1>
-                        
-                <div class="maincnt">
-                    <div class="workout">
-                        <h2>Workouts</h2>
+
+            <div class="maincnt">
+                <div class="workout">
+                    <h2>Workouts</h2>
                     <div class="wrk">
                         <div class="wrkbox">
-                           <textarea required="true" id="workout_one"></textarea>
+                            <textarea pattern="[a-zA-Z0-9,]+" required="true" id="workout_one"></textarea>
                         </div>
 
                         <div class="wrkbox">
-                            <textarea required="true" id="workout_two"></textarea>
+                            <textarea pattern="[a-zA-Z0-9,]+" required="true" id="workout_two"></textarea>
                         </div>
                         <div class="wrkbox">
-                            <textarea required="true" id="workout_three"></textarea>
+                            <textarea pattern="[a-zA-Z0-9,]+" required="true" id="workout_three"></textarea>
                         </div>
                         <div class="wrkbox">
-                            <textarea required="true" id="workout_four"></textarea>
+                            <textarea pattern="[a-zA-Z0-9,]+" required="true" id="workout_four"></textarea>
                         </div>
                         <div class="wrkbox">
-                            <textarea required="true" id="workout_five"></textarea>
+                            <textarea pattern="[a-zA-Z0-9,]+" required="true" id="workout_five"></textarea>
                         </div>
                         <div class="wrkbox">
-                            <textarea required="true" id="workout_six"></textarea>
+                            <textarea pattern="[a-zA-Z0-9,]+" required="true" id="workout_six"></textarea>
                         </div>
-                        </div>
+                    </div>
                 </div>
-            <div class="btns">
-                <div>
-                    <button type="submit" class="savebtn">Save</button>
+                <div class="btns">
+                    <div>
+                        <button type="submit" class="savebtn">Save</button>
+                    </div>
                 </div>
-            </div>
                 <div class="diet">
                     <h2>Diet</h2>
                     <div class="dietbox">
                         <div class="food">Breakfast</div>
                         <div>
-                            <textarea required="true" id="Breakfast"></textarea>
+                            <textarea pattern="[a-zA-Z0-9,]+" required="true" id="Breakfast"></textarea>
                         </div>
                     </div>
                     <div class="dietbox">
                         <div class="food">Snack</div>
                         <div>
-                            <textarea required="true" id="Snack_one"></textarea>
+                            <textarea pattern="[a-zA-Z0-9,]+" required="true" id="Snack_one"></textarea>
                         </div>
                     </div>
                     <div class="dietbox">
                         <div class="food"> Lunch</div>
                         <div>
-                            <textarea required="true" id="Lunch"></textarea>
+                            <textarea pattern="[a-zA-Z0-9,]+" required="true" id="Lunch"></textarea>
                         </div>
                     </div>
                     <div class="dietbox">
                         <div class="food">Snack</div>
                         <div>
-                            <textarea required="true" id="Snack_two"></textarea>
+                            <textarea pattern="[a-zA-Z0-9,]+" required="true" id="Snack_two"></textarea>
                         </div>
                     </div>
                     <div class="dietbox">
                         <div class="food">Dinner</div>
                         <div>
-                            <textarea required="true" id="Dinner"></textarea>
+                            <textarea pattern="[a-zA-Z0-9,]+" required="true" id="Dinner"></textarea>
                         </div>
                     </div>
                 </div>
             </div>
         </form>
-        </section>
-        <footer>
-            <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun</div>
-        </footer>
-        <script>
+    </section>
+    <footer>
+        <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun
+        </div>
+    </footer>
+    <script>
 
-            function new_plan_update(e){
+        function new_plan_update(e) {
 
             e.preventDefault();
 
@@ -135,30 +138,32 @@
 
             let add_plan = JSON.parse(localStorage.getItem('user_plan')) || [];
 
-            add_plan.push({
-                client_id: client_id,
-                day: day,
-                Workouts:  Workouts,
-                workout_one: workout_one,
-                workout_two: workout_two,
-                workout_three: workout_three,
-                workout_four: workout_four,
-                workout_five: workout_five,
-                workout_six: workout_six,
-                Breakfast: Breakfast,
-                Snack_one: Snack_one,
-                Lunch: Lunch,
-                Snack_two: Snack_two,
-                Dinner: Dinner,
-                user_plan_uuid: user_plan_uuid,
-            });
+                    add_plan.push({
+                        client_id: client_id,
+                        day: day,
+                        Workouts: Workouts,
+                        workout_one: workout_one,
+                        workout_two: workout_two,
+                        workout_three: workout_three,
+                        workout_four: workout_four,
+                        workout_five: workout_five,
+                        workout_six: workout_six,
+                        Breakfast: Breakfast,
+                        Snack_one: Snack_one,
+                        Lunch: Lunch,
+                        Snack_two: Snack_two,
+                        Dinner: Dinner,
+                        user_plan_uuid: user_plan_uuid,
+                    });
 
-            localStorage.setItem('user_plan', JSON.stringify(add_plan));
-            alert("New plan uploaded successfully");
-            window.location.href = "../TRAINER/dieat add page.html";
-        }
+                    localStorage.setItem('user_plan', JSON.stringify(add_plan));
+                    alert("New plan uploaded successfully");
+                    window.location.href = "../TRAINER/dieat add page.html";
+                }
         
-        </script>
-        <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
-        </body>
-      </html>
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+</body>
+
+</html>

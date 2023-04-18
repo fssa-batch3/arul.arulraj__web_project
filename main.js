@@ -278,7 +278,7 @@ const user_details = [{
 const user_detail = JSON.parse(localStorage.getItem("user_data"));
 
 if (!user_detail) {
-    localStorage.setItem("user_data", JSON.stringify(user_detail))
+    localStorage.setItem("user_data", JSON.stringify(user_details))
 }
 
 const plan_detail = [{

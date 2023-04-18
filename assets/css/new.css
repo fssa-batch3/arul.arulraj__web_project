@@ -1,150 +1,45 @@
-.card-box{
-    width: 300px;
-    height: 300px;
-    perspective: 500px;
-    cursor: pointer;
-}
-.content{
-    width: 100%;
-    height: 100%;
-    transition: transform 1s;
-    transform-style: preserve-3d;
-}
-.card-box:hover .content{
-    transform: rotateY(-180deg);
-    transition: transform 0.5s;
-}
-.front, .back{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    border-radius: 25px;
-    backface-visibility: hidden;
-    padding: 10px;
-    background: radial-gradient(
-        circle,
-        rgba(238, 174, 202, 1)0%,
-        rgba(148, 187, 233, 1)100%
-    );
-}
-.front img, .back img{
-    width: 230px;
-    height: auto;
-    transition: 0.5s;
-}
-.front h3, .back h3{
-    font-size: 30px;
-    color: black;
-    font-weight: 700;
-}
-.back{
-    transform: rotateY(180deg);
-    padding-top: 20px;
-}
-
-.card-box:hover .back,
-.card-box:hover .front{
-    width: auto;
-    height: auto;
-}
-.back h5{
-    font-weight: 700;
-    padding: 10px;
-}
 body {
     color: black;
     margin: 0;
     width: 100%;
     height: 100vh;
     background-size: cover;
-    background-image: url(https://c1.wallpaperflare.com/preview/112/406/444/food-diet-keto-ketodieta.jpg);
+    /* background-image: url(https://c1.wallpaperflare.com/preview/112/406/444/food-diet-keto-ketodieta.jpg); */
+}
+.round{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+}
+.round2{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(216, 11, 11);
+}
+.round3{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(33, 181, 7);
+}
+.round4{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(34, 10, 195);
+}
+.round5{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(199, 15, 236);
+}
+.round6{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(221, 236, 9);
 }
 
-*{
-    outline:none;
-    box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
-}
-.section{
-    height: 78vh;
-}
-  h1{
-    text-align: center;
-    font-size: 30px;
-    color: rgb(255, 128, 0);
-}
-.header{
-    background-color: rgba(180, 177, 177, 0.475);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.logo{
-    margin-left: 15px;
-}
-
-.maincnt{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-h2{
-    text-align: center;
-}
-.workout{
-    background-image: linear-gradient(to bottom, rgb(255, 98, 0) , rgb(255, 196, 0));
-    width: 400px;
-    height: 500px;
-    border-radius: 25px;
-    overflow-x: scroll;
-}
-.workout:hover{
-    background-image: linear-gradient(to bottom , rgb(255, 196, 0), rgb(255, 98, 0));
-}
-.workout::-webkit-scrollbar{
-    width: 0px;
-}
-.workout div{
-    padding: 15px;
-    font-size: 20px;
-}
-.wrk{
-    display: flex;
-    flex-direction: column;
-}
-.diet{
-    background-image: linear-gradient(to bottom, rgb(0, 140, 255) , rgb(0, 247, 255));
-    width: 400px;
-    height: 500px;
-    border-radius: 25px;
-    overflow-x: scroll;
-}
-.diet:hover{
-    background-image: linear-gradient(to bottom , rgb(0, 247, 255), rgb(0, 140, 255));
-}
-.diet::-webkit-scrollbar{
-    width: 0px;
-}
-.diet div{
-    padding: 10px;
-    font-size: 20px;
-}
-.dietbox:hover{
-    background-color: rgba(192, 192, 192, 0.772);
-    border-radius: 15px;
-}
-.wrkbox:hover{
-    background-color: rgba(192, 192, 192, 0.772);
-    border-radius: 15px;
-}
-.footerbtm{
-    background-color: rgb(125, 112, 112);
-    text-align: center;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 10vh;
-    
-}
