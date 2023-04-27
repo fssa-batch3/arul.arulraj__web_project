@@ -34,31 +34,8 @@
      <footer>
         <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun</div>
     </footer>
-
-    <script>
-
-        const trainerregistration = e =>{
-        
-            e.preventDefault();
-        
-            let trainer_number = document.getElementById('trainer_number').value,
-            trainer_password = document.getElementById('trainer_password').value;
-            let trainer_data = JSON.parse(localStorage.getItem('trainer_data')) || [];
-            let exist = 
-            JSON.parse(localStorage.getItem('trainer_data')).some(data => data.trainer_number.toLowerCase() == trainer_number && data.trainer_password == trainer_password);
-            if(!exist){
-                alert("Incorrect login credentials");
-            }
-            else{
-                localStorage.setItem("trainer_number",JSON.stringify(trainer_number))
-                alert("Login Successful..");
-                location.href = "../TRAINER/trainerptofile.html";
-                
-            }
-        
-        }
-
-    </script>
+    
+<script src="../../assets/js/login.js"></script>
 
     </body>
 </html>
