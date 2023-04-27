@@ -14,9 +14,6 @@ const trainer_details = [{
     trainer_age
         :
         "29",
-    trainer_confirmpassword
-        :
-        "1234",
     trainer_name
         :
         "aravin A",
@@ -60,9 +57,6 @@ const user_details = [{
     user_age
         :
         "22",
-    user_confirmpassword
-        :
-        "mobiajun55",
     user_firstname
         :
         "Arul",
@@ -119,9 +113,6 @@ const user_details = [{
     user_age
         :
         "21",
-    user_confirmpassword
-        :
-        "1234567",
     user_firstname
         :
         "tommy",
@@ -178,9 +169,6 @@ const user_details = [{
     user_age
         :
         "18",
-    user_confirmpassword
-        :
-        "123",
     user_firstname
         :
         "Sesslyn",
@@ -237,9 +225,6 @@ const user_details = [{
     user_age
         :
         "20",
-    user_confirmpassword
-        :
-        "123",
     user_firstname
         :
         "Dhanush",

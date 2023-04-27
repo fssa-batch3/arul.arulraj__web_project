@@ -37,15 +37,15 @@
                 <article class="left_content">
                     <div class="input_feild">
                         <label>Age : </label>
-                        <input required="true" maxlength="2" id="user_age" pattern="[0-9{10}]+" class="input" placeholder="Age">
+                        <input required="true" type="number" max="99" min="18" id="user_age" class="input" placeholder="Age">
                     </div>
                     <div class="input_feild">
                         <label>Height : </label>
-                        <input required="true" maxlength="3" id="user_height" pattern="[0-9{10}]+" class="input" placeholder="Height In Cm">
+                        <input required="true" maxlength="3" id="user_height" pattern="[1-9]{1}[0-9]{2}" class="input" placeholder="Height In Cm">
                     </div>
                     <div class="input_feild1">
                         <label>Weight : </label>
-                        <input required="true" maxlength="3" id="user_weight" pattern="[0-9{10}]+" class="input" placeholder="Weight In Kg">
+                        <input required="true" maxlength="3" id="user_weight" pattern="[1-9]{1}[0-9]{1}" class="input" placeholder="Weight In Kg">
                     </div>
                 </article>
                 <article class="line"></article>
@@ -53,23 +53,20 @@
                     <div class="input_feild">
                         <label>Gender : </label>
                         <select required="true" class="input" id="user_gender">
-                            <option>Gender</option>
                             <option>Male</option>
                             <option>Female</option>
                         </select>
                     </div>
                     <div class="input_feild">
                         <label>Service : </label>
-                        <select required="true" class="input" id="user_service">
-                            <option>Service</option>
+                        <select required="true" aria-placeholder="Service" class="input" id="user_service">
                             <option>Weight Lose</option>
                             <option>Weight Gain</option>
                         </select>
                     </div>
                     <div class="input_feild1">
                         <label>Package : </label>
-                        <select required="true" class="input" id="user_package">
-                            <option>Package</option>
+                        <select required="true" aria-placeholder="Package" class="input" id="user_package">
                             <option>Weight Training (700 rps)</option>
                             <option>+ Cardio(1000 rps)</option>
                         </select>
@@ -79,14 +76,13 @@
             <section class="bottom_section">
                 <h3>address</h3>
                 <div>
-                    <input pattern="[a-zA-Z0-9!@#$$%^&*()_+:>?|\]+" required="true" id="addressline1" type="text" class="input1" placeholder="House no, Building name....">
-                    <input pattern="[a-zA-Z0-9!@#$$%^&*()_+:>?|\]+" required="true" id="addressline2" type="text" class="input1" placeholder="Road name, Area, Colony....">
+                    <input pattern="^(\S+\s{0,1})+$" title="Don't use unwanted spaces" required="true" id="addressline1" type="text" class="input1" placeholder="House no, Building name....">
+                    <input pattern="^(\S+\s{0,1})+$" title="Don't use unwanted spaces" required="true" id="addressline2" type="text" class="input1" placeholder="Road name, Area, Colony....">
                 </div>
                 <div>
-                    <input required="true" id="pincode" maxlength="6" pattern="[0-9{10}]+"class="input2" placeholder="Pincode">
-                    <input pattern="[a-zA-Z]+" required="true" id="city" type="text" class="input2" placeholder="City">
-                    <input pattern="[a-zA-Z]+" required="true" id="state" type="text" class="input2" placeholder="State">
-                    
+                    <input required="true" id="pincode" title="Pincode will start with 6 enter valid pincode" maxlength="6" pattern="[6-9]{1}[0-9]{5}" class="input2" placeholder="Pincode">
+                    <input pattern="^(\S+\s{0,1})+$" title="Don't use unwanted spaces" required="true" id="city" type="text" class="input2" placeholder="City">
+                    <input pattern="^(\S+\s{0,1})+$" title="Don't use unwanted spaces" required="true" id="state" type="text" class="input2" placeholder="State">
                 </div>
                 <div>
                     <!-- <input id="user_photo" type="text" placeholder="Photo Link"> -->

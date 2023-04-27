@@ -21,7 +21,7 @@
                     <h2>Registration</h2>
                 </div>
                 <div>
-                    <input class="input" pattern="[a-zA-Z{12}]+" type="text" placeholder="First Name"
+                    <input class="input" title="Use firstletter between (A-Z) and min 8 character" pattern="[a-zA-Z{12}]+" type="text" placeholder="First Name"
                         id="user_firstname" required="true" />
                 </div>
                 <div>
@@ -29,11 +29,11 @@
                         required="true" />
                 </div>
                 <div>
-                    <input class="input" maxlength="10" pattern="[0-9{10}]+" required="true" placeholder="Contact number"
+                    <input class="input" maxlength="10" pattern="[6-9]{1}[0-9]{9}" required="true" placeholder="Contact number"
                         id="user_number" />
                 </div>
                 <div>
-                    <input required="true" class="input" pattern="[a-zA-Z0-9!@#$$%^&*()_+:>?|\]+" type="password"
+                    <input required="true" class="input" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password"
                         placeholder="Enter Password" id="user_password" />
                 </div>
                 <div id="pattern">
@@ -44,7 +44,7 @@
                     <span class="char_pass">and at least 8 or more characters)</span>
                 </div>
                 <div>
-                    <input required="true" class="input" pattern="[a-zA-Z0-9!@#$$%^&*()_+:>?|\]+" type="password"
+                    <input required="true" class="input" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password"
                         placeholder="Confirm Password" id="user_confirmpassword" />
                 </div>
                 <div class="btndiv">
@@ -68,6 +68,7 @@
         let lower_pass = document.querySelector(".lower_pass");
         let symbol_pass = document.querySelector(".symbol_pass");
         let char_pass = document.querySelector(".char_pass");
+        
         user_password.addEventListener("input", () => {
             const password_value = user_password.value;
             // check upper case
@@ -112,6 +113,7 @@
             }
         })
 
+        
         function registration(e) {
 
             e.preventDefault();
@@ -135,6 +137,25 @@
             pincode = "";
             city = "";
             state = "";
+
+            function check_phonenumber() {
+        let result = 0;
+        for (let i = 0; i < user_number.length; i++) {
+            if (user_number[0] == user_number[i]) {
+                result+= 1
+            }
+            else {
+                break
+            }
+        }
+        if (result == 10) {
+            alert("Enter your number properly");
+            up_no.value = reset();
+        }
+        else {
+            return
+        }
+    }check_phonenumber();
 
             let user_data = JSON.parse(localStorage.getItem('user_data')) || [];
 
