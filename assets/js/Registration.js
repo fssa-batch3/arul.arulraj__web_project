@@ -12,7 +12,7 @@ user_password.addEventListener('input', () => {
   const password_value = user_password.value;
   // check upper case
   const has_upper = /[A-Z]/.test(password_value);
-  if (has_upper == true) {
+  if (has_upper === true) {
     upper_pass.style.color = 'green';
   } else {
     upper_pass.style.color = 'var(--second-color)';
@@ -26,21 +26,21 @@ user_password.addEventListener('input', () => {
   }
   // check number
   const has_symbol = /[!@#$$%^&*()_+:>?|\"' ]/.test(password_value);
-  if (has_symbol == true) {
+  if (has_symbol === true) {
     symbol_pass.style.color = 'green';
   } else {
     symbol_pass.style.color = 'var(--second-color)';
   }
   // check char
   const has_number = /\d/.test(password_value);
-  if (has_number == true) {
+  if (has_number === true) {
     number_pass.style.color = 'green';
   } else {
     number_pass.style.color = 'var(--second-color)';
   }
   // check length
   const char_length = password_value.length >= 8;
-  if (char_length == true) {
+  if (char_length === true) {
     char_pass.style.color = 'green';
   } else {
     char_pass.style.color = 'var(--second-color)';
@@ -50,11 +50,11 @@ user_password.addEventListener('input', () => {
 function registration(e) {
   e.preventDefault();
 
-  const user_firstname = document.getElementById('user_firstname').value;
-  user_lastname = document.getElementById('user_lastname').value;
-  user_number = document.getElementById('user_number').value;
-  user_password = document.getElementById('user_password').value;
-  user_confirmpassword = document.getElementById('user_confirmpassword').value;
+  const user_firstname = document.getElementById('user_firstname').value,
+  user_lastname = document.getElementById('user_lastname').value,
+  user_number = document.getElementById('user_number').value,
+  user_password = document.getElementById('user_password').value,
+  user_confirmpassword = document.getElementById('user_confirmpassword').value,
   user_uuid = uuidv4();
   asign_trainer = '',
   user_age = '',
@@ -92,7 +92,7 @@ function registration(e) {
   const exist = user_data.length
                 && JSON.parse(localStorage.getItem('user_data')).some((data) => data.user_number.toLowerCase() == user_number.toLowerCase());
   if (!exist) {
-    if (user_password == user_confirmpassword) {
+    if (user_password === user_confirmpassword) {
       user_data.push({
         user_firstname,
         user_lastname,
