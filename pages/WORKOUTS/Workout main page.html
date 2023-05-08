@@ -5,124 +5,121 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../../assets/css/workout main page.css" />
+        <link rel="stylesheet" href="../../assets/css/workout main page.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <header class="header">
             <div class="logo">
-                <img src="../../assets/img/logonew2.png" width="200px" alt="logo"/>
+                <img src="../../assets/img/logonew2.png" width="200px" alt="logo">
             </div>
-         </header>
-     <section>
-        <div class="workoutslist">
-        </div>
-     </section>
-     <footer>
-        <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun</div>
-    </footer>
-</body>
-</html>
+        </header>
+        <section>
+            <div class="workoutslist">
+            </div>
+        </section>
+        <footer>
+            <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun</div>
+        </footer>
 
-    <script>
+        <script>
+const workout_list = [
+  {
+    workoutname: "Chest",
+    unique_id: "chest_workout",
+    image: {
+      source: "../../assets/img/10-best-chest-exercises.jpg",
+      alt: "image",
+    },
+  },
 
-const workout_list =
-                                    [
-                                    {
-                                            "workoutname" : "Chest",
-                                            "unique_id" : "chest_workout",
-                                            "image" : {
-                                               "source" : "../../assets/img/10-best-chest-exercises.jpg",
-                                               "alt" : "image",
-                                            },
-                                        },
-                                        
-                                        {
-                                            "workoutname" : "Back",
-                                            "unique_id" : "back_workout",
-                                            "image" : {
-                                               "source" : "../../assets/img/10-best-back-exercises.jpg",
-                                               "alt" : "image",
-                                            },
-                                        },
-                                        
-                                        {
-                                            "workoutname" : "Shoulders",
-                                            "unique_id" : "shoulder_workout",
-                                            "image" : {
-                                               "source" : "../../assets/img/10-best-shoulder-exercises-for-muscle-skinny-v2-830x467.jpg",
-                                               "alt" : "image",
-                                            },
-                                        },
+  {
+    workoutname: "Back",
+    unique_id: "back_workout",
+    image: {
+      source: "../../assets/img/10-best-back-exercises.jpg",
+      alt: "image",
+    },
+  },
 
-                                        {
-                                            "workoutname" : "Biceps",
-                                            "unique_id" : "bicep_workout",
-                                            "image" : {
-                                               "source" : "../../assets/img/10-best-biceps-exercises-for-muscle-skinny-830x467.jpg",
-                                               "alt" : "image",
-                                            },
-                                        },
-                                        
-                                        {
-                                            "workoutname" : "Triceps",
-                                            "unique_id" : "tricep_workout",
-                                            "image" : {
-                                               "source" : "../../assets/img/10-best-triceps-exercises-for-muscle-skinny-830x467.jpg",
-                                               "alt" : "image",
-                                            },
-                                        },
-                                        {
-                                            "workoutname" : "Legs",
-                                            "unique_id" : "leg_workout",
-                                            "image" : {
-                                               "source" : "../../assets/img/10-best-leg-exercises-for-muscle-skinny-830x467.jpg",
-                                               "alt" : "image",
-                                            },
-                                        },
-                                        {
-                                            "workoutname" : "Abs",
-                                            "unique_id" : "abs_workout",
-                                            "image" : {
-                                               "source" : "../../assets/img/10-best-ab-exercises-for-muscle-skinny-830x467.jpg",
-                                               "alt" : "image",
-                                            },
-                                        },
+  {
+    workoutname: "Shoulders",
+    unique_id: "shoulder_workout",
+    image: {
+      source:
+        "../../assets/img/10-best-shoulder-exercises-for-muscle-skinny-v2-830x467.jpg",
+      alt: "image",
+    },
+  },
 
-                                        ]
-                
-                        for (let i = 0; i < 7; i++) {
-                
+  {
+    workoutname: "Biceps",
+    unique_id: "bicep_workout",
+    image: {
+      source:
+        "../../assets/img/10-best-biceps-exercises-for-muscle-skinny-830x467.jpg",
+      alt: "image",
+    },
+  },
 
-                            workout = document.createElement("div");
-                            workout.setAttribute("class", "workout");
-                            
-                            
-                            title = document.createElement("h2");
-                            title.innerText=workout_list[i]["workoutname"];
-                            workout.append(title);
+  {
+    workoutname: "Triceps",
+    unique_id: "tricep_workout",
+    image: {
+      source:
+        "../../assets/img/10-best-triceps-exercises-for-muscle-skinny-830x467.jpg",
+      alt: "image",
+    },
+  },
+  {
+    workoutname: "Legs",
+    unique_id: "leg_workout",
+    image: {
+      source:
+        "../../assets/img/10-best-leg-exercises-for-muscle-skinny-830x467.jpg",
+      alt: "image",
+    },
+  },
+  {
+    workoutname: "Abs",
+    unique_id: "abs_workout",
+    image: {
+      source:
+        "../../assets/img/10-best-ab-exercises-for-muscle-skinny-830x467.jpg",
+      alt: "image",
+    },
+  },
+];
 
-                            link = document.createElement("a");
-                            // link.setAttribute("href",workout_list[i]["link"]);
-                            workout.append(link);
-                            
-                            workoutImg = document.createElement("img");
-                            workoutImg.setAttribute("class", "catagory_image");
-                            workoutImg.setAttribute("src", workout_list[i]["image"]["source"]);
-                            workoutImg.setAttribute("data-id", workout_list[i]["unique_id"]);
-                            link.append(workoutImg);
-                
-                            document.querySelector("div.workoutslist").append(workout);
-                
-                        }
+for (let i = 0; i < 7; i++) {
+  const workout = document.createElement("div");
+  workout.setAttribute("class", "workout");
 
-                        let catagory_image = document.querySelectorAll(".catagory_image")
-                            catagory_image.forEach(each => {
-                            each.addEventListener("click", (event) => {
-                                const add_workout = each.dataset.id;
+  const title = document.createElement("h2");
+  title.innerText = workout_list[i].workoutname;
+  workout.append(title);
 
-                                window.location.href = `../WORKOUTS/ChestWorkout page.html?catagory_id=${add_workout}`;
+  const link = document.createElement("a");
+  // link.setAttribute("href",workout_list[i]["link"]);
+  workout.append(link);
 
-                            })
-                        })
+  const workoutImg = document.createElement("img");
+  workoutImg.setAttribute("class", "catagory_image");
+  workoutImg.setAttribute("src", workout_list[i].image.source);
+  workoutImg.setAttribute("data-id", workout_list[i].unique_id);
+  link.append(workoutImg);
+
+  document.querySelector("div.workoutslist").append(workout);
+}
+
+const catagory_image = document.querySelectorAll(".catagory_image");
+catagory_image.forEach((each) => {
+  each.addEventListener("click", (event) => {
+    const add_workout = each.dataset.id;
+
+    window.location.href = `../WORKOUTS/ChestWorkout page.html?catagory_id=${add_workout}`;
+  });
+});
     </script>
+    </body>
+</html>

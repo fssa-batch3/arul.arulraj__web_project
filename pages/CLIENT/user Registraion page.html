@@ -1,66 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <title>fitnesswebsite</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../assets/css/client registration.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+    <head>
+        <title>fitnesswebsite</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../assets/css/client registration.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
 
-<body>
-    <section>
-        <header class="header">
-            <img class="logo" src="../../assets/img/logonew2.png" width="200px" alt="logo" />
-        </header>
-        <form onsubmit="registration(event)">
-            <div class="details">
-                <div>
-                    <h2>Registration</h2>
+    <body>
+        <section>
+            <header class="header">
+                <img class="logo" src="../../assets/img/logonew2.png" width="200px" alt="logo">
+            </header>
+            <form onsubmit="registration(event)">
+                <div class="details">
+                    <div>
+                        <h2>Registration</h2>
+                    </div>
+                    <div>
+                        <input class="input" title="Use firstletter between (A-Z) and min 8 character" pattern="[a-zA-Z{8}]+" type="text" placeholder="First Name"
+                            id="user_firstname" required="true">
+                    </div>
+                    <div>
+                        <input class="input" pattern="[a-zA-Z{8}]+" type="text" placeholder="Last Name" id="user_lastname"
+                            required="true">
+                    </div>
+                    <div>
+                        <input class="input" maxlength="10" pattern="[6-9]{1}[0-9]{9}" required="true" placeholder="Contact number"
+                            id="user_number">
+                    </div>
+                    <div>
+                        <input required="true" class="input" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password"
+                            placeholder="Enter Password" id="user_password">
+                    </div>
+                    <div id="pattern">
+                        <span class="number_pass">(Must contain at least one number,</span>
+                        <span class="upper_pass">one uppercase,</span>
+                        <span class="lower_pass">one lowercase,</span>
+                        <span class="symbol_pass">one symbol,</span>
+                        <span class="char_pass">and at least 8 or more characters)</span>
+                    </div>
+                    <div>
+                        <input required="true" class="input" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password"
+                            placeholder="Confirm Password" id="user_confirmpassword">
+                    </div>
+                    <div class="btndiv">
+                        <button class="btn" type="submit">submit</button>
+                    </div>
                 </div>
-                <div>
-                    <input class="input" title="Use firstletter between (A-Z) and min 8 character" pattern="[a-zA-Z{12}]+" type="text" placeholder="First Name"
-                        id="user_firstname" required="true" />
-                </div>
-                <div>
-                    <input class="input" pattern="[a-zA-Z{12}]+" type="text" placeholder="Last Name" id="user_lastname"
-                        required="true" />
-                </div>
-                <div>
-                    <input class="input" maxlength="10" pattern="[6-9]{1}[0-9]{9}" required="true" placeholder="Contact number"
-                        id="user_number" />
-                </div>
-                <div>
-                    <input required="true" class="input" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password"
-                        placeholder="Enter Password" id="user_password" />
-                </div>
-                <div id="pattern">
-                    <span class="number_pass">(Must contain at least one number,</span>
-                    <span class="upper_pass">one uppercase,</span>
-                    <span class="lower_pass">one lowercase,</span>
-                    <span class="symbol_pass">one symbol,</span>
-                    <span class="char_pass">and at least 8 or more characters)</span>
-                </div>
-                <div>
-                    <input required="true" class="input" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password"
-                        placeholder="Confirm Password" id="user_confirmpassword" />
-                </div>
-                <div class="btndiv">
-                    <button class="btn" type="submit">submit</button>
-                </div>
+            </form>
+        </section>
+
+        <footer>
+            <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun
             </div>
-        </form>
-    </section>
+        </footer>
 
-    <footer>
-        <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun
-        </div>
-    </footer>
-
-    <script src="../../assets/js/Registration.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
-</body>
+        <script src="../../assets/js/Registration.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+    </body>
 
 </html>

@@ -2,84 +2,100 @@
 <html lang="en">
     <head>
         <title>fitnesswebsite</title>
-        <link rel="stylesheet" href="../../assets/css/trainerprofile.css" />
+        <link rel="stylesheet" href="../../assets/css/trainerprofile.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-    <header class="header">
-        <div class="logo">
-            <img src="../../assets/img/logonew2.png" width="200px" alt="logo"/>
-        </div>
-
-        <div class="clientlistbtn">
-            <a href="../ADMIN/Add new workout.html"><button class="addwrkbtn">Add New Workout</button> </a>
-            <a href="../ADMIN/client listpage.html"><button class="listbtn">Client List</button></a>
-        </div>
-     </header>
-     <section>
-    <div class="box">
-            <div class="usericon">
-
-            <div>
-                <button class="changebtn">Change Photo</button>
+        <header class="header">
+            <div class="logo">
+                <img src="../../assets/img/logonew2.png" width="200px" alt="logo">
             </div>
-            </div>
-            <div class="border"></div>
-            <div class="details">
-                <div class="cnt">Trainer Name : <b id="trainer_name"></b></div>
-                <div>Age : <b id="trainer_age"></b></div>
-                <DIV class="cnt">Address : <b id="Trainer_address"></b></DIV>
-                <div>Achivement : <b id="Trainer_Achivements"></b> </div>
-                <div class="cnt">Experience : <b id="Trainer_Experience"></b></div>
-                <div>Phone Number : <b id="trainer_number"></b></div>
-                <div class="cnt">Gender : <b id="Trainer_gender"></b></div>
-            </div>
-            <div class="border"></div>
-        <div class="btns">
-            <div class="btnag"><a href="../TRAINER/trainer profile edit.html"><button class="editbtn">Edit</button></a></div>
-            <!-- <div onclick="del(event)" class="btnag"><button class="savebtn">Delete</button></div> -->
-            <div class="btnag"><a href="../../index.html"><button class="logoutbtn">Log out</button></a></div>
-        </div>
-    </div>
-    </section>
-    <footer>
-        <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun</div>
-    </footer>
-    <script>
 
-        let trainer_number = JSON.parse(localStorage.getItem('trainer_number'));
-        let trainer_data = JSON.parse(localStorage.getItem('trainer_data'));
+            <div class="clientlistbtn">
+                <a href="../ADMIN/Add new workout.html">
+                    <button class="addwrkbtn">Add New Workout</button> 
+                </a>
+                <a href="../ADMIN/client listpage.html">
+                    <button class="listbtn">Client List</button>
+                </a>
+            </div>
+        </header>
+        <section>
+            <div class="box">
+                <div class="usericon">
 
-        function trainerregistration(e){
-        return e.trainer_number == trainer_number;
+                    <div>
+                        <button class="changebtn">Change Photo</button>
+                    </div>
+                </div>
+                <div class="border"></div>
+                <div class="details">
+                    <div class="cnt">
+                        Trainer Name : <b id="trainer_name"></b>
+                    </div>
+                    <div>
+                        Age : <b id="trainer_age"></b>
+                    </div>
+                    <DIV class="cnt">
+                        Address : <b id="Trainer_address"></b>
+                    </DIV>
+                    <div>
+                        Achivement : <b id="Trainer_Achivements"></b> 
+                    </div>
+                    <div class="cnt">
+                        Experience : <b id="Trainer_Experience"></b>
+                    </div>
+                    <div>
+                        Phone Number : <b id="trainer_number"></b>
+                    </div>
+                    <div class="cnt">
+                        Gender : <b id="Trainer_gender"></b>
+                    </div>
+                </div>
+                <div class="border"></div>
+                <div class="btns">
+                    <div class="btnag">
+                        <a href="../TRAINER/trainer profile edit.html">
+                            <button class="editbtn">Edit</button>
+                        </a>
+                    </div>
+                    <!-- <div onclick="del(event)" class="btnag"><button class="savebtn">Delete</button></div> -->
+                    <div class="btnag">
+                        <button id="logOut" class="logoutbtn">Log out</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun</div>
+        </footer>
+        <script>const trainer_number = JSON.parse(localStorage.getItem("trainer_number"));
+        const trainer_data = JSON.parse(localStorage.getItem("trainer_data"));
+
+        function trainerregistration(e) {
+          return e.trainer_number === trainer_number;
         }
 
-   let  person_data = trainer_data.find(trainerregistration);
+const person_data = trainer_data.find(trainerregistration);
 
-        document.getElementById("trainer_name").innerText = person_data['trainer_name'];
-        document.getElementById("trainer_age").innerText = person_data["trainer_age"];
-        document.getElementById("trainer_number").innerText = person_data["trainer_number"];
-        document.getElementById("Trainer_address").innerText = person_data["Trainer_address"];
-        document.getElementById("Trainer_gender").innerText = person_data["Trainer_gender"];
-        document.getElementById("Trainer_Experience").innerText = person_data["Trainer_Experience"];
-        document.getElementById("Trainer_Achivements").innerText = person_data["Trainer_Achivements"];
+        document.getElementById("trainer_name").innerText = person_data.trainer_name;
+        document.getElementById("trainer_age").innerText = person_data.trainer_age;
+        document.getElementById("trainer_number").innerText =
+  person_data.trainer_number;
+        document.getElementById("Trainer_address").innerText =
+  person_data.Trainer_address;
+        document.getElementById("Trainer_gender").innerText =
+  person_data.Trainer_gender;
+        document.getElementById("Trainer_Experience").innerText =
+  person_data.Trainer_Experience;
+        document.getElementById("Trainer_Achivements").innerText =
+  person_data.Trainer_Achivements;
 
-        function del(e){
-                if(confirm("Are you sure you want to delete the account"))
-                {
-                    let trainer_number = JSON.parse(localStorage.getItem("trainer_number"));
-                    let trainer_data = JSON.parse(localStorage.getItem("trainer_data"));
-                    function login_data(e){
-                        return e.trainer_number == trainer_number;
-                     }
-            person_data = trainer_data.find(login_data);
-            const removedata = trainer_data.indexOf(person_data);
-            trainer_data.splice(removedata,1);
-            localStorage.setItem("trainer_data",JSON.stringify(trainer_data));
-            window.location.href = "../../index.html";
-                }
-            }
+const userLogoutElement = document.getElementById("logOut");
+        userLogoutElement?.addEventListener("click", () => {
+          localStorage.removeItem("trainer_number");
+          window.location.href = "../../index.html";
+        });
 </script>
-</body>
+    </body>
 </html>
-     

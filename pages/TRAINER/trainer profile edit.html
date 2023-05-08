@@ -2,98 +2,111 @@
 <html lang="en">
     <head>
         <title>fitnesswebsite</title>
-        <link rel="stylesheet" href="../../assets/css/trainerprofile.css" />
+        <link rel="stylesheet" href="../../assets/css/trainerprofile.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-    <header class="header">
-        <div class="logo">
-            <img src="../../assets/img/logonew2.png" width="200px" alt="logo"/>
-        </div>
-     </header>
-     <section>
-    <form role="form" onsubmit="update(event)">
-    <div class="box">
-            <div class="usericon">
+        <header class="header">
+            <div class="logo">
+                <img src="../../assets/img/logonew2.png" width="200px" alt="logo">
+            </div>
+        </header>
+        <section>
+            <form role="form" onsubmit="update(event)">
+                <div class="box">
+                    <div class="usericon">
 
-            <div>
-                <button class="changebtn">Change Photo</button>
-            </div>
-            </div>
-            <div class="border"></div>
-            <div class="details">
-                <div class="cnt">Trainer Name : <input required="true" class="input" id="trainer_name"></div>
-                <div>Age : <input  pattern="[2-9]{1}[0-9]{1}" title="Trainer age should be above 20+" required="true" class="input1" id="trainer_age"></div>
-                <div class="cnt">Address : <input required="true" pattern="^(\S+\s{0,1})+$" title="Don't use unwanted space" class="input2" id="Trainer_address"></div>
-                <div>Achivement : <input pattern="^(\S+\s{0,1})+$" required="true" class="input3" id="Trainer_Achivements"> </div>
-                <div class="cnt">Experience : <input pattern="[a-zA-Z0-9,]+" required="true" class="input4" id="Trainer_Experience"></div>
-                <div>Phone Number : <input disabled required="true" pattern="[1-9]{1}" maxlength="10" class="input5" id="trainer_number"></div>
-                <div class="cnt">
-                    <label>Gender : </label>
-                    <select required="true" class="input6" id="Trainer_gender">
-                        <option>Male</option>
-                        <option>Female</option>
-                        </select>
+                        <div>
+                            <button class="changebtn">Change Photo</button>
+                        </div>
                     </div>
-            </div>
-            <div class="border"></div>
-        <div class="btns">
-            <div class="btnag"><button type="submit" class="editbtn">Save</button></div>
-            <div class="btnag"><button class="savebtn">Cancel</button></div>
-        </div>
-    </div>
-    </form>
-    </section>
-    <footer>
-        <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun</div>
-    </footer>
+                    <div class="border"></div>
+                    <div class="details">
+                        <div class="cnt">
+                            Trainer Name : <input required="true" class="input" id="trainer_name">
+                        </div>
+                        <div>
+                            Age : <input pattern="[2-9]{1}[0-9]{1}" title="Trainer age should be above 20+" required="true" class="input1" id="trainer_age">
+                        </div>
+                        <div class="cnt">
+                            Address : <input required="true" pattern="^(\S+\s{0,1})+$" title="Don't use unwanted space" class="input2" id="Trainer_address">
+                        </div>
+                        <div>
+                            Achivement : <input pattern="^(\S+\s{0,1})+$" required="true" class="input3" id="Trainer_Achivements"> 
+                        </div>
+                        <div class="cnt">
+                            Experience : <input pattern="[a-zA-Z0-9,]+" required="true" class="input4" id="Trainer_Experience">
+                        </div>
+                        <div>
+                            Phone Number : <input disabled required="true" pattern="[1-9]{1}" maxlength="10" class="input5" id="trainer_number">
+                        </div>
+                        <div class="cnt">
+                            <label>Gender : </label>
+                            <select required="true" class="input6" id="Trainer_gender">
+                                <option>Male</option>
+                                <option>Female</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="border"></div>
+                    <div class="btns">
+                        <div class="btnag">
+                            <button type="submit" class="editbtn">Save</button>
+                        </div>
+                        <div class="btnag">
+                            <button class="savebtn">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <footer>
+            <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun</div>
+        </footer>
 
-    <script>    
-
-        let trainer_number = JSON.parse(localStorage.getItem('trainer_number'));
+        <script>const trainer_number = JSON.parse(localStorage.getItem("trainer_number"));
         
-        let trainer_data = JSON.parse(localStorage.getItem('trainer_data'));
+        const trainer_data = JSON.parse(localStorage.getItem("trainer_data"));
 
-        function find_id(e){
-        return e.trainer_number == trainer_number;
+        function find_id(e) {
+          return e.trainer_number === trainer_number;
         }
 
-        let person_data = trainer_data.find(find_id);
+        const person_data = trainer_data.find(find_id);
 
-        document.getElementById("trainer_name").value = person_data['trainer_name'];
-        document.getElementById("trainer_age").value = person_data["trainer_age"];
-        document.getElementById("trainer_number").value = person_data["trainer_number"];
-        document.getElementById("Trainer_address").value = person_data["Trainer_address"];
-        document.getElementById("Trainer_gender").value = person_data["Trainer_gender"];
-        document.getElementById("Trainer_Experience").value = person_data["Trainer_Experience"];
-        document.getElementById("Trainer_Achivements").value = person_data["Trainer_Achivements"];
+        document.getElementById("trainer_name").value = person_data.trainer_name;
+        document.getElementById("trainer_age").value = person_data.trainer_age;
+        document.getElementById("trainer_number").value = person_data.trainer_number;
+        document.getElementById("Trainer_address").value = person_data.Trainer_address;
+        document.getElementById("Trainer_gender").value = person_data.Trainer_gender;
+        document.getElementById("Trainer_Experience").value =
+  person_data.Trainer_Experience;
+        document.getElementById("Trainer_Achivements").value =
+  person_data.Trainer_Achivements;
 
-        function update(e){
+        function update(e) {
+  event.preventDefault();
 
-            event.preventDefault();
+  const trainer_name = document.getElementById("trainer_name").value;
+  const trainer_age = document.getElementById("trainer_age").value;
+  const trainer_number = document.getElementById("trainer_number").value;
+          Trainer_address = document.getElementById("Trainer_address").value;
+          Trainer_gender = document.getElementById("Trainer_gender").value;
+          Trainer_Experience = document.getElementById("Trainer_Experience").value;
+          Trainer_Achivements = document.getElementById("Trainer_Achivements").value;
 
-    let  trainer_name = document.getElementById("trainer_name").value
-    let  trainer_age = document.getElementById("trainer_age").value
-    let  trainer_number = document.getElementById("trainer_number").value 
-         Trainer_address = document.getElementById("Trainer_address").value
-         Trainer_gender = document.getElementById("Trainer_gender").value
-         Trainer_Experience = document.getElementById("Trainer_Experience").value
-         Trainer_Achivements = document.getElementById("Trainer_Achivements").value
+  person_data.trainer_name = trainer_name;
+          person_data.trainer_age = trainer_age;
+          person_data.trainer_number = trainer_number;
+          person_data.Trainer_address = Trainer_address;
+          person_data.Trainer_gender = Trainer_gender;
+          person_data.Trainer_Experience = Trainer_Experience;
+          person_data.Trainer_Achivements = Trainer_Achivements;
 
+          localStorage.setItem("trainer_data", JSON.stringify(trainer_data));
 
-         person_data["trainer_name"] = trainer_name;
-         person_data["trainer_age"] = trainer_age;
-         person_data["trainer_number"] = trainer_number;
-         person_data["Trainer_address"] = Trainer_address;
-         person_data["Trainer_gender"] = Trainer_gender;
-         person_data["Trainer_Experience"] = Trainer_Experience;
-         person_data["Trainer_Achivements"] = Trainer_Achivements;
-
-         localStorage.setItem("trainer_data", JSON.stringify(trainer_data));
-
-         location.href = "./trainerptofile.html"
+          window.location.href = "./trainerptofile.html";
         }
-
 </script>
-</body>
+    </body>
 </html>

@@ -5,115 +5,103 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../../assets/css/clientcurrentweekplan.css" />
+        <link rel="stylesheet" href="../../assets/css/clientcurrentweekplan.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
 
-
         <header class="header">
             <div class="logo">
-                <img src="../../assets/img/logonew2.png" width="200px" alt="logo"/>
+                <img src="../../assets/img/logonew2.png" width="200px" alt="logo">
             </div>
             <div class="headings">
-                <a href="./client main page.html"><div>HOME</div></a>
+                <a href="./client main page.html">
+                    <div>HOME</div>
+                </a>
             </div>
-     </header>
+        </header>
 
-
-
-     <section class="section">
+        <section class="section">
             <b class="old">Week Plans</b>
-        <div class="condainer1">
+            <div class="condainer1">
             </div>
-     </section>
+        </section>
 
-    <footer>
-        <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun</div>
-    </footer>
-
+        <footer>
+            <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun</div>
+        </footer>
     
-    <script>
+        <script>const day_list = [
+  {
+    day: "Monday",
+    unique_id: "Monday_plan",
+    link: "../CLIENT/day 1-6 diet and workout/clientdiet and workout day 1.html",
+  },
+  {
+      day: "Tuesday",
+      unique_id: "Tuesday_plan",
+    link: "../CLIENT/day 1-6 diet and workout/clientdiet and workout day 1.html",
+  },
+  {
+      day: "Wednesday",
+      unique_id: "Wednesday_plan",
+      link: "../CLIENT/day 1-6 diet and workout/clientdiet and workout day 1.html",
+  },
+  {
+      day: "Thursday",
+      unique_id: "Thursday_plan",
+      link: "../CLIENT/day 1-6 diet and workout/clientdiet and workout day 1.html",
+  },
+  {
+      day: "Friday",
+      unique_id: "Friday_plan",
+      link: "../CLIENT/day 1-6 diet and workout/clientdiet and workout day 1.html",
+  },
+  {
+    day: "Saturday",
+      unique_id: "Saturday_plan",
+      link: "../CLIENT/day 1-6 diet and workout/clientdiet and workout day 1.html",
+  },
+  {
+      day: "Sunday",
+      unique_id: "Sunday_plan",
+      link: "../CLIENT/day 1-6 diet and workout/clientdiet and workout day 1.html",
+  },
+];
 
-        const day_list =
-                                            [
-                                                {
-                                                    "day" : "Monday",
-                                                    "unique_id" : "Monday_plan",
-                                                    "link" : "../CLIENT/day 1-6 diet and workout/clientdiet and workout day 1.html",
-                                                    },
-                                                    {
-                                                    "day" : "Tuesday",
-                                                    "unique_id" : "Tuesday_plan",
-                                                    "link" : "../CLIENT/day 1-6 diet and workout/clientdiet and workout day 1.html",
-                                                    },
-                                                    {
-                                                    "day" : "Wednesday",
-                                                    "unique_id" : "Wednesday_plan",
-                                                    "link" : "../CLIENT/day 1-6 diet and workout/clientdiet and workout day 1.html",
-                                                    },
-                                                    {
-                                                    "day" : "Thursday",
-                                                    "unique_id" : "Thursday_plan",
-                                                    "link" : "../CLIENT/day 1-6 diet and workout/clientdiet and workout day 1.html",
-                                                    },
-                                                    {
-                                                    "day" : "Friday",
-                                                    "unique_id" : "Friday_plan",
-                                                    "link" : "../CLIENT/day 1-6 diet and workout/clientdiet and workout day 1.html",
-                                                    },
-                                                    {
-                                                    "day" : "Saturday",
-                                                    "unique_id" : "Saturday_plan",
-                                                    "link" : "../CLIENT/day 1-6 diet and workout/clientdiet and workout day 1.html",
-                                                    },
-                                                    {
-                                                    "day" : "Sunday",
-                                                    "unique_id" : "Sunday_plan",
-                                                    "link" : "../CLIENT/day 1-6 diet and workout/clientdiet and workout day 1.html",
-                                                    },
-                                                ]
+for (let i = 0; i < 7; i++) {
+  day_condainer = document.createElement("div");
+  day_condainer.setAttribute("data-id", day_list[i].unique_id);
+  day_condainer.setAttribute("class", "pad");
 
-            for (let i = 0; i < 7; i++) {
-                
+  link = document.createElement("a");
+  // link.setAttribute("href",day_list[i]["link"]);
+  day_condainer.append(link);
 
-                day_condainer = document.createElement("div");
-                day_condainer.setAttribute("data-id", day_list[i]["unique_id"]);
-                day_condainer.setAttribute("class", "pad");
+  condainer_clipboard = document.createElement("i");
+  condainer_clipboard.setAttribute("class", "fa fa-clipboard");
+  condainer_clipboard.setAttribute("style", "font-size:100px;color: black;");
+  link.append(condainer_clipboard);
 
-                link = document.createElement("a");
-                // link.setAttribute("href",day_list[i]["link"]);
-                day_condainer.append(link);
+  bold = document.createElement("b");
+  day_condainer.append(bold);
 
-                condainer_clipboard = document.createElement("i");
-                condainer_clipboard.setAttribute("class", "fa fa-clipboard");
-                condainer_clipboard.setAttribute("style", "font-size:100px;color: black;");
-                link.append(condainer_clipboard);
+  condainer_day = document.createElement("p");
+  condainer_day.innerText = day_list[i].day;
+  bold.append(condainer_day);
 
-                bold = document.createElement("b");
-                day_condainer.append(bold);
-                
-                condainer_day = document.createElement("p");
-                condainer_day.innerText=day_list[i]["day"];
-                bold.append(condainer_day);
+  document.querySelector("div.condainer1").append(day_condainer);
+}
 
+const pad = document.querySelectorAll(".pad");
+pad.forEach((each) => {
+  each.addEventListener("click", (event) => {
+      const new_plan_update = each.dataset.id;
 
-                document.querySelector("div.condainer1").append(day_condainer);
-    
-            }
-
-            let pad = document.querySelectorAll(".pad")
-            pad.forEach(each => {
-                each.addEventListener("click", (event) => {
-                    const new_plan_update = each.dataset.id;
-
-                    window.location.href = `../CLIENT/day 1-6 diet and workout/clientdiet and workout day 1.html?user_plan=${new_plan_update}`;
-
-                })
-            })
-            
+      window.location.href = `../CLIENT/day 1-6 diet and workout/clientdiet and workout day 1.html?user_plan=${new_plan_update}`;
+  });
+});
 </script>
 
-
-</body>
+    </body>
 </html>

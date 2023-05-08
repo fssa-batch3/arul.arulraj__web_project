@@ -1,127 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <title>fitnesswebsite</title>
-        <link rel="stylesheet" href="../../assets/css/clientprofilepage.css" />
+        <link rel="stylesheet" href="../../assets/css/clientprofilepage.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
+
     <body>
-    <header class="header">
-        <div class="logo">
-            <img src="../../assets/img/logonew2.png" width="200px" alt="logo"/>
-        </div>
-        <div class="headings">
-            <a href="./client main page.html"><div>HOME</div></a>
-        </div>
-     </header>
-     <main class="main">
-        <section class="top_section">
-            <img id="user_photo" alt="profile_image" class="profile_img">
-            <div  class="contact">
-                <b readonly id="user_firstname"></b><b readonly id="user_lastname"></b>
-                <div ><i  class="fa fa-phone"></i><p readonly id="user_number"></p></div>
+        <header class="header">
+            <div class="logo">
+                <img src="../../assets/img/logonew2.png" width="200px" alt="logo">
             </div>
-        </section>
-        <section class="middle_section">
-            <article class="left_content">
-                <div class="input_feild">
-                    <label>Age : </label>
-                    <input id="user_age" readonly type="number" class="input" placeholder="Age">
-                </div>
-                <div class="input_feild">
-                    <label>Height : </label>
-                    <input id="user_height" readonly type="number" class="input" placeholder="Height In Cm">
-                </div>
-                <div class="input_feild1">
-                    <label>Weight : </label>
-                    <input id="user_weight" readonly type="number" class="input" placeholder="Weight In Kg">
-                </div>
-            </article>
-            <article class="line"></article>
-            <article class="right_content">
-                <div class="input_feild">
-                    <label>Gender : </label>
-                    <input id="user_gender" readonly class="input" id="Gender">
-                </div>
-                <div class="input_feild">
-                    <label>Service : </label>
-                    <input id="user_service" readonly class="input" id="service" >
-                </div>
-                <div class="input_feild1">
-                    <label>package : </label>
-                    <input id="user_package" readonly class="input" id="package">
-                </div>
-            </article>
-        </section>
-        <section class="bottom_section">
-            <h3>address</h3>
-            <div>
-                <input id="addressline1" readonly type="text" class="input1" placeholder="House no, Building name....">
-                <input id="addressline2" readonly type="text" class="input1" placeholder="Road name, Area, Colony....">
+            <div class="headings">
+                <a href="./client main page.html">
+                    <div>HOME</div>
+                </a>
             </div>
-            <div>
-                <input id="pincode" readonly type="number" class="input2" placeholder="Pincode">
-                <input id="city" readonly type="text" class="input2" placeholder="City">
-                <input id="state" readonly type="text" class="input2" placeholder="State">
+        </header>
+        <main class="main">
+            <section class="top_section">
+                <img id="user_photo" alt="profile_image" class="profile_img">
+                <div class="contact">
+                    <b readonly id="user_firstname"></b>
+                    <b readonly id="user_lastname"></b>
+                    <div>
+                        <i class="fa fa-phone"></i>
+                        <p readonly id="user_number"></p>
+                    </div>
+                </div>
+            </section>
+            <section class="middle_section">
+                <article class="left_content">
+                    <div class="input_feild">
+                        <label>Age : </label>
+                        <input id="user_age" readonly type="number" class="input" placeholder="Age">
+                    </div>
+                    <div class="input_feild">
+                        <label>Height : </label>
+                        <input id="user_height" readonly type="number" class="input" placeholder="Height In Cm">
+                    </div>
+                    <div class="input_feild1">
+                        <label>Weight : </label>
+                        <input id="user_weight" readonly type="number" class="input" placeholder="Weight In Kg">
+                    </div>
+                </article>
+                <article class="line"></article>
+                <article class="right_content">
+                    <div class="input_feild">
+                        <label>Gender : </label>
+                        <input id="user_gender" readonly class="input" id="Gender">
+                    </div>
+                    <div class="input_feild">
+                        <label>Service : </label>
+                        <input id="user_service" readonly class="input" id="service">
+                    </div>
+                    <div class="input_feild1">
+                        <label>package : </label>
+                        <input id="user_package" readonly class="input" id="package">
+                    </div>
+                </article>
+            </section>
+            <section class="bottom_section">
+                <h3>address</h3>
+                <div>
+                    <input id="addressline1" readonly type="text" class="input1" placeholder="House no, Building name....">
+                    <input id="addressline2" readonly type="text" class="input1" placeholder="Road name, Area, Colony....">
+                </div>
+                <div>
+                    <input id="pincode" readonly type="number" class="input2" placeholder="Pincode">
+                    <input id="city" readonly type="text" class="input2" placeholder="City">
+                    <input id="state" readonly type="text" class="input2" placeholder="State">
+                </div>
+
+                <div class="btn">
+                    <a href="../CLIENT/cilent profile edit page.html">
+                        <button class="button1">Edit</button>
+                    </a>
+                    <button id="logOut" class="button2">Log Out</button>
+                    <!-- <button onclick="del(event)" class="del"><i  class="fa fa-trash" style="color: white;"></i></button> -->
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun
             </div>
+        </footer>
 
-        <div class="btn">
-            <a href="../CLIENT/cilent profile edit page.html"><button class="button1">Edit</button></a>
-            <a href="../../index.html"><button class="button2">Log Out</button></a>
-            <!-- <button onclick="del(event)" class="del"><i  class="fa fa-trash" style="color: white;"></i></button> -->
-        </div>
-    </section>
-    </main>
-     <footer>
-        <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun</div>
-    </footer>
+        <script>const number_id = JSON.parse(localStorage.getItem("number_id"));
+        const user_data = JSON.parse(localStorage.getItem("user_data"));
 
-    <script>
-
-        let number_id = JSON.parse(localStorage.getItem('number_id'));
-        let user_data = JSON.parse(localStorage.getItem('user_data'));
-
-        function login_data(e){
-        return e.user_number == number_id;
+        function login_data(e) {
+          return e.user_number == number_id;
         }
 
-   let  person_data = user_data.find(login_data);
+        const person_data = user_data.find(login_data);
 
-        document.getElementById("user_firstname").innerText = person_data['user_firstname']+" "+person_data['user_lastname'];
-        document.getElementById("user_number").innerText = person_data["user_number"];
-        document.getElementById("user_age").value = person_data["user_age"];
-        document.getElementById("user_weight").value = person_data["user_weight"];
-        document.getElementById("user_height").value = person_data["user_height"];
-        document.getElementById("user_package").value = person_data["user_package"];
-        document.getElementById("user_service").value = person_data["user_service"];
-        document.getElementById("user_gender").value = person_data["user_gender"];
-        document.getElementById("addressline1").value = person_data["addressline1"];
-        document.getElementById("addressline2").value = person_data["addressline2"];
-       let a= document.getElementById("user_photo")
-       a.setAttribute("src", person_data["user_photo"])
-       console.log(a)
-        document.getElementById("pincode").value = person_data["pincode"];
-        document.getElementById("city").value = person_data["city"];
-        document.getElementById("state").value = person_data["state"];
+        document.getElementById(
+          "user_firstname"
+        ).innerText = `${person_data.user_firstname} ${person_data.user_lastname}`;
+        document.getElementById("user_number").innerText = person_data.user_number;
+        document.getElementById("user_age").value = person_data.user_age;
+        document.getElementById("user_weight").value = person_data.user_weight;
+        document.getElementById("user_height").value = person_data.user_height;
+        document.getElementById("user_package").value = person_data.user_package;
+        document.getElementById("user_service").value = person_data.user_service;
+        document.getElementById("user_gender").value = person_data.user_gender;
+        document.getElementById("addressline1").value = person_data.addressline1;
+        document.getElementById("addressline2").value = person_data.addressline2;
+        const a = document.getElementById("user_photo");
+        a.setAttribute("src", person_data.user_photo);
+        console.log(a);
+        document.getElementById("pincode").value = person_data.pincode;
+        document.getElementById("city").value = person_data.city;
+        document.getElementById("state").value = person_data.state;
 
+        // function del(e) {
+        //     if (confirm("Are you sure you want to delete the account")) {
+        //         const number_id = JSON.parse(localStorage.getItem("number_id"));
+        //         const user_data = JSON.parse(localStorage.getItem("user_data"));
+        //         function login_data(e) {
+        //             return e.user_number == number_id;
+        //         }
+        //         person_data = user_data.find(login_data);
+        //         const removedata = user_data.indexOf(person_data);
+        //         user_data.splice(removedata, 1);
+        //         localStorage.setItem("user_data", JSON.stringify(user_data));
+        //         window.location.href = "../../index.html";
+        //     }
+        // }
 
-        function del(e){
-                if(confirm("Are you sure you want to delete the account"))
-                {
-                    let number_id = JSON.parse(localStorage.getItem("number_id"));
-                    let user_data = JSON.parse(localStorage.getItem("user_data"));
-                    function login_data(e){
-                        return e.user_number == number_id;
-                    }
-            person_data = user_data.find(login_data);
-            const removedata = user_data.indexOf(person_data);
-            user_data.splice(removedata,1);
-            localStorage.setItem("user_data",JSON.stringify(user_data));
-            window.location.href = "../../index.html";
-                }
-            }
-
+        const userLogoutElement = document.getElementById("logOut");
+        userLogoutElement?.addEventListener("click", () => {
+          localStorage.removeItem("number_id");
+          // document.body.innerHTML = AfterLogin;
+          window.location.href = "../../index.html";
+        });
     </script>
 
     </body>
+
 </html>

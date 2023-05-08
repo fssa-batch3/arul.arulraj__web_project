@@ -2,261 +2,248 @@
 <html lang="en">
     <head>
         <title>fitnesswebsite</title>
-        <link rel="stylesheet" href="../../assets/css/cleint list style.css" />
+        <link rel="stylesheet" href="../../assets/css/cleint list style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-    <header class="header">
-      <div class="logo">
-        <img src="../../assets/img/logonew2.png" width="200px" alt="logo"/>
-    </div>
-    <div>
-      <a href="../../pages/ADMIN/Add more Client.html"><button class="submit">Add More Client +</button> </a>
-    </div>
-     </header>
-     <section>
-        <div class="heading">Client List</div>
-        <div class="list">
-          <!-- <div class="innerlist">
-          <div class="cntbtn">
-            <div class="container">
-                <img src="../../assets/img/team/tamim.jpg" class="image" alt="image">
-                <div class="overlay">
-                  <div class="text">
+        <header class="header">
+            <div class="logo">
+                <img src="../../assets/img/logonew2.png" width="200px" alt="logo">
+            </div>
+            <div>
+                <a href="../../pages/ADMIN/Add more Client.html">
+                    <button class="submit">Add More Client +</button> 
+                </a>
+            </div>
+        </header>
+        <section>
+            <div class="heading">Client List</div>
+            <div class="list">
+                <!-- <div class="innerlist">
+                    <div class="cntbtn">
+                    <div class="container">
+                    <img src="../../assets/img/team/tamim.jpg" class="image" alt="image">
+                    <div class="overlay">
+                    <div class="text">
                     <p>Name: Thamim</p>
                     <p>Age: 18</p>
                     <p>Weight and height : 70kg,178cm</p>
                     <p>Contact : 7418822895</p>
                     <p>pakage :Weight lose</p>
                     <p>Trained By: Vicky</p>
-                  </div>
-                </div>
-              </div>
-              <div class="btn">
-                <a href="../CLIENT/old plan/oldplanweeklist.html"><button class="old">OLD</button></a><a href="../TRAINER/day 1-6 diet and workout/trainerpageclintnextweekplan.css.html"><button class="new">NEW</button></a>
-              </div>
-              </div>
-              <div class="cntbtn">
-              <div class="container">
-                <img src="data:image/jpeg;base64,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" class="image" alt="image">
-                <div class="overlay">
-                  <div class="text">
+                    </div>
+                    </div>
+                    </div>
+                    <div class="btn">
+                    <a href="../CLIENT/old plan/oldplanweeklist.html"><button class="old">OLD</button></a><a href="../TRAINER/day 1-6 diet and workout/trainerpageclintnextweekplan.css.html"><button class="new">NEW</button></a>
+                    </div>
+                    </div>
+                    <div class="cntbtn">
+                    <div class="container">
+                    <img src="data:image/jpeg;base64,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" class="image" alt="image">
+                    <div class="overlay">
+                    <div class="text">
                     <p>Name: Kathryn Newton</p>
                     <p>Age: 24</p>
                     <p>Weight and height : 52kg,155cm</p>
                     <p>Contact : 9678889009</p>
                     <p>pakage :Weight Gain</p>
                     <p>Trained By: Kishor</p>
-                  </div>
-                </div>
-              </div>
-              <div class="btn">
-                <a href="../CLIENT/old plan/oldplanweeklist.html"><button class="old">OLD</button></a><a href="../TRAINER/day 1-6 diet and workout/trainerpageclintnextweekplan.css.html"><button class="new">NEW</button></a>
-              </div>
-              </div>
-              <div class="cntbtn">
-              <div class="container">
-                <img src="../../assets/img/team/saranya.jpg" class="image" alt="image">
-                <div class="overlay">
-                  <div class="text">
+                    </div>
+                    </div>
+                    </div>
+                    <div class="btn">
+                    <a href="../CLIENT/old plan/oldplanweeklist.html"><button class="old">OLD</button></a><a href="../TRAINER/day 1-6 diet and workout/trainerpageclintnextweekplan.css.html"><button class="new">NEW</button></a>
+                    </div>
+                    </div>
+                    <div class="cntbtn">
+                    <div class="container">
+                    <img src="../../assets/img/team/saranya.jpg" class="image" alt="image">
+                    <div class="overlay">
+                    <div class="text">
                     <p>Name: Saranya</p>
                     <p>Age: 17</p>
                     <p>Weight and height : 62kg,158cm</p>
                     <p>Contact : 7200462679</p>
                     <p>pakage :Weight Gain</p>
                     <p>Trained By: Uthra</p>
-                  </div>
-                </div>
-              </div>
-              <div class="btn">
-                <a href="../CLIENT/old plan/oldplanweeklist.html"><button class="old">OLD</button></a><a href="../TRAINER/day 1-6 diet and workout/trainerpageclintnextweekplan.css.html"><button class="new">NEW</button></a>
-              </div>
-              </div>
-                <div class="cntbtn">
-                <div class="container">
+                    </div>
+                    </div>
+                    </div>
+                    <div class="btn">
+                    <a href="../CLIENT/old plan/oldplanweeklist.html"><button class="old">OLD</button></a><a href="../TRAINER/day 1-6 diet and workout/trainerpageclintnextweekplan.css.html"><button class="new">NEW</button></a>
+                    </div>
+                    </div>
+                    <div class="cntbtn">
+                    <div class="container">
                     <img src="../../assets/img/team/meenu.jpg" class="image" alt="image">
                     <div class="overlay">
-                      <div class="text">
-                        <p>Name: meena</p>
-                        <p>Age: 19</p>
-                        <p>Weight and height : 50kg,159cm</p>
-                        <p>Contact : 8903589234</p>
-                        <p>pakage :Weight Gain</p>
-                        <p>Trained By: Bhakya</p>
-                      </div>
+                    <div class="text">
+                    <p>Name: meena</p>
+                    <p>Age: 19</p>
+                    <p>Weight and height : 50kg,159cm</p>
+                    <p>Contact : 8903589234</p>
+                    <p>pakage :Weight Gain</p>
+                    <p>Trained By: Bhakya</p>
                     </div>
-                  </div>
-                  <div class="btn">
+                    </div>
+                    </div>
+                    <div class="btn">
                     <a href="../CLIENT/old plan/oldplanweeklist.html"><button class="old">OLD</button></a><a href="../TRAINER/day 1-6 diet and workout/trainerpageclintnextweekplan.css.html"><button class="new">NEW</button></a>
-                  </div>
-                  </div>
-                  <div class="cntbtn">
-                  <div class="container">
+                    </div>
+                    </div>
+                    <div class="cntbtn">
+                    <div class="container">
                     <img src="../../assets/img/team/irfan.jpg" class="image" alt="image">
                     <div class="overlay">
-                      <div class="text">
-                        <p>Name: Irfan</p>
-                        <p>Age: 20</p>
-                        <p>Weight and height : 59kg,179cm</p>
-                        <p>Contact : 9678889009</p>
-                        <p>pakage :Weight gain</p>
-                        <p>Trained By: Tamil</p>
-                      </div>
+                    <div class="text">
+                    <p>Name: Irfan</p>
+                    <p>Age: 20</p>
+                    <p>Weight and height : 59kg,179cm</p>
+                    <p>Contact : 9678889009</p>
+                    <p>pakage :Weight gain</p>
+                    <p>Trained By: Tamil</p>
                     </div>
-                  </div>
-                  <div class="btn">
+                    </div>
+                    </div>
+                    <div class="btn">
                     <a href="../CLIENT/old plan/oldplanweeklist.html"><button class="old">OLD</button></a><a href="../TRAINER/day 1-6 diet and workout/trainerpageclintnextweekplan.css.html"><button class="new">NEW</button></a>
-                  </div>
-                  </div>
-                </div> -->
-                </div>
-                <div class="scroll" style="color:rgb(10, 9, 9);text-align:center"> << For More Scroll >> </div>
-    </section>
-    <footer>
-      <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun</div>
-  </footer>
+                    </div>
+                    </div>
+                    </div> -->
+            </div>
+            <div class="scroll" style="color:rgb(10, 9, 9);text-align:center"> << For More Scroll >> </div>
+        </section>
+        <footer>
+            <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun</div>
+        </footer>
 
-  <script>
+        <script>const client_list = [
+  {
+    user_name: {
+        title: "Name",
+      },
+      user_age: {
+        title: "Age",
+      },
+      user_weight: {
+        title: "Weight",
+      },
+      user_height: {
+        title: "height",
+      },
+      user_phonenumber: {
+        title: "Contact",
+      },
+      user_pakage: {
+        title: "Pakage",
+      },
+      user_trainer: {
+        title: "Trained by",
+      },
+      oldplan_btnlink: "",
+      newplan_btnlink: "../TRAINER/dieat add page.html",
+  },
+];
 
-              
-        
-    const client_list =
-    [
-        {
-            "user_name":{
-                
-                "title" : "Name",
-                } ,
-                "user_age":{
-                
-                "title" : "Age",
-                } ,
-                "user_weight":{
-                
-                "title" : "Weight",
-                } ,
-                "user_height":{
-                
-                "title" : "height",
-                } ,
-                "user_phonenumber":{
-                
-                "title" : "Contact",
-                } ,
-                "user_pakage":{
-                
-                "title" : "Pakage",
-                } ,
-                "user_trainer":{
-                
-                "title" : "Trained by",
-                } ,
-                "oldplan_btnlink" : "",
-                "newplan_btnlink" : "../TRAINER/dieat add page.html",
-        },
-      ] 
+  const user_data = JSON.parse(localStorage.getItem("user_data"));
 
-                    let user_data = JSON.parse(localStorage.getItem('user_data'));
+  for (let i = 0; i < user_data.length; i++) {
+  clientlist_card = document.createElement("div");
+    clientlist_card.setAttribute("class", "innerlist");
+    console.log(clientlist_card);
 
-                for (let i = 0; i < user_data.length; i++) {
+    clientlist_cntbtn = document.createElement("div");
+    clientlist_cntbtn.setAttribute("class", "cntbtn");
+    clientlist_card.append(clientlist_cntbtn);
 
-                    clientlist_card = document.createElement("div");
-                    clientlist_card.setAttribute("class", "innerlist");
-                    console.log(clientlist_card);
+    trainerlist_container = document.createElement("div");
+    trainerlist_container.setAttribute("class", "container");
+    clientlist_cntbtn.append(trainerlist_container);
 
-                    
-                    clientlist_cntbtn = document.createElement("div");
-                    clientlist_cntbtn.setAttribute("class", "cntbtn");
-                    clientlist_card.append(clientlist_cntbtn);
+    trainerImg = document.createElement("img");
+    trainerImg.setAttribute("src", user_data[i].user_photo);
+    trainerImg.setAttribute("width", "350px");
+    trainerImg.setAttribute("class", "image");
+    trainerImg.setAttribute("alt", "image");
+    trainerlist_container.append(trainerImg);
 
-                    trainerlist_container = document.createElement("div");
-                    trainerlist_container.setAttribute("class", "container");
-                    clientlist_cntbtn.append(trainerlist_container);
+    trainerlist_containeroverlay = document.createElement("div");
+    trainerlist_containeroverlay.setAttribute("class", "overlay");
+    trainerlist_container.append(trainerlist_containeroverlay);
 
-                    trainerImg = document.createElement("img");
-                    trainerImg.setAttribute("src", user_data[i]["user_photo"]);
-                    trainerImg.setAttribute("width", "350px");
-                    trainerImg.setAttribute("class", "image");
-                    trainerImg.setAttribute("alt", "image");
-                    trainerlist_container.append(trainerImg);
+    trainerlist_containerText = document.createElement("div");
+    trainerlist_containerText.setAttribute("class", "text");
+    trainerlist_containeroverlay.append(trainerlist_containerText);
 
-                    trainerlist_containeroverlay = document.createElement("div");
-                    trainerlist_containeroverlay.setAttribute("class", "overlay");
-                    trainerlist_container.append(trainerlist_containeroverlay);
+    user_name = document.createElement("p");
+    user_name.innerText = `Name : ${user_data[i].user_firstname}${user_data[i].user_lastname}`;
+    trainerlist_containerText.append(user_name);
 
-                    trainerlist_containerText = document.createElement("div");
-                    trainerlist_containerText.setAttribute("class", "text");
-                    trainerlist_containeroverlay.append(trainerlist_containerText);
+    user_age = document.createElement("p");
+    user_age.innerText = `age : ${user_data[i].user_age}`;
+    trainerlist_containerText.append(user_age);
 
-                    user_name = document.createElement("p");
-                    user_name.innerText= "Name : " +user_data[i]["user_firstname"]+ user_data[i]["user_lastname"];
-                    trainerlist_containerText.append(user_name);
+    user_weightandheight = document.createElement("p");
+    user_weightandheight.innerText =
+      `weight` +
+      ` and ` +
+      `Height : ${user_data[i].user_weight}kg` +
+    `,${user_data[i].user_height}cm`;
+    trainerlist_containerText.append(user_weightandheight);
 
-                    user_age = document.createElement("p");
-                    user_age.innerText= "age : " +  user_data[i]["user_age"];
-                    trainerlist_containerText.append(user_age);
+    user_phonenumber = document.createElement("p");
+    user_phonenumber.innerText = `Number` + `:${user_data[i].user_number}`;
+    trainerlist_containerText.append(user_phonenumber);
 
-                    user_weightandheight = document.createElement("p");
-                    user_weightandheight.innerText= "weight" + " and " + "Height : " + user_data[i]["user_weight"]+"kg"+ "," +user_data[i]["user_height"]+"cm";
-                    trainerlist_containerText.append(user_weightandheight);
+    user_pakage = document.createElement("p");
+    user_pakage.innerText = `Pakage` + `:${user_data[i].user_package}`;
+    trainerlist_containerText.append(user_pakage);
 
-                    user_phonenumber = document.createElement("p");
-                    user_phonenumber.innerText= "Number" + ":" + user_data[i]["user_number"];
-                    trainerlist_containerText.append(user_phonenumber);
+    user_trainer = document.createElement("p");
+    user_trainer.innerText = `Trined By ` + `:${user_data[i].asign_trainer}`;
+    trainerlist_containerText.append(user_trainer);
 
-                    user_pakage = document.createElement("p");
-                    user_pakage.innerText= "Pakage" + ":" + user_data[i]["user_package"];
-                    trainerlist_containerText.append(user_pakage);
+    plan_btn = document.createElement("div");
+    plan_btn.setAttribute("class", "btn");
+    clientlist_cntbtn.append(plan_btn);
 
-                    user_trainer = document.createElement("p");
-                    user_trainer.innerText= "Trined By " + ":" + user_data[i]["asign_trainer"];
-                    trainerlist_containerText.append(user_trainer);
+    oldplan_btn = document.createElement("button");
+    oldplan_btn.setAttribute("class", "old");
+    // oldplan_btn.setAttribute("onclick", del(event));
+    oldplan_btn.innerText = "Delete";
+    plan_btn.append(oldplan_btn);
 
-                    plan_btn = document.createElement("div");
-                    plan_btn.setAttribute("class", "btn");
-                    clientlist_cntbtn.append(plan_btn);
+    newplan_btnlink = document.createElement("a");
+    newplan_btnlink.setAttribute("href", "../TRAINER/dieat add page.html");
+    plan_btn.append(newplan_btnlink);
 
-                    oldplan_btn = document.createElement("button");
-                    oldplan_btn.setAttribute("class", "old");
-                    // oldplan_btn.setAttribute("onclick", del(event));
-                    oldplan_btn.innerText= "Delete";
-                    plan_btn.append(oldplan_btn);
+    newplan_btn = document.createElement("button");
+    newplan_btn.setAttribute("class", "new");
+    newplan_btn.innerText = "Add plan";
+    newplan_btnlink.append(newplan_btn);
 
-                    newplan_btnlink = document.createElement("a");
-                    newplan_btnlink.setAttribute("href", "../TRAINER/dieat add page.html");
-                    plan_btn.append(newplan_btnlink);
+    document.querySelector("div.list").append(clientlist_card);
+}
 
-                    newplan_btn = document.createElement("button");
-                    newplan_btn.setAttribute("class", "new");
-                    newplan_btn.innerText= "Add plan";
-                    newplan_btnlink.append(newplan_btn);
-        
-                    document.querySelector("div.list").append(clientlist_card);
-        
-                }
+  const delet = document.querySelector(".old");
+  delet.addEventListener("click", del);
 
-                const delet = document.querySelector(".old")
-                delet.addEventListener("click",del)
-
-                function del(e){
-                if(confirm("Are you sure you want to delete the account"))
-                {
-                    let number_id = JSON.parse(localStorage.getItem("number_id"));
-                    let user_data = JSON.parse(localStorage.getItem("user_data"));
-                    function login_data(e){
-                        return e.user_number == number_id;
-                    }
-            person_data = user_data.find(login_data);
-            const removedata = user_data.indexOf(person_data);
-            user_data.splice(removedata,1);
-            localStorage.setItem("user_data",JSON.stringify(user_data));
-            window.location.href = "../../index.html";
-                }
-            }
-          
-        
+  function del(e) {
+    if (confirm("Are you sure you want to delete the account")) {
+      const number_id = JSON.parse(localStorage.getItem("number_id"));
+      const user_data = JSON.parse(localStorage.getItem("user_data"));
+      function login_data(e) {
+        return e.user_number == number_id;
+      }
+      person_data = user_data.find(login_data);
+      const removedata = user_data.indexOf(person_data);
+      user_data.splice(removedata, 1);
+    localStorage.setItem("user_data", JSON.stringify(user_data));
+      window.location.href = "../../index.html";
+    }
+}
             </script>
 
-
-  </body>
+    </body>
 </html>
