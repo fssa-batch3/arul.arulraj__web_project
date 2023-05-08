@@ -4,7 +4,8 @@ const signIn = (e) => {
 
   const user_number = document.getElementById("user_number").value;
   const user_password = document.getElementById("user_password").value;
-  const user_data = JSON.parse(localStorage.getItem("user_data")) || [];
+  // const user_data = JSON.parse(localStorage.getItem("user_data")) || [];
+  
   const exist = JSON.parse(localStorage.getItem("user_data")).some(
     (data) =>
       data.user_number.toLowerCase() == user_number &&
@@ -30,7 +31,7 @@ const trainerregistration = (e) => {
 
   const trainer_number = document.getElementById("trainer_number").value;
   const trainer_password = document.getElementById("trainer_password").value;
-  const trainer_data = JSON.parse(localStorage.getItem("trainer_data")) || [];
+  // const trainer_data = JSON.parse(localStorage.getItem("trainer_data")) || [];
   const exist = JSON.parse(localStorage.getItem("trainer_data")).some(
     (data) =>
       data.trainer_number.toLowerCase() == trainer_number &&
