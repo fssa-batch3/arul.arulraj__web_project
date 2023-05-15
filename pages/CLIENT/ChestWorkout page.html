@@ -1,121 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Workouts</title>
-        <link rel="stylesheet" href="../../assets/css/workout style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
-    <body>
-        <header class="header">
-            <div class="logo">
-                <img src="../../assets/img/logonew2.png" width="200px" alt="logo">
-            </div>
-        </header>
 
-        <div class="workoutlist">
+<head>
+    <title>Workouts</title>
+    <link rel="stylesheet" href="../../assets/css/workout style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="../../assets/img/logonew2.png" width="200px" alt="logo">
         </div>
-        <footer>
-            <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun</div>
-        </footer>
+    </header>
 
-        <script>const queryString = window.location.search;
-                const urlParams = new URLSearchParams(queryString);
-                const catagory_id = urlParams.get("catagory_id");
-                
-                const add_workout = JSON.parse(localStorage.getItem("catagory_id"));
-                // const workout_Id = add_workout.workout_uuid;
+    <div class="workoutlist">
+    </div>
+    <footer>
+        <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun
+        </div>
+    </footer>
 
-                // array.filter()
-                const Workout = add_workout.filter(function find(e) {
-                  return e.category === catagory_id;
-                });
-                // console.log(Chest_Workout)
-                
-                for (let i = 0; i < Workout.length; i++) {
-  const workout_card = document.createElement("div");
-                  workout_card.setAttribute("class", "workout");
-                  console.log(workout_card);
-                
-                  const workout_title = document.createElement("div");
-                  workout_card.append(workout_title);
-                
-                  const title = document.createElement("h2");
-                  title.innerText = Workout[i].workoutname;
-                  workout_title.append(title);
-                
-                  const imageContainer = document.createElement("div");
-                  workout_card.append(imageContainer);
-                
-                  const workoutImg = document.createElement("img");
-                  workoutImg.setAttribute("id", "workoutphoto");
-                  workoutImg.setAttribute("src", Workout[i].workoutphoto);
-                  workoutImg.setAttribute("width", "250px");
-                  workoutImg.setAttribute("alt", "image");
-                  imageContainer.append(workoutImg);
-                
-                  const detailContainer = document.createElement("div");
-                  workout_card.append(detailContainer);
-                
-                  const counts = document.createElement("p");
-                  counts.innerText =
-    `SETS AND REPS` +
-    `:` +
-    `sets` +
-    `:${Workout[i].sets},` +
-    `reps` +
-    `:${Workout[i].rep}`;
-                  detailContainer.append(counts);
-                
-                  const benifitsTitle = document.createElement("p");
-                  benifitsTitle.innerText = "BENIFITS";
-                  detailContainer.append(benifitsTitle);
-                
-                  const benifitContainer = document.createElement("p");
-                  detailContainer.append(benifitContainer);
-                
-                  const benifit = document.createElement("b");
-                  benifit.innerText = Workout[i].benifits;
-                  benifitContainer.append(benifit);
+    <script>const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const catagory_id = urlParams.get("catagory_id");
 
-                  // delContainer = document.createElement("div");
-                  // workout_card.append(delContainer);
+        const add_workout = JSON.parse(localStorage.getItem("catagory_id"));
+        // const workout_Id = add_workout.workout_uuid;
 
-                  // delbtn = document.createElement("button");
-                  // delbtn.setAttribute("class", "delbtn");
-                  // delbtn.setAttribute("data-id",Workout[i]["workout_uuid"])
-                  // delContainer.append(delbtn);
+        // array.filter()
+        const Workout = add_workout.filter(function find(e) {
+            return e.category === catagory_id;
+        });
+        // console.log(Chest_Workout)
 
-                  // delbtnicon = document.createElement("i");
-                  // delbtnicon.setAttribute("class", "fa fa-heart");
-                  // delbtn.append(delbtnicon);
+        for (let i = 0; i < Workout.length; i++) {
+            const workout_card = document.createElement("div");
+            workout_card.setAttribute("class", "workout");
+            console.log(workout_card);
 
-                  document.querySelector("div.workoutlist").append(workout_card);
-                }
+            const workout_title = document.createElement("div");
+            workout_card.append(workout_title);
 
-                //         let delt = document.querySelector(".delbtn")
+            const title = document.createElement("h2");
+            title.innerText = Workout[i].workoutname;
+            workout_title.append(title);
 
-                //         delt.addEventListener("click",del)
+            const imageContainer = document.createElement("div");
+            workout_card.append(imageContainer);
 
-                //         function del(e){
-                //             let workoutId=this.dataset.id
-                
-                // if(confirm("Are you sure you want to delete the workout"))
-                // {
-                //     console.log(workoutId)
-                //     let category = JSON.parse(localStorage.getItem("catagory_id"));
-                //     function delwrk(e){
-                //         return e.workout_uuid==workoutId
-                
-                //     }
-                
-//         add_workout = category.find(delwrk);
-// const removedata = category.indexOf(add_workout);
-// category.splice(removedata,1);
-// localStorage.setItem("catagory_id",JSON.stringify(category));
-//     }
+            const workoutImg = document.createElement("img");
+            workoutImg.setAttribute("id", "workoutphoto");
+            workoutImg.setAttribute("src", Workout[i].workoutphoto);
+            workoutImg.setAttribute("width", "250px");
+            workoutImg.setAttribute("alt", "image");
+            imageContainer.append(workoutImg);
 
-//     }
-            </script>
+            //               const detailContainer = document.createElement("div");
+            //               workout_card.append(detailContainer);
 
-    </body>
+            //               const counts = document.createElement("p");
+            //               counts.innerText =
+            // `SETS AND REPS` +
+            // `:` +
+            // `sets` +
+            // `:${Workout[i].sets},` +
+            // `reps` +
+            // `:${Workout[i].rep}`;
+            //               detailContainer.append(counts);
+
+            //               const benifitsTitle = document.createElement("p");
+            //               benifitsTitle.innerText = "BENIFITS";
+            //               detailContainer.append(benifitsTitle);
+
+            //               const benifitContainer = document.createElement("p");
+            //               detailContainer.append(benifitContainer);
+
+            //               const benifit = document.createElement("b");
+            //               benifit.innerText = Workout[i].benifits;
+            //               benifitContainer.append(benifit);
+
+            const playContainer = document.createElement("div");
+            workout_card.append(playContainer);
+
+            const playbtn = document.createElement("button");
+            playbtn.setAttribute("class", "playbtn");
+            playbtn.setAttribute("data-workoutname", Workout[i].workoutname);
+            playbtn.innerText = "Play";
+            playContainer.append(playbtn);
+
+            document.querySelector("div.workoutlist").append(workout_card);
+        }
+
+        const playbtns = document.querySelectorAll(".playbtn");
+        playbtns.forEach((playbtn) => {
+            playbtn.addEventListener("click", (event) => {
+                const workoutname = playbtn.dataset.workoutname;
+                const url = `../WORKOUTS/workoutvideo.html?workoutname=${encodeURIComponent(workoutname)}`;
+                window.location.href = url;
+            });
+        });
+        
+    </script>
+
+</body>
+
 </html>

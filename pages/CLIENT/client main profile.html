@@ -91,7 +91,7 @@
         const user_data = JSON.parse(localStorage.getItem("user_data"));
 
         function login_data(e) {
-          return e.user_number == number_id;
+          return e.user_number === number_id;
         }
 
         const person_data = user_data.find(login_data);
@@ -133,7 +133,6 @@
         const userLogoutElement = document.getElementById("logOut");
         userLogoutElement?.addEventListener("click", () => {
           localStorage.removeItem("number_id");
-          // document.body.innerHTML = AfterLogin;
           window.location.href = "../../index.html";
         });
     </script>

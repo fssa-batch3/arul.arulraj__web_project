@@ -1,20 +1,57 @@
 body {
-    color: black;
     margin: 0;
     width: 100%;
     height: 97vh;
     background-size: cover;
-    background-image: url(../img/Desktop\ -\ 1background2.jpg);
 }
 *{
     outline:none;
     box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
+    /* font-family:'Poppins', sans-serif; */
   }
-  h1{
-    text-align: center;
+h1,h2,h3{
+    padding-left: 25px;
     font-size: 30px;
-    color: rgb(255, 128, 0);
+    color: white;
+}
+.backimg{
+    margin-left: 30%;
+    width: 40%;
+    height: 90%;
+    background-repeat: no-repeat;
+}
+.backbtn{
+    width: 100px;
+    height: 50px;
+    border: none;
+    position: absolute;
+    top: 68%;
+    left: 47%;
+    border-radius: 10px;
+
+}
+.backbtn:hover{
+    background-color: orange;
+    transition: ease-in-out;
+}
+.nodata{
+    position: absolute;
+    top: 70%;
+    left: 35%;
+    font-size: 30px;
+}
+  .day1{
+    background-color: rgb(244, 241, 241);
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    border-right: 1px solid #d41a1a;
+    margin-bottom: 5px;
   }
 .header{
     background-color: rgba(180, 177, 177, 0.475);
@@ -52,112 +89,135 @@ body {
     color: rgb(255, 98, 0);
     border-bottom: 2px solid black;
 }
-.section{
-    height: 85vh;
+section{
+    height: 87.5vh;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+#toggleButton1,#toggleButton2 {
+    margin-left: 20px;
+    width: 200px;
+    height: 50px;
+    font-size: 30px;
+    background-color: orange;
+    cursor: pointer;
+  }
+  #table1{
+    display: none;
+  }
+  #table2 {
+    display: none;
+  }
+.schedule{
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+.container{
+    display: flex;
+    flex-direction: row;
 }
 .dietbox{
     margin: 5px;
     text-align: center;
 }
-.maincnt{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+.card-box{
+    cursor: pointer;
 }
-h2{
-    text-align: center;
+.datecontainer{
+    height: 780px;
+    width: 30%;
 }
-.workout{
-    background-image: linear-gradient(to bottom, rgb(255, 98, 0) , rgb(255, 196, 0));
-    width: 400px;
-    height: 500px;
-    border-radius: 25px;
-    overflow-x: scroll;
-}
-.workout:hover{
-    background-image: linear-gradient(to bottom , rgb(255, 196, 0), rgb(255, 98, 0));
-}
-.workout::-webkit-scrollbar{
-    width: 0px;
-}
-.workout div{
-    padding: 15px;
-    font-size: 20px;
+.back{
+    font-size: 25px;
+    height: 30%;
+    width: 800px;
 }
 .dietbox:hover{
     background-color: rgba(192, 192, 192, 0.772);
     border-radius: 15px;
 }
+.wrk{
+    height: 640px;
+    width: 850;
+    overflow-y: scroll;
+}
+.wrk::-webkit-scrollbar{
+    width: 0px;
+}
 .wrkbox{
+    border-radius: 10px;
+    background-color: rgb(255, 98, 0);
+    color: white;
+    height: 100px;
     margin: 15px;
+    width: 600px;
 }
 .wrkbox:hover{
     background-color: rgba(192, 192, 192, 0.772);
     border-radius: 15px;
 }
+.logo2{
+    width: 230px;
+    height: auto;
+    transition: 0.5s;
+}
+.img{
+    margin-top: 10px;
+    width: 20px;
+}
+.hidden {
+    display: none;
+}
+.btns{
+    display: flex;
+
+}
+.btns button{
+    width: 200px;
+    height: 50px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border: 0px;
+    border-radius: 5px;
+    background-color:  rgb(255, 98, 0);
+}
+#btn2{
+    margin-left: 5px;
+}
+#searchButton{
+    margin-top: 5px;
+    margin-left: 5px;
+}
+input{
+    position: relative;
+    top:38px;
+    font-size: 20px;
+    left: -112%;
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+}
+div .container2{
+    width: 150px;
+}
+.workout div{
+    padding: 15px;
+    font-size: 20px;
+}
 .footerbtm{
-    background-color: rgb(125, 112, 112);
+    background-color: rgb(39, 37, 37);
     text-align: center;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+    /* top: 80px; */
     height: 3vh;
     
-}
-.card-box{
-    width: 300px;
-    height: 300px;
-    perspective: 500px;
-    cursor: pointer;
-}
-.content{
-    width: 100%;
-    height: 100%;
-    transition: transform 1s;
-    transform-style: preserve-3d;
-}
-.card-box:hover .content{
-    transform: rotateY(-180deg);
-    transition: transform 0.5s;
-}
-.front, .back{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    border-radius: 25px;
-    backface-visibility: hidden;
-    padding: 10px;
-    background: radial-gradient(
-        circle,
-        rgba(238, 174, 202, 1)0%,
-        rgba(148, 187, 233, 1)100%
-    );
-}
-.front img, .back img{
-    width: 230px;
-    height: auto;
-    transition: 0.5s;
-}
-.front h3, .back h3{
-    font-size: 30px;
-    color: black;
-    font-weight: 700;
-}
-.back{
-    transform: rotateY(180deg);
-    padding-top: 20px;
-}
-
-.card-box:hover .back,
-.card-box:hover .front{
-    width: auto;
-    height: auto;
-}
-.back h5{
-    font-weight: 700;
-    padding: 10px;
 }
 @media (max-width:420px){
     body{

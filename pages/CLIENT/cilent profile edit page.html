@@ -102,7 +102,9 @@
             </div>
         </footer>
 
-        <script>const number_id = JSON.parse(localStorage.getItem("number_id"));
+        <script>
+            
+        const number_id = JSON.parse(localStorage.getItem("number_id"));
         const user_data = JSON.parse(localStorage.getItem("user_data"));
 
         function login_data(e) {
@@ -160,8 +162,9 @@
           localStorage.setItem("user_data", JSON.stringify(user_data));
 
           location.href = "../CLIENT/client main profile.html";
-          console.log(up_photo);
         }
+        
+        
     </script>
 
     </body>

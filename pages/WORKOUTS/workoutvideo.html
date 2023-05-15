@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Workout and Diet</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/video.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="../../CLIENT/currentweekplan.html">
+                <img alt="fitexpertlogo" src="../../../assets/img/logonew2.png" width="200px" alt="logo"></a>
+        </div>
+    </header>
+    <main>
+        <section class="main">
+            <section>
+                <div>
+                    <h2 id="workoutTitle"></h2>
+                </div>
+                <div class="videosec">
+                    <iframe id="videoPlayer" class="videosec" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </section>
+            <section>
+                <div class="discription">
+                    <div class="text">
+                        <h3>Sets and Reps:</h3>
+                        <p id="setsAndReps"></p>
+                    </div>
+                    <hr>
+                    <br>
+                    <div class="text">
+                        <h3>Benefits:</h3>
+                        <p id="benifits"></p>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section class="sidebar">
+            <div><iframe class="scroll" src="https://www.youtube.com/embed/sP5c-sPJUu0" frameborder="0"
+                    allowfullscreen></iframe></div>
+            <div><iframe class="scroll" src="https://www.youtube.com/embed/tbnzAVRZ9Xc" frameborder="0"
+                    allowfullscreen></iframe></div>
+            <div><iframe class="scroll" src="https://www.youtube.com/embed/dTRBnHtHehQ" frameborder="0"
+                    allowfullscreen></iframe></div>
+            <div><iframe class="scroll" src="https://www.youtube.com/embed/PWDQpEBq_pU" frameborder="0"
+                    allowfullscreen></iframe></div>
+            <div><iframe class="scroll" src="https://www.youtube.com/embed/PA8IptS2wQA" frameborder="0"
+                    allowfullscreen></iframe></div>
+            <div><iframe class="scroll" src="https://www.youtube.com/embed/UylDG7HP2HY" frameborder="0"
+                    allowfullscreen></iframe></div>
+            <div><iframe class="scroll" src="https://www.youtube.com/embed/MxZyUxK64RY" frameborder="0"
+                    allowfullscreen></iframe></div>
+            <div><iframe class="scroll" src="https://www.youtube.com/embed/Q7lVTjHt5M4" frameborder="0"
+                    allowfullscreen></iframe></div>
+            <div><iframe class="scroll" src="https://www.youtube.com/embed/uvbVzutfulU" frameborder="0"
+                    allowfullscreen></iframe></div>
+            <div><iframe class="scroll" src="https://www.youtube.com/embed/bBTXKJhiq64" frameborder="0"
+                    allowfullscreen></iframe></div>
+            <div><iframe class="scroll" src="https://www.youtube.com/embed/WQmEtHuGFiA" frameborder="0"
+                    allowfullscreen></iframe></div>
+            <div><iframe class="scroll" src="https://www.youtube.com/embed/tBgsREyppuI" frameborder="0"
+                    allowfullscreen></iframe></div>
+            <div><iframe class="scroll" src="https://www.youtube.com/embed/anKyzyvn46g" frameborder="0"
+                    allowfullscreen></iframe></div>
+            <div><iframe class="scroll" src="https://www.youtube.com/embed/tdSdSDnXXF0" frameborder="0"
+                    allowfullscreen></iframe></div>
+        </section>
+    </main>
+    <footer>
+        <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun
+        </div>
+    </footer>
+
+    <script>
+        // Retrieve workout name from URL parameter
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const workoutname = urlParams.get("workoutname");
+
+        // Retrieve video link and workout name from localStorage based on the workout name
+        const add_workout = JSON.parse(localStorage.getItem("catagory_id"));
+        const workout = add_workout.find((w) => w.workoutname === workoutname);
+
+        console.log(workout);
+        // Update the workout title and video link
+        document.getElementById("workoutTitle").textContent = workout.workoutname;
+        document.getElementById("videoPlayer").src = workout.videolink;
+        document.getElementById("benifits").textContent = workout.benifits;
+        document.getElementById("setsAndReps").textContent = `Sets: ${workout.sets}, Reps: ${workout.rep}`;
+    </script>
+</body>
+
+</html>
