@@ -42,6 +42,6 @@ const trainerregistration = (e) => {
   } else {
     localStorage.setItem("trainer_number", JSON.stringify(trainer_number));
     alert("Login Successful..");
-    location.href = "../TRAINER/trainerptofile.html";
+    location.href = "../TRAINER/Trainer Mainpage.html";
   }
 };

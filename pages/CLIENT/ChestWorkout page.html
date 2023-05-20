@@ -10,18 +10,22 @@
 <body>
     <header class="header">
         <div class="logo">
+            <a href="../CLIENT/Workout main page.html">
             <img src="../../assets/img/logonew2.png" width="200px" alt="logo">
+            </a>
         </div>
     </header>
-
     <div class="workoutlist">
+
     </div>
     <footer>
         <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun
         </div>
     </footer>
 
-    <script>const queryString = window.location.search;
+    <script>
+        
+        const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
         const catagory_id = urlParams.get("catagory_id");
 
@@ -32,7 +36,7 @@
         const Workout = add_workout.filter(function find(e) {
             return e.category === catagory_id;
         });
-        // console.log(Chest_Workout)
+
 
         for (let i = 0; i < Workout.length; i++) {
             const workout_card = document.createElement("div");
@@ -40,6 +44,7 @@
             console.log(workout_card);
 
             const workout_title = document.createElement("div");
+            workout_title.setAttribute("class", "workoutname");
             workout_card.append(workout_title);
 
             const title = document.createElement("h2");
@@ -53,32 +58,9 @@
             workoutImg.setAttribute("id", "workoutphoto");
             workoutImg.setAttribute("src", Workout[i].workoutphoto);
             workoutImg.setAttribute("width", "250px");
+            workoutImg.setAttribute("height", "200px");
             workoutImg.setAttribute("alt", "image");
             imageContainer.append(workoutImg);
-
-            //               const detailContainer = document.createElement("div");
-            //               workout_card.append(detailContainer);
-
-            //               const counts = document.createElement("p");
-            //               counts.innerText =
-            // `SETS AND REPS` +
-            // `:` +
-            // `sets` +
-            // `:${Workout[i].sets},` +
-            // `reps` +
-            // `:${Workout[i].rep}`;
-            //               detailContainer.append(counts);
-
-            //               const benifitsTitle = document.createElement("p");
-            //               benifitsTitle.innerText = "BENIFITS";
-            //               detailContainer.append(benifitsTitle);
-
-            //               const benifitContainer = document.createElement("p");
-            //               detailContainer.append(benifitContainer);
-
-            //               const benifit = document.createElement("b");
-            //               benifit.innerText = Workout[i].benifits;
-            //               benifitContainer.append(benifit);
 
             const playContainer = document.createElement("div");
             workout_card.append(playContainer);

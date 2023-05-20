@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body>
+<body id="body">
     <header class="header">
         <div class="logo">
             <a href="../../CLIENT/currentweekplan.html">
@@ -51,14 +51,16 @@
                     <div class="day1">Sunday_plan</div>
                 </div>
             </div>
+            <div class="border">
+            </div>
             <div id="data-container">
 
                 <div class="maincnt">
                     <h1 id="Workouts">Workouts</h1>
                     <h2>WORKOUTS AND DIET PLAN</h2>
                     <div>
-                        <button id="toggleButton1">Workout</button>
-                        <button id="toggleButton2">Diet</button>
+                        <button type="submit" id="toggleButton1">Workout</button>
+                        <button type="button" id="toggleButton2">Diet</button>
                     </div>
                     <div id="table1" class="card-box">
                         <div class="content">
@@ -143,40 +145,6 @@
 
     <script>
 
-
-        const toggleButton1 = document.getElementById('toggleButton1');
-        const table1 = document.getElementById('table1');
-
-        const toggleButton2 = document.getElementById('toggleButton2');
-        const table2 = document.getElementById('table2');
-
-
-
-        toggleButton1.addEventListener('click', function () {
-            if (table1.style.display === 'none') {
-                table1.style.display = 'table';
-                table2.style.display = 'none';
-                toggleButton1.style.backgroundColor = 'white';
-                toggleButton2.style.backgroundColor = 'orange';
-            }
-            else {
-                table1.style.display = 'none';
-                table2.style.display = 'none';
-
-            }
-        });
-        toggleButton2.addEventListener('click', function () {
-            if (table2.style.display === 'none') {
-                table1.style.display = 'none';
-                table2.style.display = 'table';
-                toggleButton1.style.backgroundColor = 'orange';
-                toggleButton2.style.backgroundColor = 'white';
-            }
-            else {
-                table2.style.display = 'none';
-            }
-        });
-
         const schedule = document.querySelector('.schedule');
         const dataContainer = document.getElementById('data-container');
 
@@ -190,9 +158,14 @@
 
                 const scheduleData = JSON.parse(storedData);
                 const filteredData = scheduleData.filter(item => item.day === selectedDay);
+                const hover = document.querySelector('.day1');
+
                 console.log(filteredData);
                 if (filteredData.length > 0) {
                     for (let i = 0; i < filteredData.length; i++) {
+
+
+
 
                         document.getElementById("Workouts").innerHTML = filteredData[i].Workouts;
                         document.getElementById("workout_one").innerHTML = filteredData[i].workout_one;
@@ -224,11 +197,7 @@
             searchButton.classList.remove('hidden');
         });
 
-
         const storedData = JSON.parse(localStorage.getItem("old_plan"));
-        const containersec = document.getElementById('container');
-        const container3 = document.querySelector('#container3');
-        const section = document.getElementById('section');
 
         searchButton.addEventListener('click', function () {
             const selectedDate = date.value;
@@ -238,6 +207,10 @@
             const findOldPlan = storedData.find((item) =>
                 item.date === selectedDate
             );
+
+            const containersec = document.getElementById('container');
+            const container3 = document.querySelector('#container3');
+            const body = document.getElementById('body');
 
             if (findOldPlan) {
                 // Old plan data found for the selected date
@@ -259,9 +232,62 @@
                 // alert('No data found for the selected date');
                 container3.style.display = '';
                 containersec.style.display = 'none';
-                section.style.backgroundColor = 'white';
+                body.style.backgroundColor = 'white';
             }
         });
+
+        const backbtn = document.getElementById('backbtn');
+        const contback = document.getElementById('container3');
+        const maincontainer = document.getElementById('container');
+
+        backbtn.addEventListener('click', function () {
+            if (maincontainer.style.display === 'none') {
+                maincontainer.style.display = '';
+                contback.style.display = 'none';
+                body.style.backgroundColor = 'black';
+            }
+        });
+
+        const liveButton = document.getElementById('liveButton');
+
+        liveButton.addEventListener('click', function () {
+            window.location.reload();
+        });
+
+        const toggleButton1 = document.querySelector('#toggleButton1');
+        const table1 = document.getElementById('table1');
+
+        const toggleButton2 = document.getElementById('toggleButton2');
+        const table2 = document.getElementById('table2');
+
+
+
+        toggleButton1.addEventListener('click', function () {
+            if (table1.style.display === 'none') {
+                table1.style.display = 'table';
+                table2.style.display = 'none';
+                toggleButton1.style.backgroundColor = 'white';
+                toggleButton2.style.backgroundColor = 'orange';
+            }
+            else {
+                table1.style.display = 'none';
+                table2.style.display = 'none';
+
+            }
+        });
+
+        toggleButton2.addEventListener('click', function () {
+            if (table2.style.display === 'none') {
+                table1.style.display = 'none';
+                table2.style.display = 'table';
+                toggleButton1.style.backgroundColor = 'orange';
+                toggleButton2.style.backgroundColor = 'white';
+            }
+            else {
+                table2.style.display = 'none';
+            }
+        });
+
 
     </script>
 </body>

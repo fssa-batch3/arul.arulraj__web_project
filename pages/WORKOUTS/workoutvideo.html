@@ -13,18 +13,19 @@
 <body>
     <header class="header">
         <div class="logo">
-            <a href="../../CLIENT/currentweekplan.html">
-                <img alt="fitexpertlogo" src="../../../assets/img/logonew2.png" width="200px" alt="logo"></a>
+            <a href="../CLIENT/Workout main page.html">
+                <img alt="fitexpertlogo" src="../../../assets/img/logonew2.png" width="200px" alt="logo">
+            </a>
         </div>
     </header>
     <main>
         <section class="main">
             <section>
-                <div>
+                <div class="title">
                     <h2 id="workoutTitle"></h2>
                 </div>
                 <div class="videosec">
-                    <iframe id="videoPlayer" class="videosec" src="" frameborder="0" allowfullscreen></iframe>
+                    <iframe id="videoPlayer" src="" class="videosec" frameborder="0" allowfullscreen></iframe>
                 </div>
             </section>
             <section>
@@ -77,6 +78,7 @@
         <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun
         </div>
     </footer>
+    <!-- src="https://www.youtube.com/embed/" -->
 
     <script>
         // Retrieve workout name from URL parameter
@@ -91,7 +93,9 @@
         console.log(workout);
         // Update the workout title and video link
         document.getElementById("workoutTitle").textContent = workout.workoutname;
-        document.getElementById("videoPlayer").src = workout.videolink;
+        const workoutlink = document.getElementById("videoPlayer")
+        workoutlink.setAttribute("src", workout.videolink);
+        console.log(workoutlink);
         document.getElementById("benifits").textContent = workout.benifits;
         document.getElementById("setsAndReps").textContent = `Sets: ${workout.sets}, Reps: ${workout.rep}`;
     </script>
