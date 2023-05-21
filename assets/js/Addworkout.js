@@ -7,6 +7,7 @@ function add_workout(e) {
   const sets = document.getElementById("sets").value;
   const benifits = document.getElementById("benifits").value;
   const workoutphoto = document.getElementById("workoutphoto").value;
+  const videolink = document.getElementById("videolink").value;
   const workout_uuid = uuidv4();
 
   const add_workout = JSON.parse(localStorage.getItem("catagory_id")) || [];
@@ -19,6 +20,7 @@ function add_workout(e) {
     benifits,
     workoutphoto,
     workout_uuid,
+    videolink,
   });
 
   localStorage.setItem("catagory_id", JSON.stringify(add_workout));

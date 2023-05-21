@@ -26,7 +26,7 @@ function register() {
 
 // Trainer login
 
-const trainerregistration = (e) => {
+const trainerlogin = (e) => {
   e.preventDefault();
 
   const trainer_number = document.getElementById("trainer_number").value;
