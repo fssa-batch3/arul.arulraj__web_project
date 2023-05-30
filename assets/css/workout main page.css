@@ -58,6 +58,20 @@ section{
 h2{
     color: rgb(255, 98, 0);
 }
+.addwrkbtn{
+    background-image: linear-gradient(to right,rgb(10, 8, 8),rgb(255, 102, 0));
+    color: white;
+    margin-right: 10px;
+    width: 200px;
+    height: 40px;
+    font-weight: bold;
+    border: 0px;
+    border-radius: 10px;
+}
+.addwrkbtn:hover{
+    background-image: linear-gradient(to right,rgb(255, 102, 0),rgb(10, 8, 8));
+    color: white;
+}
 .footerbtm{
     background-color: rgb(6, 6, 6);
     text-align: center;

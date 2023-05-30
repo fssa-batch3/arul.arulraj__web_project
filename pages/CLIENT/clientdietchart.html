@@ -28,115 +28,52 @@
             <button id="backbtn" class="backbtn">Back</button>
             <h4 class="nodata">No data found for the selected date</h4>
         </div>
-        <div id="container" class="container">
+        <div id="container">
             <div class="datecontainer">
-                <div class="btns">
-                    <button class="liveButton" id="liveButton">Live</button>
-                    <div class="container2">
-                        <button id="btn2" class="input-container">
-                            OLD
-                            <input type="date" id="date" class="hidden">
-                            <button class="hidden" id="searchButton"><i class="fa fa-search"
-                                    style="font-size:15px;color: rgb(14, 14, 14);"></i></button>
-                        </button>
-                    </div>
+                <div class="container2">
+                    <button id="btn2" class="input-container">
+                        Search plan
+                        <input type="date" id="date" class="hidden">
+                        <button class="hidden" id="searchButton"><i class="fa fa-search"
+                                style="font-size:15px;color: rgb(14, 14, 14);"></i></button>
+                    </button>
                 </div>
-                <div class="schedule">
-                    <div class="day1">Monday_plan</div>
-                    <div class="day1">Tuesday_plan</div>
-                    <div class="day1">Wednesday_plan</div>
-                    <div class="day1">Thursday_plan</div>
-                    <div class="day1">Friday_plan</div>
-                    <div class="day1">Saturday_plan</div>
-                    <div class="day1">Sunday_plan</div>
-                </div>
-            </div>
-            <div class="border">
-            </div>
-            <div id="data-container">
-
-                <div class="maincnt">
-                    <h1 id="Workouts">Workouts</h1>
-                    <h2>WORKOUTS AND DIET PLAN</h2>
-                    <div>
-                        <button type="submit" id="toggleButton1">Workout</button>
-                        <button type="button" id="toggleButton2">Diet</button>
-                    </div>
-                    <div id="table1" class="card-box">
-                        <div class="content">
-                            <div class="back">
-                                <div class="wrk">
-                                    <div class="wrkbox">
-                                        <img class="img" src="../../assets/img/logo.png">
-                                        <b id="workout_one"></b>
-                                    </div>
-
-                                    <div class="wrkbox">
-                                        <img class="img" src="../../assets/img/logo.png">
-                                        <b id="workout_two"></b>
-                                    </div>
-                                    <div class="wrkbox">
-                                        <img class="img" src="../../assets/img/logo.png">
-                                        <b id="workout_three"></b>
-                                    </div>
-                                    <div class="wrkbox">
-                                        <img class="img" src="../../assets/img/logo.png">
-                                        <b id="workout_four"></b>
-                                    </div>
-                                    <div class="wrkbox">
-                                        <img class="img" src="../../assets/img/logo.png">
-                                        <b id="workout_five"></b>
-                                    </div>
-                                    <div class="wrkbox">
-                                        <img class="img" src="../../assets/img/logo.png">
-                                        <b id="workout_six"></b>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="border"></div>
+                <div>
+                    <div class="schedule">
+                        <div>
+                            <p>Diet</p>
+                            <img id="dietbtn" class="diet" src="../../assets/img/checklist.png" style="width: 150px;">
+                        </div>
+                        <div>
+                            <p>Workouts</p>
+                            <img id="workoutbtn" class="workout" src="../../assets/img/workout.png"
+                                style="width: 150px;">
                         </div>
                     </div>
-                    <div id="table2" class="card-box">
-                        <div class="content">
-                            <div class="back">
-                                <div class="wrk">
-                                    <div class="wrkbox">
-                                        <div class="food">Breakfast</div>
-                                        <div>
-                                            <b id="Breakfast"></b>
-                                        </div>
-                                    </div>
-                                    <div class="wrkbox">
-                                        <div class="food">Snack</div>
-                                        <div>
-                                            <b id="Snack_one"></b>
-                                        </div>
-                                    </div>
-                                    <div class="wrkbox">
-                                        <div class="food"> Lunch</div>
-                                        <div>
-                                            <b id="Lunch"></b>
-                                        </div>
-                                    </div>
-                                    <div class="wrkbox">
-                                        <div class="food">Snack</div>
-                                        <div>
-                                            <b id="Snack_two"></b>
-                                        </div>
-                                    </div>
-                                    <div class="wrkbox">
-                                        <div class="food">Dinner</div>
-                                        <div>
-                                            <b id="Dinner"></b>
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="boxes">
+                        <div class='box'>
+                            <div class='wave -one'></div>
+                            <div class='title'>Water intake<p id="water"></p>
+                            </div>
+                        </div>
+                        <div class='box2'>
+                            <div class='wave -one'></div>
+                            <div class='title'>calorie burn<p id="calorie"></p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
+        <div class="container4" id="container4" style="display: none;">
+            <i id="dietcancel" class="fa fa-window-close"></i>
+            Diet Plans
+        </div>
+        <div class="container4" id="container5" style="display: none;">
+            <i id="wrkcancel" class="fa fa-window-close"></i>
+            Workout Plans
+        </div>
     </section>
     <footer>
         <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun
@@ -145,46 +82,7 @@
 
     <script>
 
-        const schedule = document.querySelector('.schedule');
-        const dataContainer = document.getElementById('data-container');
 
-        schedule.addEventListener('click', function (event) {
-            const selectedDay = event.target.textContent;
-
-            const storedData = localStorage.getItem('user_plan');
-            console.log(storedData);
-
-            if (storedData) {
-
-                const scheduleData = JSON.parse(storedData);
-                const filteredData = scheduleData.filter(item => item.day === selectedDay);
-                const hover = document.querySelector('.day1');
-
-                console.log(filteredData);
-                if (filteredData.length > 0) {
-                    for (let i = 0; i < filteredData.length; i++) {
-
-
-
-
-                        document.getElementById("Workouts").innerHTML = filteredData[i].Workouts;
-                        document.getElementById("workout_one").innerHTML = filteredData[i].workout_one;
-                        document.getElementById("workout_two").innerHTML = filteredData[i].workout_two;
-                        document.getElementById("workout_three").innerHTML = filteredData[i].workout_three;
-                        document.getElementById("workout_four").innerHTML = filteredData[i].workout_four;
-                        document.getElementById("workout_five").innerHTML = filteredData[i].workout_five;
-                        document.getElementById("workout_six").innerHTML = filteredData[i].workout_six;
-                        document.getElementById("Breakfast").innerHTML = filteredData[i].Breakfast;
-                        document.getElementById("Snack_one").innerHTML = filteredData[i].Snack_one;
-                        document.getElementById("Lunch").innerHTML = filteredData[i].Lunch;
-                        document.getElementById("Snack_two").innerHTML = filteredData[i].Snack_two;
-                        document.getElementById("Dinner").innerHTML = filteredData[i].Dinner;
-                    }
-                } else {
-                    alert('No data available for the selected day');
-                }
-            }
-        });
 
         // localStorage.removeItem("datelist")
         const container = document.querySelector('.container2');
@@ -197,36 +95,49 @@
             searchButton.classList.remove('hidden');
         });
 
-        const storedData = JSON.parse(localStorage.getItem("old_plan"));
+        let dated
 
         searchButton.addEventListener('click', function () {
             const selectedDate = date.value;
-            console.log('date:', selectedDate);
-
-            // Perform the search based on the selected date
-            const findOldPlan = storedData.find((item) =>
-                item.date === selectedDate
-            );
+            // console.log('date:', selectedDate);
 
             const containersec = document.getElementById('container');
             const container3 = document.querySelector('#container3');
             const body = document.getElementById('body');
 
-            if (findOldPlan) {
-                // Old plan data found for the selected date
-                // document.getElementById("day").innerText = findOldPlan.day;
-                document.getElementById("Workouts").innerHTML = findOldPlan.Workouts;
-                document.getElementById("workout_one").innerHTML = findOldPlan.workout_one;
-                document.getElementById("workout_two").innerHTML = findOldPlan.workout_two;
-                document.getElementById("workout_three").innerHTML = findOldPlan.workout_three;
-                document.getElementById("workout_four").innerHTML = findOldPlan.workout_four;
-                document.getElementById("workout_five").innerHTML = findOldPlan.workout_five;
-                document.getElementById("workout_six").innerHTML = findOldPlan.workout_six;
-                document.getElementById("Breakfast").innerHTML = findOldPlan.Breakfast;
-                document.getElementById("Snack_one").innerHTML = findOldPlan.Snack_one;
-                document.getElementById("Lunch").innerHTML = findOldPlan.Lunch;
-                document.getElementById("Snack_two").innerHTML = findOldPlan.Snack_two;
-                document.getElementById("Dinner").innerHTML = findOldPlan.Dinner;
+            const selectedDates = document.getElementById("date").value
+            dated = selectedDates
+            console.log(selectedDates)
+            const userid = JSON.parse(localStorage.getItem('number_id'));
+            const storedData = JSON.parse(localStorage.getItem('user_workoutplans'));
+            const storedplans = JSON.parse(localStorage.getItem('user_dietplans'));
+
+            const filteredData = storedData.filter(item => (item.date === selectedDate) && (item.client_id === userid));
+            console.log(filteredData);
+            const filteredPlan = storedplans.filter(item => (item.user_plan_uuid === filteredData[0].user_plan_uuid));
+
+            if (filteredData.length > 0) {
+                const calorie = filteredData[0].calorie;
+                document.getElementById("calorie").innerText = calorie;
+                console.log(calorie);
+            }
+            if (filteredData.length > 0) {
+                const water = filteredData[0].water;
+                document.getElementById("water").innerText = water;
+                console.log(water);
+            }
+
+            // document.getElementById("water").value = user_workoutplans.water;
+
+            const filetplans = [];
+            for (let i = 0; i < filteredData.length; i++) {
+                const plans = storedplans.find(item => item.user_plan_uuid === filteredData[i].user_plan_uuid);
+                filetplans.push(plans)
+            }
+
+            if (filteredData.length > 0) {
+                const firstFilteredData = filteredData[0]; // Assuming you only want the first matching item
+
             } else {
                 // Data not found for the selected date
                 // alert('No data found for the selected date');
@@ -234,7 +145,51 @@
                 containersec.style.display = 'none';
                 body.style.backgroundColor = 'white';
             }
-        });
+
+            const container4 = document.getElementById('container4');
+            console.log(filteredPlan)
+
+            filteredPlan.forEach((diet, index) => {
+                let count = 0
+                console.log(count)
+                const plandivDiv = document.createElement('div');
+                plandivDiv.className = 'plandiv';
+                plandivDiv.id = `Diet_${count}`;
+
+                const dietname = document.createElement("p")
+                dietname.innerText = filteredPlan[count].diets
+
+                plandivDiv.appendChild(dietname);
+
+                container4.appendChild(plandivDiv)
+
+                count++
+            });
+
+            //For creating diet container
+
+            const container5 = document.getElementById('container5');
+
+            filteredData.forEach((workout, index) => {
+                let count = 0
+                const plandivDiv = document.createElement('div');
+                plandivDiv.className = 'plandiv';
+                plandivDiv.id = `Workout_${index}`;
+
+                const workoutName = document.createElement("p")
+                workoutName.innerText = filteredData[count].workouts
+
+                plandivDiv.appendChild(workoutName);
+
+                container5.appendChild(plandivDiv);
+
+                count++
+            });
+
+
+        }
+        );
+
 
         const backbtn = document.getElementById('backbtn');
         const contback = document.getElementById('container3');
@@ -244,47 +199,51 @@
             if (maincontainer.style.display === 'none') {
                 maincontainer.style.display = '';
                 contback.style.display = 'none';
-                body.style.backgroundColor = 'black';
+                body.style.backgroundColor = 'white';
             }
         });
 
-        const liveButton = document.getElementById('liveButton');
+        const diet = document.getElementById('dietbtn');
+        const maincnt = document.getElementById('container');
+        const containerplans = document.getElementById('container4');
 
-        liveButton.addEventListener('click', function () {
-            window.location.reload();
-        });
-
-        const toggleButton1 = document.querySelector('#toggleButton1');
-        const table1 = document.getElementById('table1');
-
-        const toggleButton2 = document.getElementById('toggleButton2');
-        const table2 = document.getElementById('table2');
-
-
-
-        toggleButton1.addEventListener('click', function () {
-            if (table1.style.display === 'none') {
-                table1.style.display = 'table';
-                table2.style.display = 'none';
-                toggleButton1.style.backgroundColor = 'white';
-                toggleButton2.style.backgroundColor = 'orange';
-            }
-            else {
-                table1.style.display = 'none';
-                table2.style.display = 'none';
-
+        diet.addEventListener('click', function () {
+            if (maincnt.style.display === '') {
+                maincnt.style = 'filter: blur(8px); -webkit-filter: blur(8px);';
+                containerplans.style.display = '';
             }
         });
 
-        toggleButton2.addEventListener('click', function () {
-            if (table2.style.display === 'none') {
-                table1.style.display = 'none';
-                table2.style.display = 'table';
-                toggleButton1.style.backgroundColor = 'orange';
-                toggleButton2.style.backgroundColor = 'white';
+        const cancelbtn = document.getElementById('dietcancel');
+        const main = document.getElementById('container');
+        const containerplan = document.getElementById('container4');
+
+        cancelbtn.addEventListener('click', function () {
+            if (containerplan.style.display === '') {
+                main.style = '';
+                containerplan.style.display = 'none';
             }
-            else {
-                table2.style.display = 'none';
+        });
+
+        const workout = document.getElementById('workoutbtn');
+        const maincnt2 = document.getElementById('container');
+        const containerwrks = document.getElementById('container5');
+
+        workout.addEventListener('click', function () {
+            if (maincnt2.style.display === '') {
+                maincnt2.style = 'filter: blur(8px); -webkit-filter: blur(8px);';
+                containerwrks.style.display = '';
+            }
+        });
+
+        const cancelbtn2 = document.getElementById('wrkcancel');
+        const main2 = document.getElementById('container');
+        const containerwrk = document.getElementById('container5');
+
+        cancelbtn2.addEventListener('click', function () {
+            if (containerwrk.style.display === '') {
+                main2.style = '';
+                containerwrk.style.display = 'none';
             }
         });
 

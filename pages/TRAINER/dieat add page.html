@@ -1,123 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <title>Next Week Plans</title>
-        <link rel="stylesheet" href="../../assets/css/addnewplan.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
+<head>
+    <title>Next Week Plans</title>
+    <link rel="stylesheet" href="../../assets/css/addnewplan.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 
-    <body>
-        <header class="header">
-            <div class="logo">
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="../ADMIN/client listpage.html">
                 <img src="../../../assets/img/logonew2.png" width="200px" alt="logo">
-            </div>
-        </header>
-        <section class="section">
+            </a>
+        </div>
+    </header>
+    <section class="section">
+        <div class="sec">
             <form onsubmit="new_plan_update(event)" role="form">
-                <h1>
-                    <input required="true" maxlength="10" id="client_id" placeholder="client_id">
-                </h1>
-                <h2>
+                <div class="column">
                     <div>
-                        <input required="true" type="date" id="date">
+                        <input class="input1" required="true" maxlength="10" id="client_id" placeholder="client_id">
                     </div>
-                </h2>
-                <h2>
-                    <select required="true" id="day" class="daysel">
-                        <option>Monday_plan</option>
-                        <option>Tuesday_plan</option>
-                        <option>Wednesday_plan</option>
-                        <option>Thursday_plan</option>
-                        <option>Friday_plan</option>
-                        <option>Saturday_plan</option>
-                        <option>Sunday_plan</option>
-                    </select>
-                </h2>
-                <h2>
-                    <select required="true" id="Workouts" class="wrksel">
-                        <option>Chest workout</option>
-                        <option>Back workout</option>
-                        <option>Shoulder workout</option>
-                        <option>Triceps workout</option>
-                        <option>Biceps workout</option>
-                        <option>Abs workout</option>
-                        <option>Leg workout</option>
-                    </select>
-                </h2>
-
-                <div class="maincnt">
-                    <div class="workout">
-                        <h2>Workouts</h2>
-                        <div class="wrk">
-                            <div class="wrkbox">
-                                <textarea pattern="[a-zA-Z0-9,]+" required="true" id="workout_one"></textarea>
-                            </div>
-
-                            <div class="wrkbox">
-                                <textarea pattern="[a-zA-Z0-9,]+" required="true" id="workout_two"></textarea>
-                            </div>
-                            <div class="wrkbox">
-                                <textarea pattern="[a-zA-Z0-9,]+" required="true" id="workout_three"></textarea>
-                            </div>
-                            <div class="wrkbox">
-                                <textarea pattern="[a-zA-Z0-9,]+" required="true" id="workout_four"></textarea>
-                            </div>
-                            <div class="wrkbox">
-                                <textarea pattern="[a-zA-Z0-9,]+" required="true" id="workout_five"></textarea>
-                            </div>
-                            <div class="wrkbox">
-                                <textarea pattern="[a-zA-Z0-9,]+" required="true" id="workout_six"></textarea>
-                            </div>
-                        </div>
+                    <div>
+                        <input class="input1" required="true" type="date" id="date">
                     </div>
-                    <div class="btns">
+                    <!-- <div>
+                        <select class="input1" required="true" id="plan" class="wrksel">
+                            <option disabled selected>Plan</option>
+                            <option id="dietplan">Diet</option>
+                            <option id="workoutplan">Workout</option>
+                        </select>
+                    </div> -->
+                    <div>
+                        <input class="input1" placeholder="How much calorie want to burn?" required="true" id="calorie">
+                    </div>
+                    <div>
+                        <input class="input1" placeholder="How much water want to drink?" required="true" id="water">
+                    </div>
+
+                    <div id="wrk">
                         <div>
-                            <button type="submit" class="savebtn">Save</button>
+                            <select class="input1" required="true" id="Workout" class="wrksel">
+                                <option disabled selected>Workouts</option>
+                                <option>Chest workout</option>
+                                <option>Back workout</option>
+                                <option>Shoulder workout</option>
+                                <option>Triceps workout</option>
+                                <option>Biceps workout</option>
+                                <option>Abs workout</option>
+                                <option>Leg workout</option>
+                            </select>
                         </div>
+                        <div class="addcnt">
+                            <i id="plus" class="fa fa-plus" style="font-size: 20px;color: rgb(246, 242, 242);"> Add
+                                workout</i>
+                        </div>
+                        <div class="container" id="inputContainer"></div>
                     </div>
-                    <div class="diet">
-                        <h2>Diet</h2>
-                        <div class="dietbox">
-                            <div class="food">Breakfast</div>
-                            <div>
-                                <textarea pattern="[a-zA-Z0-9,]+" required="true" id="Breakfast"></textarea>
-                            </div>
+
+                    <div id="diet">
+                        <div class="addcnt">
+                            <i id="plus2" class="fa fa-plus" style="font-size: 20px;color: rgb(246, 242, 242);"> Add
+                                Diet</i>
                         </div>
-                        <div class="dietbox">
-                            <div class="food">Snack</div>
-                            <div>
-                                <textarea pattern="[a-zA-Z0-9,]+" required="true" id="Snack_one"></textarea>
-                            </div>
-                        </div>
-                        <div class="dietbox">
-                            <div class="food"> Lunch</div>
-                            <div>
-                                <textarea pattern="[a-zA-Z0-9,]+" required="true" id="Lunch"></textarea>
-                            </div>
-                        </div>
-                        <div class="dietbox">
-                            <div class="food">Snack</div>
-                            <div>
-                                <textarea pattern="[a-zA-Z0-9,]+" required="true" id="Snack_two"></textarea>
-                            </div>
-                        </div>
-                        <div class="dietbox">
-                            <div class="food">Dinner</div>
-                            <div>
-                                <textarea pattern="[a-zA-Z0-9,]+" required="true" id="Dinner"></textarea>
-                            </div>
-                        </div>
+                        <div class="container2" id="inputContainer2"></div>
+                    </div>
+                    <div>
+                        <button type="submit" class="savebtn">Save</button>
                     </div>
                 </div>
             </form>
-        </section>
-        <footer>
-            <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun
-            </div>
-        </footer>
-        <script>
-        
+        </div>
+        <div class="sec2">
+            <h1>*Conditions</h1>
+            <b>
+                <p>1. When providing a client with a diet, you should provide them as much as they want to eat?</p>
+                <p>2. Please let us know when and what they intend to consume.</p>
+                <p>3. Remember to give the client the calories they wish to burn.</p>
+                <p>4. When giving the workout, please provide the correct reps, counts, and exercise.</p>
+            </b>
+        </div>
+    </section>
+    <script>
+
+        const plusButton = document.getElementById("plus");
+        const inputContainer = document.getElementById("inputContainer");
+        let inputCounter = 1;
+
+        plusButton.addEventListener("click", () => {
+            const input = document.createElement("input");
+            input.className = "workoutinput";
+            input.id = `Workout_${inputCounter}`;
+            input.placeholder = `Workout ${inputCounter}`;
+            input.required = true;
+            inputContainer.appendChild(input);
+
+            inputCounter++;
+        });
+
+        const plusButton2 = document.getElementById("plus2");
+        const inputContainer2 = document.getElementById("inputContainer2");
+        let inputCounter2 = 1;
+
+        plusButton2.addEventListener("click", () => {
+            const input = document.createElement("input");
+            input.className = "dietinput";
+            input.id = `Diet_${inputCounter2}`;
+            input.placeholder = `Diet ${inputCounter2}`;
+            input.required = true;
+            inputContainer2.appendChild(input);
+
+            inputCounter2++;
+        });
+
         const dateInput = document.getElementById("date");
         const systemDate = new Date();
         const year = systemDate.getFullYear();
@@ -127,88 +123,102 @@
         dateInput.value = dateString;
 
         function new_plan_update(e) {
-  e.preventDefault();
+            e.preventDefault();
 
-    let client_id = document.getElementById("client_id").value;
-    let day = document.getElementById("day").value;
-    let date = document.getElementById("date").value;
-    let Workouts = document.getElementById("Workouts").value;
-    let workout_one = document.getElementById("workout_one").value;
-    let workout_two = document.getElementById("workout_two").value;
-    let workout_three = document.getElementById("workout_three").value;
-    let workout_four = document.getElementById("workout_four").value;
-    let workout_five = document.getElementById("workout_five").value;
-    let workout_six = document.getElementById("workout_six").value;
-    let Breakfast = document.getElementById("Breakfast").value;
-    let Snack_one = document.getElementById("Snack_one").value;
-    let Lunch = document.getElementById("Lunch").value;
-    let Snack_two = document.getElementById("Snack_two").value;
-    let Dinner = document.getElementById("Dinner").value;
-    let user_plan_uuid = uuidv4();
+            let client_id = document.getElementById("client_id").value;
+            const date = document.getElementById("date").value;
+            console.log(typeof(date))
+            let Workout = document.getElementById("Workout").value;
+            let calorie = document.getElementById("calorie").value;
+            let water = document.getElementById("water").value;
+            let workoutInputs = document.getElementsByClassName("workoutinput"); // Retrieve all workout inputs
+            let dietInputs = document.getElementsByClassName("dietinput"); // Retrieve all diet inputs
+            let user_plan_uuid = uuidv4();
 
-    let add_plan = JSON.parse(localStorage.getItem("user_plan"));
+            let selectedDate = new Date(date);
+            let currentDate = new Date();
 
-    let old_plan = JSON.parse(localStorage.getItem("old_plan")) || [];
+            if (selectedDate < currentDate) {
+                alert("Please select a upcoming date for the plan.");
+                return;
+            }
+            // Store workout values in an array
+            let workouts = [];
+            for (let i = 0; i < workoutInputs.length; i++) {
+                workouts.push(workoutInputs[i].value);
+            }
 
-    let find_plan = add_plan.filter((plan)=>
-      plan.client_id == client_id &&
-      plan.day == day
-  );
+            if (workouts.length === 0) {
+                alert("Please enter at least one workout.");
+                return;
+            }
 
-  if(find_plan.length>0){
-    old_plan.push(...find_plan);
-    localStorage.setItem('old_plan', JSON.stringify(old_plan));
+           
+            // console.log(typeof(plans[0]["date"])) 
+            const plans = JSON.parse(localStorage.getItem("user_workoutplans")) || [];
+            // Check if a plan for the selected date already exists
+            const existingPlan = plans.find(p => p.date === date);
 
-    find_plan[0].client_id = client_id;
-    find_plan[0].day = day;
-    find_plan[0].date = date;
-    find_plan[0].Workouts = Workouts;
-    find_plan[0].workout_one = workout_one;
-    find_plan[0].workout_two = workout_two;
-    find_plan[0].workout_three = workout_three;
-    find_plan[0].workout_four = workout_four;
-    find_plan[0].workout_five = workout_five;
-    find_plan[0].workout_six = workout_six;
-    find_plan[0].Breakfast = Breakfast;
-    find_plan[0].Snack_one = Snack_one;
-    find_plan[0].Lunch = Lunch;
-    find_plan[0].Snack_two = Snack_two;
-    find_plan[0].Dinner = Dinner;
-    find_plan[0].user_plan_uuid = find_plan[0].user_plan_uuid;
+            if (existingPlan) {
+                alert("A plan for the selected date already exists.");
+            }
+            else {
+                
 
-    localStorage.setItem("user_plan", JSON.stringify(add_plan));
+                console.log(plans);
+                
+                for (let i = 0; i < workouts.length; i++) {
+                    const plan = {
+                    client_id,
+                    date,
+                    calorie,
+                    Workout,
+                    water,
+                    "workouts": workouts[i],
+                    user_plan_uuid,
+                    };
 
-  }
-  else{
-     
-    add_plan.push({
-      client_id,
-      day,
-      date,
-      Workouts,
-      workout_one,
-      workout_two,
-      workout_three,
-      workout_four,
-      workout_five,
-      workout_six,
-      Breakfast,
-      Snack_one,
-      Lunch,
-      Snack_two,
-      Dinner,
-      user_plan_uuid,
-    });
-    localStorage.setItem("user_plan", JSON.stringify(add_plan));
+                plans.push(plan);
+                console.log(plans);
+                localStorage.setItem("user_workoutplans",JSON.stringify(plans))
+            }
 
-  }
-   
-    alert("New plan uploaded successfully");
-    window.location.href = "../TRAINER/dieat add page.html";
+            // Store workout values in an array
+            let diets = [];
+            for (let i = 0; i < dietInputs.length; i++) {
+                diets.push(dietInputs[i].value);
+            }
 
-  }
+            if (diets.length === 0) {
+                alert("Please enter at least one workout.");
+                return;
+            }
+            let plan = JSON.parse(localStorage.getItem("user_dietplans")) || [];
+
+            // Check if a plan for the selected date already exists
+            let existingPlans = plan.find(p => p.date === date);
+
+            if (existingPlan) {
+                alert("A plan for the selected date already exists.");
+            } else {
+                let plan = JSON.parse(localStorage.getItem("user_dietplans")) || [];
+                for (let i = 0; i < diets.length; i++) {
+                    const plans = {
+                        "diets": diets[i],
+                        user_plan_uuid
+                    };
+
+                    plan.push(plans);
+                    localStorage.setItem("user_dietplans", JSON.stringify(plan));
+                    alert("New plan uploaded successfully");
+                }
+            }
+
+
+            window.location.href = "../TRAINER/dieat add page.html";
+        }};
     </script>
-        <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
-    </body>
+    <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+</body>
 
 </html>

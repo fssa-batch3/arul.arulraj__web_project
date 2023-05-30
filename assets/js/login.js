@@ -9,10 +9,10 @@ const signIn = (e) => {
   const exist = JSON.parse(localStorage.getItem("user_data")).some(
     (data) =>
       data.user_number.toLowerCase() == user_number &&
-      data.user_password == user_password
+      data.user_password == user_password && data.user_status !== false
   );
   if (!exist) {
-    alert("Incorrect login credentials");
+    alert("Incorrect login credentials OR your account has expired");
   } else {
     localStorage.setItem("number_id", JSON.stringify(user_number));
     alert("Login Successful..");

@@ -54,6 +54,7 @@ function registration(e) {
   const  user_number = document.getElementById('user_number').value;
   const  user_password = document.getElementById('user_password').value;
   const  user_confirmpassword = document.getElementById('user_confirmpassword').value;
+  const dateCreated = new Date().toISOString();
   let user_uuid = uuidv4();
   let asign_trainer = '';
   let user_age = '';
@@ -68,6 +69,7 @@ function registration(e) {
   let pincode = '';
   let city = '';
   let state = '';
+  let user_status = true;
 
   function checkPhoneNumber() {
     let result = 0;
@@ -109,7 +111,9 @@ function registration(e) {
         pincode,
         city,
         state,
+        dateCreated,
         user_uuid,
+        user_status,
       });
       localStorage.setItem('user_data', JSON.stringify(user_data));
       document.querySelector('form').reset();

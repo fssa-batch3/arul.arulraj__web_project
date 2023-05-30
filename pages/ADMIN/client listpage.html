@@ -10,7 +10,9 @@
 <body id="page">
   <header class="header">
     <div class="logo">
+      <a href="../TRAINER/Trainer Mainpage.html">
       <img src="../../assets/img/logonew2.png" width="200px" alt="logo">
+    </a>
     </div>
     <div>
       <a href="../../pages/ADMIN/Add more Client.html">
@@ -18,7 +20,7 @@
       </a>
     </div>
   </header>
-  <div class="container" id="container" style="display: none;">
+  <div class="container2" id="container2" style="display: none;">
     <img class="backimg" src="../../assets/img/4904780.jpg">
     <a href="../TRAINER/Trainer Mainpage.html">
     <button id="backbtn" class="backbtn">Back</button>
@@ -30,157 +32,14 @@
     <div class="list">
     </div>
     <div class="scroll" style="color:rgb(10, 9, 9);text-align:center">
-      << For More Scroll>>
+      <span><< For More Scroll>></span>
     </div>
   </section>
   <footer>
     <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun</div>
   </footer>
 
-  <script>
-    const client_list = [
-      {
-        user_name: {
-          title: "Name",
-        },
-        user_age: {
-          title: "Age",
-        },
-        user_weight: {
-          title: "Weight",
-        },
-        user_height: {
-          title: "height",
-        },
-        user_phonenumber: {
-          title: "Contact",
-        },
-        user_pakage: {
-          title: "Pakage",
-        },
-        user_trainer: {
-          title: "Trained by",
-        },
-        oldplan_btnlink: "",
-        newplan_btnlink: "../TRAINER/dieat add page.html",
-      },
-    ];
-
-    const mainsec = document.getElementById('mainsec');
-    const container = document.getElementById('container');
-    const page = document.getElementById('page');
-    const user_data = JSON.parse(localStorage.getItem("user_data"));
-
-    if (!user_data || user_data.length === 0 && container.style.display === 'none') {
-      container.style.display = '';
-      mainsec.style.display = 'none';
-      page.style.backgroundImage = 'white';
-    } else{
-      for (let i = 0; i < user_data.length; i++) {
-        clientlist_card = document.createElement("div");
-        clientlist_card.setAttribute("class", "innerlist");
-        console.log(clientlist_card);
-
-        clientlist_cntbtn = document.createElement("div");
-        clientlist_cntbtn.setAttribute("class", "cntbtn");
-        clientlist_card.append(clientlist_cntbtn);
-
-        trainerlist_container = document.createElement("div");
-        trainerlist_container.setAttribute("class", "container");
-        clientlist_cntbtn.append(trainerlist_container);
-
-        trainerImg = document.createElement("img");
-        trainerImg.setAttribute("src", user_data[i].user_photo);
-        trainerImg.setAttribute("width", "350px");
-        trainerImg.setAttribute("class", "image");
-        trainerImg.setAttribute("alt", "image");
-        trainerlist_container.append(trainerImg);
-
-        trainerlist_containeroverlay = document.createElement("div");
-        trainerlist_containeroverlay.setAttribute("class", "overlay");
-        trainerlist_container.append(trainerlist_containeroverlay);
-
-        trainerlist_containerText = document.createElement("div");
-        trainerlist_containerText.setAttribute("class", "text");
-        trainerlist_containeroverlay.append(trainerlist_containerText);
-
-        user_name = document.createElement("p");
-        user_name.innerText = `Name : ${user_data[i].user_firstname}${user_data[i].user_lastname}`;
-        trainerlist_containerText.append(user_name);
-
-        user_age = document.createElement("p");
-        user_age.innerText = `age : ${user_data[i].user_age}`;
-        trainerlist_containerText.append(user_age);
-
-        user_weightandheight = document.createElement("p");
-        user_weightandheight.innerText =
-          `weight` +
-          ` and ` +
-          `Height : ${user_data[i].user_weight}kg` +
-          `,${user_data[i].user_height}cm`;
-        trainerlist_containerText.append(user_weightandheight);
-
-        user_phonenumber = document.createElement("p");
-        user_phonenumber.setAttribute("class", "user_phonenumber");
-        user_phonenumber.innerText = `Number` + `:${user_data[i].user_number}`;
-        trainerlist_containerText.append(user_phonenumber);
-
-        user_pakage = document.createElement("p");
-        user_pakage.innerText = `Pakage` + `:${user_data[i].user_package}`;
-        trainerlist_containerText.append(user_pakage);
-
-        user_trainer = document.createElement("p");
-        user_trainer.innerText = `Trined By ` + `:${user_data[i].asign_trainer}`;
-        trainerlist_containerText.append(user_trainer);
-
-        plan_btn = document.createElement("div");
-        plan_btn.setAttribute("class", "btn");
-        clientlist_cntbtn.append(plan_btn);
-
-        oldplan_btn = document.createElement("button");
-        oldplan_btn.setAttribute("class", "old");
-        oldplan_btn.setAttribute("data-index", i);
-        // oldplan_btn.setAttribute("onclick", del(event));
-        oldplan_btn.innerText = "Delete";
-        plan_btn.append(oldplan_btn);
-
-        console.log(oldplan_btn);
-
-        newplan_btnlink = document.createElement("a");
-        newplan_btnlink.setAttribute("href", "../TRAINER/dieat add page.html");
-        plan_btn.append(newplan_btnlink);
-
-        newplan_btn = document.createElement("button");
-        newplan_btn.setAttribute("class", "new");
-        newplan_btn.innerText = "Add plan";
-        newplan_btnlink.append(newplan_btn);
-
-        document.querySelector("div.list").append(clientlist_card);
-      }
-    }
-
-    const deleteButtons = document.querySelectorAll(".old");
-    deleteButtons.forEach((deleteButton) => {
-      deleteButton.addEventListener("click", del);
-    });
-
-
-
-    function del(e) {
-      if (confirm("Are you sure you want to delete the account?")) {
-        const user_data = JSON.parse(localStorage.getItem("user_data"));
-
-        const clientIndex = e.currentTarget.getAttribute("data-index"); // Get the index of the client from the data attribute of the clicked button
-
-        if (clientIndex >= 0 && clientIndex < user_data.length) {
-          user_data.splice(clientIndex, 1); // Remove the client from the user_data array
-          localStorage.setItem("user_data", JSON.stringify(user_data)); // Update the localStorage
-          e.currentTarget.closest(".innerlist").remove(); // Remove the client list element from the DOM
-        }
-      }
-    }
-
-  </script>
+  <script src="../../assets/js/Clientlist.js"></script>
 
 </body>
 
