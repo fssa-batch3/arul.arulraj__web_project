@@ -69,10 +69,16 @@
         <div class="container4" id="container4" style="display: none;">
             <i id="dietcancel" class="fa fa-window-close"></i>
             Diet Plans
+            <div class="subcontainer4">
+
+            </div>
         </div>
         <div class="container4" id="container5" style="display: none;">
             <i id="wrkcancel" class="fa fa-window-close"></i>
             Workout Plans
+            <div class="subcontainer5">
+
+            </div>
         </div>
     </section>
     <footer>
@@ -98,31 +104,51 @@
         let dated
 
         searchButton.addEventListener('click', function () {
-            const selectedDate = date.value;
-            // console.log('date:', selectedDate);
 
             const containersec = document.getElementById('container');
             const container3 = document.querySelector('#container3');
             const body = document.getElementById('body');
 
+            const find = JSON.parse(localStorage.getItem('plans'));
+
+            const selectedDate = date.value;
+            console.log('date:', selectedDate);
+
             const selectedDates = document.getElementById("date").value
             dated = selectedDates
-            console.log(selectedDates)
+            // console.log(selectedDates)
             const userid = JSON.parse(localStorage.getItem('number_id'));
+            const storedplan = JSON.parse(localStorage.getItem('plans'));
             const storedData = JSON.parse(localStorage.getItem('user_workoutplans'));
+            // console.log(storedData);
             const storedplans = JSON.parse(localStorage.getItem('user_dietplans'));
+            // console.log(storedplans);
 
-            const filteredData = storedData.filter(item => (item.date === selectedDate) && (item.client_id === userid));
-            console.log(filteredData);
+            const filterplan = storedplan.filter(item => (item.date === selectedDates) && (item.client_id === userid));
+            console.log(filterplan)
+            
+            if (filterplan.length === 0) {
+                // Data not found for the selected date
+                // alert('No data found for the selected date');
+
+                container3.style.display = '';
+                containersec.style.display = 'none';
+                body.style.backgroundColor = 'white';
+            }
+
+            const filteredData = storedData.filter(item => (item.user_plan_uuid === filterplan[0].user_plan_uuid));
+
+            console.log(filteredData)
             const filteredPlan = storedplans.filter(item => (item.user_plan_uuid === filteredData[0].user_plan_uuid));
+            console.log(filteredPlan)
 
-            if (filteredData.length > 0) {
-                const calorie = filteredData[0].calorie;
+            if (filterplan.length > 0) {
+                const calorie = filterplan[0].calorie;
                 document.getElementById("calorie").innerText = calorie;
                 console.log(calorie);
             }
-            if (filteredData.length > 0) {
-                const water = filteredData[0].water;
+            if (filterplan.length > 0) {
+                const water = filterplan[0].water;
                 document.getElementById("water").innerText = water;
                 console.log(water);
             }
@@ -137,20 +163,17 @@
 
             if (filteredData.length > 0) {
                 const firstFilteredData = filteredData[0]; // Assuming you only want the first matching item
+                //             for (let i = 0; i < filteredData.length; i++) {
 
-            } else {
-                // Data not found for the selected date
-                // alert('No data found for the selected date');
-                container3.style.display = '';
-                containersec.style.display = 'none';
-                body.style.backgroundColor = 'white';
+                // document.getElementById("Workout").innerHTML = filteredData.Workout;
+                // document.getElementById("calorie").innerHTML = filteredData.calorie;
             }
 
-            const container4 = document.getElementById('container4');
+            const container4 = document.querySelector('.subcontainer4');
             console.log(filteredPlan)
-
+            container4.innerHTML = "";
             filteredPlan.forEach((diet, index) => {
-                let count = 0
+                let count = index
                 console.log(count)
                 const plandivDiv = document.createElement('div');
                 plandivDiv.className = 'plandiv';
@@ -158,23 +181,23 @@
 
                 const dietname = document.createElement("p")
                 dietname.innerText = filteredPlan[count].diets
-
+                console.log(filteredPlan[count].diets)
                 plandivDiv.appendChild(dietname);
 
                 container4.appendChild(plandivDiv)
 
-                count++
+                // count++
             });
 
             //For creating diet container
 
-            const container5 = document.getElementById('container5');
-
+            const container5 = document.querySelector('.subcontainer5');
+            container5.innerHTML = "";
             filteredData.forEach((workout, index) => {
-                let count = 0
+                let count = index
                 const plandivDiv = document.createElement('div');
                 plandivDiv.className = 'plandiv';
-                plandivDiv.id = `Workout_${index}`;
+                plandivDiv.id = `Workout_${count}`;
 
                 const workoutName = document.createElement("p")
                 workoutName.innerText = filteredData[count].workouts
@@ -183,7 +206,7 @@
 
                 container5.appendChild(plandivDiv);
 
-                count++
+                // count++
             });
 
 
@@ -224,6 +247,8 @@
                 containerplan.style.display = 'none';
             }
         });
+
+
 
         const workout = document.getElementById('workoutbtn');
         const maincnt2 = document.getElementById('container');

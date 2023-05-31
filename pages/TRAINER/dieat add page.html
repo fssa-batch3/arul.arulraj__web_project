@@ -127,7 +127,7 @@
 
             let client_id = document.getElementById("client_id").value;
             const date = document.getElementById("date").value;
-            console.log(typeof(date))
+            console.log(typeof (date))
             let Workout = document.getElementById("Workout").value;
             let calorie = document.getElementById("calorie").value;
             let water = document.getElementById("water").value;
@@ -153,7 +153,7 @@
                 return;
             }
 
-           
+
             // console.log(typeof(plans[0]["date"])) 
             const plans = JSON.parse(localStorage.getItem("user_workoutplans")) || [];
             // Check if a plan for the selected date already exists
@@ -163,60 +163,78 @@
                 alert("A plan for the selected date already exists.");
             }
             else {
-                
+
 
                 console.log(plans);
-                
+
                 for (let i = 0; i < workouts.length; i++) {
                     const plan = {
-                    client_id,
-                    date,
-                    calorie,
-                    Workout,
-                    water,
-                    "workouts": workouts[i],
-                    user_plan_uuid,
+                        "workouts": workouts[i],
+                        user_plan_uuid,
                     };
 
-                plans.push(plan);
-                console.log(plans);
-                localStorage.setItem("user_workoutplans",JSON.stringify(plans))
-            }
-
-            // Store workout values in an array
-            let diets = [];
-            for (let i = 0; i < dietInputs.length; i++) {
-                diets.push(dietInputs[i].value);
-            }
-
-            if (diets.length === 0) {
-                alert("Please enter at least one workout.");
-                return;
-            }
-            let plan = JSON.parse(localStorage.getItem("user_dietplans")) || [];
-
-            // Check if a plan for the selected date already exists
-            let existingPlans = plan.find(p => p.date === date);
-
-            if (existingPlan) {
-                alert("A plan for the selected date already exists.");
-            } else {
-                let plan = JSON.parse(localStorage.getItem("user_dietplans")) || [];
-                for (let i = 0; i < diets.length; i++) {
-                    const plans = {
-                        "diets": diets[i],
-                        user_plan_uuid
-                    };
-
-                    plan.push(plans);
-                    localStorage.setItem("user_dietplans", JSON.stringify(plan));
-                    alert("New plan uploaded successfully");
+                    plans.push(plan);
+                    console.log(plans);
+                    localStorage.setItem("user_workoutplans", JSON.stringify(plans))
                 }
+
+                // Retrieve the existing plans from localStorage
+                const newexistingPlans = JSON.parse(localStorage.getItem("plans")) || [];
+
+                // Create a new plan object
+                const newPlan = {
+                    client_id: client_id,
+                    date: date,
+                    calorie: calorie,
+                    Workout: Workout,
+                    water: water,
+                    user_plan_uuid: user_plan_uuid
+                };
+
+                // Add the new plan to the existing plans array
+                newexistingPlans.push(newPlan);
+
+                // Store the updated plans in localStorage
+                localStorage.setItem("plans", JSON.stringify(newexistingPlans));
+
+                console.log(newexistingPlans);
+
+
+                // Store workout values in an array
+                let diets = [];
+                for (let i = 0; i < dietInputs.length; i++) {
+                    diets.push(dietInputs[i].value);
+                }
+
+                if (diets.length === 0) {
+                    alert("Please enter at least one workout.");
+                    return;
+                }
+                let plan = JSON.parse(localStorage.getItem("user_dietplans")) || [];
+
+                // Check if a plan for the selected date already exists
+                let existingPlans = plan.find(p => p.date === date);
+
+                if (existingPlan) {
+                    alert("A plan for the selected date already exists.");
+                } else {
+                    let plan = JSON.parse(localStorage.getItem("user_dietplans")) || [];
+                    for (let i = 0; i < diets.length; i++) {
+                        const plans = {
+                            "diets": diets[i],
+                            user_plan_uuid
+                        };
+
+                        plan.push(plans);
+                        localStorage.setItem("user_dietplans", JSON.stringify(plan));
+                        alert("New plan uploaded successfully");
+                    }
+                }
+
+
+                window.location.href = "../TRAINER/dieat add page.html";
             }
-
-
-            window.location.href = "../TRAINER/dieat add page.html";
-        }};
+        };
     </script>
     <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
 </body>
