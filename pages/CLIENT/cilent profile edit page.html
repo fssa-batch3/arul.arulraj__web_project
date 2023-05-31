@@ -1,157 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <title>fitnesswebsite</title>
-        <link rel="stylesheet" href="../../assets/css/clientprofilepage.css" />
+        <link rel="stylesheet" href="../../assets/css/clientprofilepage.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
+
     <body>
-    <header class="header">
-        <div class="logo">
-            <img src="../../assets/img/logonew2.png" width="200px" alt="logo"/>
-        </div>
-        <div class="headings">
-            <a href="./client main page.html"><div>HOME</div></a>
-        </div>
-     </header>
-     <main class="main">
-        <section class="top_section">
-            <img src="https://st.depositphotos.com/2101611/4338/v/600/depositphotos_43381243-stock-illustration-male-avatar-profile-picture.jpg" alt="profile_image" class="profile_img">
-            <div  class="contact">
-                <h1 id="user_firstname"></h1><h1 id="user_lastname"></h1>
-                <div><i class="fa fa-phone"></i><p id="user_number"></p></div>
+        <header class="header">
+            <div class="logo">
+                <img src="../../assets/img/logonew2.png" width="200px" alt="logo">
             </div>
-        </section>
-        <form role="form" onsubmit="update(event)">
-        <section class="middle_section">
-            <article class="left_content">
-                <div class="input_feild">
-                    <input id="user_age" type="number" class="input" placeholder="Age">
-                </div>
-                <div class="input_feild">
-                    <input id="user_height" type="number" class="input" placeholder="Height In Cm">
-                </div>
-                <div class="input_feild1">
-                    <input id="user_weight" type="number" class="input" placeholder="Weight In Kg">
-                </div>
-            </article>
-            <article class="line"></article>
-            <article class="right_content">
-                <div class="input_feild">
-                    <label>Gender : </label>
-                    <select class="input" id="user_gender">
-                        <option>Gender</option>
-                        <option>Male</option>
-                        <option>Female</option>
-                        </select>
-                </div>
-                <div class="input_feild">
-                    <label>Service : </label>
-                    <select class="input" id="user_service" >
-                        <option>Service</option>
-                        <option>Weight Lose</option>
-                        <option>Weight Gain</option>
-                     </select>
-                </div>
-                <div class="input_feild1">
-                    <label>Package : </label>
-                    <select class="input" id="user_package">
-                        <option>Package</option>
-                        <option>Weight Training (700 rps)</option>
-                        <option>+ Cardio(1000 rps)</option>
-                     </select>
-                </div>
-            </article>
-        </section>
-        <section class="bottom_section">
-            <h3>address</h3>
-            <div>
-                <input id="addressline1" type="text" class="input1" placeholder="House no, Building name....">
-                <input id="addressline2" type="text" class="input1" placeholder="Road name, Area, Colony....">
+            <div class="headings">
+                <a href="./client main page.html">
+                    <div>HOME</div>
+                </a>
             </div>
-            <div>
-                <input id="pincode" type="number" class="input2" placeholder="Pincode">
-                <input id="city" type="text" class="input2" placeholder="City">
-                <input id="state" type="text" class="input2" placeholder="State">
+        </header>
+        <main class="main">
+            <form role="form" onsubmit="update(event)">
+                <section class="top_section">
+                    <div>
+                        <input id="user_photo" placeholder="Photo Link">
+                    </div>
+                    <div class="contact">
+                        <h1 id="user_firstname"></h1>
+                        <h2 id="user_lastname"></h2>
+                        <div>
+                            <i class="fa fa-phone"></i>
+                            <p id="user_number"></p>
+                        </div>
+                    </div>
+                </section>
+        
+                <section class="middle_section">
+                    <article class="left_content">
+                        <div class="input_feild">
+                            <label>Age : </label>
+                            <input required="true" type="number" max="99" min="18" id="user_age" class="input" placeholder="Age">
+                        </div>
+                        <div class="input_feild">
+                            <label>Height : </label>
+                            <input required="true" maxlength="3" id="user_height" pattern="[1-9]{1}[0-9]{2}" class="input" placeholder="Height In Cm">
+                        </div>
+                        <div class="input_feild1">
+                            <label>Weight : </label>
+                            <input required="true" maxlength="3" id="user_weight" pattern="[1-9]{1}[0-9]{1}" class="input" placeholder="Weight In Kg">
+                        </div>
+                    </article>
+                    <article class="line"></article>
+                    <article class="right_content">
+                        <div class="input_feild">
+                            <label>Gender : </label>
+                            <select required="true" class="input" id="user_gender">
+                                <option>Male</option>
+                                <option>Female</option>
+                            </select>
+                        </div>
+                        <div class="input_feild">
+                            <label>Service : </label>
+                            <select required="true" aria-placeholder="Service" class="input" id="user_service">
+                                <option>Weight Lose</option>
+                                <option>Weight Gain</option>
+                            </select>
+                        </div>
+                        <div class="input_feild1">
+                            <label>Package : </label>
+                            <select required="true" aria-placeholder="Package" class="input" id="user_package">
+                                <option>Weight Training (700 rps)</option>
+                                <option>+ Cardio(1000 rps)</option>
+                            </select>
+                        </div>
+                    </article>
+                </section>
+                <section class="bottom_section">
+                    <h3>address</h3>
+                    <div>
+                        <input pattern="^(\S+\s{0,1})+$" title="Don't use unwanted spaces" required="true" id="addressline1" type="text" class="input1" placeholder="House no, Building name....">
+                        <input pattern="^(\S+\s{0,1})+$" title="Don't use unwanted spaces" required="true" id="addressline2" type="text" class="input1" placeholder="Road name, Area, Colony....">
+                    </div>
+                    <div>
+                        <input required="true" id="pincode" title="Pincode will start with 6 enter valid pincode" maxlength="6" pattern="[6-9]{1}[0-9]{5}" class="input2" placeholder="Pincode">
+                        <input pattern="^(\S+\s{0,1})+$" title="Don't use unwanted spaces" required="true" id="city" type="text" class="input2" placeholder="City">
+                        <input pattern="^(\S+\s{0,1})+$" title="Don't use unwanted spaces" required="true" id="state" type="text" class="input2" placeholder="State">
+                    </div>
+                    <div>
+                        <!-- <input id="user_photo" type="text" placeholder="Photo Link"> -->
+                    </div>
+                </section>
+                <div class="btn">
+                    <button type="submit" class="button1">Submit</button>
+                    <a href="../../index.html">
+                        <button class="button2">Cancel</button>
+                    </a>
+                </div>
+            </form>
+        </main>
+        <footer>
+            <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun
             </div>
-        </section>
-        <div class="btn">
-            <button type="submit" class="button1">Submit</button>
-            <a href="../../index.html"><button class="button2">Cancel</button></a>
-        </div>
-    </form>
-    </main>
-     <footer>
-        <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun</div>
-    </footer>
+        </footer>
 
-    <script>
-
-        let number_id = JSON.parse(localStorage.getItem('number_id'));
-        let user_data = JSON.parse(localStorage.getItem('user_data'));
-
-        function login_data(e){
-        return e.user_number == number_id;
-        }
-
-       let  person_data = user_data.find(login_data);
-
-        document.getElementById("user_firstname").innerText = person_data['user_firstname']+" "+person_data['user_lastname'];
-        document.getElementById("user_number").innerText = person_data["user_number"];
-
-        document.getElementById("user_age").value = person_data["user_age"];
-        document.getElementById("user_weight").value = person_data["user_weight"];
-        document.getElementById("user_height").value = person_data["user_height"];
-        document.getElementById("user_package").value = person_data["user_package"];
-        document.getElementById("user_service").value = person_data["user_service"];
-        document.getElementById("user_gender").value = person_data["user_gender"];
-        document.getElementById("addressline1").value = person_data["addressline1"];
-        document.getElementById("addressline2").value = person_data["addressline2"];
-        document.getElementById("pincode").value = person_data["pincode"];
-        document.getElementById("city").value = person_data["city"];
-        document.getElementById("state").value = person_data["state"];
-
-        function update(e){
-
-            event.preventDefault();
-
-    let  up_age = document.getElementById("user_age").value
-    let  up_weight = document.getElementById("user_weight").value
-    let  up_height = document.getElementById("user_height").value 
-         up_package = document.getElementById("user_package").value
-         up_service = document.getElementById("user_service").value
-         up_gender = document.getElementById("user_gender").value
-         up_addressline1 = document.getElementById("addressline1").value
-         up_addressline2 = document.getElementById("addressline2").value
-         Up_pincode = document.getElementById("pincode").value
-         up_city = document.getElementById("city").value
-         up_state = document.getElementById("state").value
-
-         person_data["user_age"] = up_age;
-         person_data["user_weight"] = up_weight;
-         person_data["user_height"] = up_height;
-         person_data["user_package"] = up_package;
-         person_data["user_service"] = up_service;
-         person_data["user_gender"] = up_gender;
-         person_data["addressline1"] = up_addressline1;
-         person_data["addressline2"] = up_addressline2;
-         person_data["pincode"] = Up_pincode;
-         person_data["city"] = up_city;
-         person_data["state"] = up_state;
-
-         localStorage.setItem("user_data", JSON.stringify(user_data));
-
-         location.href = "../CLIENT/client main profile.html"
-
-        }
-
-    </script>
+        <script src="../../assets/js/userprofileedit.js"></script>
 
     </body>
+
 </html>
 
-            
-
-
 <!-- // user_details = {user_age,user_weight,user_height,user_package,user_service,user_gender,addressline1,addressline2,pincode,city,state}
-// console.log(user_data_list) -->
+    // console.log(user_data_list) -->

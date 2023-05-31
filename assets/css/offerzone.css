@@ -4,6 +4,8 @@ body {
     padding: 0px;
     width: 100%;
     height: 100%;
+    background-image: url(../img/offer2.jpg);
+    background-size: cover;
     transition: all 0.5s;
 }
 *{
@@ -13,7 +15,7 @@ body {
     font-family:'Poppins', sans-serif;
   }
 .header{
-    background-color: rgba(180, 177, 177, 0.906);
+    background-color: rgba(234, 234, 234, 0.454);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -106,70 +108,33 @@ body {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+.mainsection{
+    height: 84.5vh;
+}
 .offer{
-    background-image: url(https://media.tenor.com/erbfpVT0mPUAAAAC/red-and-black-red.gif);
+
+    border-radius: 20px;
+    position: relative;
+    left: 45%;
+    top: 15px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 30vh;
-}
-h1{
-    font-size: 65px;
-    color: white;
-}
-.h1{
-    font-size: 40px;
-    text-align: center;
-    padding: 20px;
-    color: black;
+    height: 80vh;
+    width: 50%;
+    background-color: rgba(240, 248, 255, 0.521);
 }
 h2{
-    font-size: 30px;
-    color: white;
+    color: rgba(255, 98, 0, 0.646);
 }
-.border{
-    border-bottom: 1px solid black;
-    width: 100px;
-    margin-left: 45%;
-}
-.ongoing{
-
-    height: 100px;
-    background-color: rgb(187, 185, 185);
-}
-.sec3{
-    text-align: center;
-    height: 470px;
-    background-color: rgba(199, 197, 197, 0.495);
-}
-.h3{
+.text{
     position: relative;
-    top: 5px;
-    bottom: 20px;
-    font-size: 50px;
-    color: rgb(240, 5, 5);
-}
-.sec4{
-    text-align: center;
-}
-.sec5{
-    text-align: center;
-    background-color: rgba(199, 197, 197, 0.495);
-    height: 400px;
-}
-.sec6{
-    text-align: center;
+    top: 60px;
 }
 .footerbtm{
-    margin-top: 20px;
-    background-color: rgb(125, 112, 112);
+    margin-top: 5px;
+    background-color: rgb(10, 9, 9);
     text-align: center;
     color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 10vh;
+    height: 3vh;
     
 }
 @media (max-width:420px){

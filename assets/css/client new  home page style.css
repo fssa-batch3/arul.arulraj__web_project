@@ -1,17 +1,60 @@
+
 @import "normalize.css";
+
 body {
-    color: black;
+    color: rgb(75, 74, 74);
     margin: 0px;
     padding: 0px;
     width: 100%;
     height: 100%;
     transition: all 0.5s;
 }
+a{
+    text-decoration: none;
+    color: #ba8764;
+}
 *{
     outline:none;
     box-sizing:border-box;
     font-family:'Poppins', sans-serif;
   }
+  .joinbtn{
+    width: 150px;
+    height:40px;
+    border-radius: 20px;
+    position: relative;
+    background-color: #f57926;
+    text-decoration: none;
+    color: #3a3434;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid rgb(255, 255, 255, 0.35);
+    padding-left: 40px;
+    transition: 0.5s;
+}
+.joinbtn:hover{
+    padding-left: 0px;
+    padding-right: 40px;
+    color: white;
+}
+.joinbtn span{
+    position: absolute;
+    left: 5px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgb(230, 207, 202);
+    color: rgb(237, 233, 233);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease-in-out;
+}
+.joinbtn:hover span{
+    left: calc(100% - 50px);
+
+}
 .section1{
     background-image: url(https://wallpapercave.com/wp/wp5885948.jpg);
     color: aliceblue;
@@ -22,7 +65,7 @@ body {
     background-repeat: no-repeat;
 }
 .header{
-    background-color: rgba(180, 177, 177, 0.906);
+    background-color: rgba(180, 177, 177, 0.205);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -32,6 +75,7 @@ body {
     display: none;
     position: absolute;
     right: 20px;
+    margin-right: 20px;
 }
 .navbar2 a{
     float: left;
@@ -40,36 +84,30 @@ body {
     padding:10px;
     color:rgb(226, 237, 240);
     font-weight: 600;
-    font-size: 3vw;
+    font-size: 18px;
     border-bottom: 2px solid rgb(255, 98, 0);
     transition: all 0.5s;
 }
 .dropdown {
     float: left;
     overflow: hidden;
-} 
+}
 .dropdown .dropbtn {
     font-size: 27px;  
     border: none;
     outline: none;
     color: rgb(6, 7, 7);
     margin-top: 9px;
-}
-.navbar2 a:hover, .dropdown:hover .dropbtn {
-    color: rgb(255, 98, 0);
-    border-bottom: 3px solid rgb(4, 4, 4);
-}
-  
+} 
 .dropdown-content {
     display: none;
     position: absolute;
-    right: 0;
+    right: 10px;
     background-color: black;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
-  
 .dropdown-content a {
     float: none;
     color: rgb(247, 240, 240);
@@ -87,25 +125,12 @@ body {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+.navbar2 a:hover, .dropdown:hover .dropbtn {
+    color: rgb(255, 98, 0);
+    border-bottom: 3px solid rgb(4, 4, 4);
+}
 .logo{
     margin-left: 15px;
-}
-.joinbtn{
-    color: white;
-    margin-right: 20px;
-    padding: 8px;
-    border: 0;
-    font-size: 16px;
-    width: 150px;
-    font-weight: bold;
-    background-image: linear-gradient(to right, rgb(255, 98, 0) , rgb(255, 196, 0));
-}
-.joinbtn:hover{
-    background-color: white;
-    color: black;
-    background-image: linear-gradient(to right , rgb(255, 196, 0), rgb(255, 98, 0));
-    transform: scale(1.1);
-    border: none;
 }
 .trnbtn{
     color: white;
@@ -136,7 +161,7 @@ body {
 }
 .navbar a{
     text-decoration: none;
-    color: black;
+    color: rgb(241, 238, 238);
     border-bottom: 2px solid rgb(255, 98, 0);
     font-weight: 600;
     font-size: 20px;
@@ -181,7 +206,7 @@ body {
 }
 h1{
     font-size: 60px;
-    color: red;
+    color: rgb(255, 98, 0);
 }
 .events{
     text-align: center;
@@ -206,11 +231,12 @@ h1{
     background-color: black;
 }
 h3{
-    color: red;
+    color: rgb(255, 98, 0);
     text-align: center;
     font-size: 60px;
     padding: 15px;
 }
+.scrol
 .column{
     display: flex;
     flex-direction: row;
@@ -230,7 +256,7 @@ h3{
     width: 300px;
     height: 300px;
     border-radius: 15px;
-    box-shadow: rgb(63, 154, 245) 0px 8px 24px;
+    box-shadow: rgb(220, 136, 84) 0px 2px 18px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -239,6 +265,7 @@ h3{
 }
 .reimg{
     border-radius: 50%;
+    width: 150px;
 }
 .scrol{
     display: flex;
@@ -258,7 +285,7 @@ h3{
     bottom: 100%;
     left: 0;
     right: 0;
-    background-color: rgb(241, 9, 9);
+    background-color: rgb(255, 98, 0);
     overflow: hidden;
     width: 100%;
     height:0;
@@ -293,9 +320,9 @@ h3{
 }
 .ft1{
     position: relative;
-    left: 20px;
+    left: 40px;
     width: 300px;
-    height: 400px;
+    /* height: 400px; */
 }
 .ft1,a{
     display: flex;
@@ -305,20 +332,19 @@ h3{
 .footer{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    background-color: rgb(10, 9, 9);
+    height: 310px;
+    /* justify-content: space-between; */
 }
 .ft3{
     position: relative;
-    left: 20px;
+    color: #ba8764;
+    left: 80px;
     width: 300px;
-    height: 400px;
+    /* height: 400px; */
 }
 .ft3 div{
-    padding: 10px;
-}
-.ft2{
-    width: 300px;
-    height: 400px;
+    padding: 15px;
 }
 .contact{
     display: flex;
@@ -327,11 +353,23 @@ h3{
 .contact i{
     padding: 10px;
 }
-footer{
-    background-color: rgb(222, 205, 205);
+.ft4{
+    position: relative;
+    left: 150px;
+}
+.Social{
+    display: flex;
+    flex-direction: row;
+}
+.ft2{
+    position: relative;
+    left: 250px;
+}
+h4{
+    color: #f57926;
 }
 .footerbtm{
-    background-color: rgb(125, 112, 112);
+    background-color: rgb(7, 7, 7);
     text-align: center;
     color: white;
 }

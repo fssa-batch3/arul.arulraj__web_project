@@ -1,115 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <title>fitnesswebsite</title>
-        <link rel="stylesheet" href="../../assets/css/Add More Client style.css" />
+        <link rel="stylesheet" href="../../assets/css/Add More Client style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
+
     <body>
         <header class="header">
             <div class="logo">
-                <img src="../../assets/img/logonew2.png" width="200px" alt="logo"/>
+                <a href="../ADMIN/client listpage.html">
+                <img src="../../assets/img/logonew2.png" width="200px" alt="logo">
+            </a>
             </div>
-         </header>
+        </header>
 
-    <section>
-        <div class="details">
-            <div>
-                <h2>Add more Client</h2>
-            </div>
-            <div>
-             <label>Client Name :</label>
-             </div>
-             <div>
-             <input type="name" placeholder="Client Name" id="name" required="true" />
-            </div>
-            <div>
-                <label>Age :</label>
-            </div>
-            <div>
-                <input type="number" placeholder="Age" id="age" />
-            </div>
-            <div>
-            <label>Gender :</label>
-            </div>
-            <div>
-            <select>
-                <option>Select</option>
-            <option>Male</option>
-            <option>Female</option>
-            </select>
-           </div>
-            <div>
-                <label>Weight :</label>
-            </div>
-            <div>
-                <input type="number" placeholder="In KG" />
-            </div>
-            <div>
-                <label>Height:</label>
-            </div>
-            <div>
-                <input type="number" placeholder="In CM" />
-            </div>
-            <div>
-                <label>Pakage :</label>
-            </div>
-            <div>
-                <select>
-                <option>Select</option>
-                <option>Weight Gain</option>
-                <option>Weight Lose</option>
-                </select>
-            </div>
-            <div>
-                <label>Trainer :</label>
-            </div>
-            <div>
-                <select>
-                <option>Select</option>
-                <option>Tamil</option>
-                <option>Kishor</option>
-                <option>Viknesh</option>
-                </select>
-            </div>
-            <div>
-             <label>Phone Number :</label>
-             </div>
-             <div>
-             <input type="text" placeholder="+91 **********" />
-            </div>
+        <section>
+            <form id="addClient">
+                <div class="details">
+                    <div>
+                        <h2>Add more Client</h2>
+                    </div>
+                    <div>
+                        <input class="input" pattern="[a-zA-Z{8}]+" type="text" placeholder="First Name"
+                            id="user_firstname" required="true">
+                    </div>
+                    <div>
+                        <input class="input" pattern="[a-zA-Z{8}]+" type="text" placeholder="Last Name" id="user_lastname"
+                            required="true">
+                    </div>
+                    <div>
+                        <input id="user_age" type="number" max="99" min="18" class="input" placeholder="Age">
+                    </div>
+                    <div>
+                        <select class="input" id="user_gender">
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input id="user_weight" maxlength="3" pattern="[1-9]{1}[0-9]{2}" class="input" placeholder="Weight In Kg">
+                    </div>
+                    <div>
+                        <input id="user_height" maxlength="3" pattern="[1-9]{1}[0-9]{2}" class="input" placeholder="Height In Cm">
+                    </div>
+                    <div>
+                        <select class="input" id="user_package">
+                            <option>Weight Training (700 rps)</option>
+                            <option>+ Cardio(1000 rps)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select class="input" id="user_service">
+                            <option>Weight Lose</option>
+                            <option>Weight Gain</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input class="input" placeholder="trainer_id" id="asign_trainer">
+                    </div>
+                    <div>
+                        <input class="input" maxlength="10" pattern="[6-9]{1}[0-9]{9}" required="true" placeholder="Contact number"
+                            id="user_number">
+                    </div>
+                    <div>
+                        <input class="input" pattern="[a-zA-Z0-9!@#$$%^&*()_+:>?|\]+" type="password"
+                            placeholder="Enter Password" id="user_password">
+                    </div>
+                    <div>
+                        <input class="input" pattern="[a-zA-Z0-9!@#$$%^&*()_+:>?|\]+" type="password"
+                            placeholder="Confirm Password" id="user_confirmpassword">
+                    </div>
+                    <div>
+                        <input class="input" id="user_photo" placeholder="Photo Link">
+                    </div>
+                    <div>
+                        <button type="submit">submit</button>
+                    </div>
+                </div>
+            </form>
+        </section>
 
-            <div>
-            <label>Create Password :</label>
-            </div>
-            <div>
-            <input type="password" required= "true" placeholder="********"/>
-            </div>
-            <div>
-            <label>Photo : </label><input type="file" />
-        </div>
-            <div class="submit">
-             <a href="../ADMIN/client listpage.html"><input type="submit"/></a>
-            </div>
-        </div>
-    </section>
-
-    <script>
-
-        const workout = document.getElementById("workout").value 
-        const name = document.getElementById("name").value 
-        const rep = document.getElementById("rep").value 
-        const sets = document.getElementById("sets").value 
-        const textarea = document.getElementById("textarea").value 
+        <script src="../../assets/js/Addclient.js"></script>
     
-        console.log(workout)
-        console.log(name)
-        console.log(rep)
-        console.log(sets)
-        console.log(textarea)
-
-    </script>
-
+        <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
 
     </body>
-    </html>
+
+</html>

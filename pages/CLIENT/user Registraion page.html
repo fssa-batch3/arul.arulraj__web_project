@@ -1,113 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <title>fitnesswebsite</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../../assets/css/client registration.css" />
+        <link rel="stylesheet" href="../../assets/css/client registration.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
+
     <body>
         <section>
-        <header class="header">
-                <img class="logo" src="../../assets/img/logonew2.png" width="200px" alt="logo"/>
-     </header>
-     <form onsubmit="registration(event)">
-        <div class="details">
-             <div>
-              <h2>Registration</h2>
-          </div>
-          <div>
-            <input class="input" pattern="[a-zA-Z{12}]+" type="text" placeholder="First Name" id="user_firstname" required="true" />
-            <input class="input2" pattern="[a-zA-Z{12}]+" type="text" placeholder="Last Name" id="user_lastname" required="true" />
-           </div>
-           <div>
-           <input class="input3" type="" pattern="[0-9{10}]+" required= "true" placeholder="Contact number" id="user_number" />
-           </div>
-               <div>
-                   <input class="input4" pattern="[a-zA-Z0-9!@#$$%^&*()_+:>?|\]+" type="password" placeholder= "Enter Password" id="user_password"/>
-                  </div>
-                  <div>
-                    <input class="input4" pattern="[a-zA-Z0-9!@#$$%^&*()_+:>?|\]+" type="password" placeholder= "Confirm Password" id="user_confirmpassword"/>
-                   </div>
-            <div class="submit">
-            <button class="btn" style="position: relative;left: 45%;"  type="submit">submit</button>
+            <header class="header">
+                <img class="logo" src="../../assets/img/logonew2.png" width="200px" alt="logo">
+            </header>
+            <form onsubmit="registration(event)">
+                <div class="details">
+                    <div>
+                        <h2>Registration</h2>
+                    </div>
+                    <div>
+                        <input value="Riyash" class="input" title="Use firstletter between (A-Z) and min 8 character" pattern="[a-zA-Z{8}]+" type="text" placeholder="First Name"
+                            id="user_firstname" required="true">
+                    </div>
+                    <div>
+                        <input value="R" class="input" pattern="[a-zA-Z{8}]+" type="text" placeholder="Last Name" id="user_lastname"
+                            required="true">
+                    </div>
+                    <div>
+                        <input value="7302867877" class="input" maxlength="10" pattern="[6-9]{1}[0-9]{9}" required="true" placeholder="Contact number"
+                            id="user_number">
+                    </div>
+                    <div>
+                        <input value="Ajunajun'05" required="true" class="input" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password"
+                            placeholder="Enter Password" id="user_password">
+                    </div>
+                    <div id="pattern">
+                        <span class="number_pass">(Must contain at least one number,</span>
+                        <span class="upper_pass">one uppercase,</span>
+                        <span class="lower_pass">one lowercase,</span>
+                        <span class="symbol_pass">one symbol,</span>
+                        <span class="char_pass">and at least 8 or more characters)</span>
+                    </div>
+                    <div>
+                        <input value="Ajunajun'05" required="true" class="input" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password"
+                            placeholder="Confirm Password" id="user_confirmpassword">
+                    </div>
+                    <div class="btndiv">
+                        <button class="btn" type="submit">submit</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <footer>
+            <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun
             </div>
-        </div>
-        </form>
-    </section>
+        </footer>
 
-    <footer>
-        <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun</div>
-    </footer>
+        <script src="../../assets/js/Registration.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+    </body>
 
-    <script>
-
-function registration(e){
-
-    e.preventDefault();
-    
-    let user_firstname = document.getElementById("user_firstname").value;
-        user_lastname = document.getElementById("user_lastname").value;
-        user_number = document.getElementById("user_number").value;  
-        user_password = document.getElementById("user_password").value; 
-        user_confirmpassword = document.getElementById("user_confirmpassword").value; 
-        user_uuid=uuidv4();
-         user_age = "";
-         user_weight = "";
-         user_height = "";
-         user_package = "";
-         user_service = "";
-         user_gender = "";
-         addressline1 = "";
-         addressline2 = "";
-         pincode = "";
-         city = "";
-         state = "";
-
-    let user_data = JSON.parse(localStorage.getItem('user_data')) || [];
-
-    let exist = user_data.length &&
-        JSON.parse(localStorage.getItem('user_data')).some(data =>data.user_number.toLowerCase() == user_number.toLowerCase());
-    if(!exist){
-        if(user_password == user_confirmpassword){
-            user_data.push({ user_firstname,
-                             user_lastname,     
-                             user_number,
-                             user_confirmpassword,
-                             user_password,
-                             user_age,
-                             user_weight,
-                             user_height,
-                             user_package,
-                             user_service,
-                             user_gender,
-                             addressline1,
-                             addressline2,
-                             pincode,
-                             city,
-                             state,
-                             user_uuid});
-                             
-        localStorage.setItem('user_data', JSON.stringify(user_data));
-        document.querySelector('form').reset();
-        document.getElementById('user_number').focus();
-        alert('Account created Successfully');
-        location.href = "../CLIENT/clientloginpage.html";
-        }
-        else{
-            alert("Confirmpassword is not correct!!!")
-        }
-    }
-    else{
-        alert('Sorry the User already Exist!! \n Try with different Phone number or email');
-        document.querySelector('form').reset();
-    }
-
-}
-
-</script>
-<script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
-</body>
 </html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Workout and Diet</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../assets/css/client plan day1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body id="body">
+    <header class="header">
+        <div class="logo">
+            <a href="../../CLIENT/currentweekplan.html">
+                <img alt="fitexpertlogo" src="../../../assets/img/logonew2.png" width="200px" alt="logo"></a>
+        </div>
+        <div class="headings">
+            <a href="../CLIENT/client main page.html">
+                <div>HOME</div>
+            </a>
+        </div>
+    </header>
+    <section id="section" class="section">
+        <div id="container3" style="display: none;">
+            <img class="backimg" alt="noplan" src="../../assets/img/wrkbackground.jpg">
+            <button id="backbtn" class="backbtn">Back</button>
+            <h4 class="nodata">No data found for the selected date</h4>
+        </div>
+        <div id="container">
+            <div class="datecontainer">
+                <div class="container2">
+                    <button id="btn2" class="input-container">
+                        Search plan
+                        <input type="date" id="date" class="hidden">
+                        <button class="hidden" id="searchButton"><i class="fa fa-search"
+                                style="font-size:15px;color: rgb(14, 14, 14);"></i></button>
+                    </button>
+                </div>
+                <div class="border"></div>
+                <div>
+                    <div class="schedule">
+                        <div>
+                            <p>Diet</p>
+                            <img id="dietbtn" class="diet" src="../../assets/img/checklist.png" style="width: 150px;">
+                        </div>
+                        <div>
+                            <p>Workouts</p>
+                            <img id="workoutbtn" class="workout" src="../../assets/img/workout.png"
+                                style="width: 150px;">
+                        </div>
+                    </div>
+                    <div class="boxes">
+                        <div class='box'>
+                            <div class='wave -one'></div>
+                            <div class='title'>Water intake<p id="water"></p>
+                            </div>
+                        </div>
+                        <div class='box2'>
+                            <div class='wave -one'></div>
+                            <div class='title'>calorie burn<p id="calorie"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container4" id="container4" style="display: none;">
+            <i id="dietcancel" class="fa fa-window-close"></i>
+            Diet Plans
+            <div class="subcontainer4">
+
+            </div>
+        </div>
+        <div class="container4" id="container5" style="display: none;">
+            <i id="wrkcancel" class="fa fa-window-close"></i>
+            Workout Plans
+            <div class="subcontainer5">
+
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footerbtm">Copyright © 2022 Fit Expert Fitness . All Rights Reserved.Website Designed by Arul Ajun
+        </div>
+    </footer>
+
+    <script src="../../assets/js/dietchart.js"></script>
+</body>
+
+</html>

@@ -2,99 +2,76 @@
 <html lang="en">
     <head>
         <title>fitnesswebsite</title>
-        <link rel="stylesheet" href="../../assets/css/addnewworkoutstyle.css" />
+        <link rel="stylesheet" href="../../assets/css/addnewworkoutstyle.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <section>
-        <header class="header">
-            <div class="logo">
-                <a href="../ADMIN/Home page.html"><img src="../../assets/img/logonew2.png" width="200px" alt="logo"/></a>
-            </div>
-         </header>
-        <form role="form" onsubmit="add_workout(event)" class="box">
-            <div>
-                <label>Workout :</label>
-            </div>
-                <div>
-                 <select id="category">
-                    <option>Select</option>
-                    <option>chest_workout</option>
-                    <option>back_workout</option>
-                    <option>shoulder_workout</option>
-                    <option>bicep_workout</option>
-                    <option>tricep_workout</option>
-                    <option>leg_workout</option>
-                    <option>abs_workout</option>
-                 </select>
+            <header class="header">
+                <div class="logo">
+                    <a href="../TRAINER/Trainer Mainpage.html">
+                        <img src="../../assets/img/logonew2.png" width="200px" alt="logo">
+                    </a>
                 </div>
-            <div>
-             <label>Workout Name :</label>
-            </div>
-            <div>
-             <input type="text" required="true" placeholder="name" id="workoutname"/>
-            </div>
-            <div>
-                <label>Reps :</label>
-            </div>
-            <div>
-                <input placeholder="Reps" id="rep"/>
-            </div>
-            <div>
-                <label>Sets :</label>
-            </div>
-            <div>
-                <input placeholder="Sets" id="sets"/>
-            </div>
-            <div>
-                <label>Benifits :</label>
-            </div>
-            <div>
-                <textarea id="benifits"></textarea>
-            </div>
+            </header>
+            <form role="form" onsubmit="add_workout(event)" class="box">
+                <div>
+                    <label>Workout :</label>
+                </div>
+                <div>
+                    <select required="true" id="category">
+                        <option>chest_workout</option>
+                        <option>back_workout</option>
+                        <option>shoulder_workout</option>
+                        <option>bicep_workout</option>
+                        <option>tricep_workout</option>
+                        <option>leg_workout</option>
+                        <option>abs_workout</option>
+                    </select>
+                </div>
+                <div>
+                    <label required="true">Workout Name :</label>
+                </div>
+                <div>
+                    <input value="Dimond pushups" type="text" required="true" placeholder="name" id="workoutname">
+                </div>
+                <div>
+                    <label required="true">Reps :</label>
+                </div>
+                <div>
+                    <input value="12-08" required="true" placeholder="Reps" id="rep">
+                </div>
+                <div>
+                    <label>Sets :</label>
+                </div>
+                <div>
+                    <input value="04" laple ava required="true" placeholder="Sets" id="sets">
+                </div>
+                <div>
+                    <label>Benifits :</label>
+                </div>
+                <div>
+                    <textarea  required="true" id="benifits"></textarea>
+                </div>
+                <div>
+                    <label required="true">Video</label>
+                </div>
+                <div>
+                    <input value="https://www.youtube.com/embed/Y_7aHqXeCfQ" id="videolink" placeholder="video link">
+                </div>
+                <div>
+                    <label  required="true">Photo</label>
+                </div>
+                <div>
+                    <input value="" id="workoutphoto" placeholder="photo link">
+                </div>
+                <div>
+                    <button type="submit">ADD</button>
+                </div>
+            </form>
+        </section>
 
-        <div>
-            <label>Video (or) Photo</label>
-        </div>
-        <div>
-            <input type="file">
-        </div>
-        <div>
-            <button type="submit">ADD</button>
-        </div>
-        </form>
-    </section>
-
-    <script>
-         function add_workout(e){
-
-        e.preventDefault();
-
-        let category = document.getElementById("category").value;
-        let workoutname = document.getElementById("workoutname").value;
-        let rep = document.getElementById("rep").value;
-        let sets = document.getElementById("sets").value;
-        let benifits = document.getElementById("benifits").value;
-        let workout_uuid=uuidv4();
-
-        let add_workout = JSON.parse(localStorage.getItem('catagory_id'))||[];
-
-        add_workout.push({
-            category: category,
-            workoutname:  workoutname,
-            rep: rep,
-            sets: sets,
-            benifits: benifits,
-            workout_uuid : workout_uuid,
-        });
-
-        localStorage.setItem('catagory_id', JSON.stringify(add_workout));
-        alert("New plan uploaded successfully");
-        window.location.href = "../WORKOUTS/Workout main page.html";
-        }
-
-
-    </script>
-<script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+        <script src="../../assets/js/Addworkout.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
     </body>
-    </html>
+</html>
