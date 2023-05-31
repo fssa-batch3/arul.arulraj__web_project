@@ -4,8 +4,7 @@ body {
     width: 100%;
     height: 100vh;
     background-size: cover;
-    background-color: antiquewhite;
-    /* background-image: url(https://c1.wallpaperflare.com/preview/112/406/444/food-diet-keto-ketodieta.jpg); */
+    background-image: url(h../../../img/loginbackground.jpg);
 }
 *{
     outline:none;
@@ -18,116 +17,70 @@ body {
 .logo{
     margin-left: 15px;
 }
-h1{
-    text-align: center;
-    font-size: 30px;
-    color: rgb(255, 128, 0);
-}
-.daysel{
-    width: 100px;
-    height: 30px;
-    border-radius: 20px;
-}
-.wrksel{
-    width: 100px;
-    height: 30px;
-    border-radius: 20px;
-}
 .section{
-    height: 85vh;
-}
-.food{
-    text-align: center;
-}
-.maincnt{
+    height: fit-content;
+    width: fit-content;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    margin-left: 20%;
+    margin-top: 10%;
+    background-color: rgba(75, 74, 74, 0.395);
+    border-radius: 20px;
+    padding: 20px;
 }
-h2{
-    text-align: center;
+.column{
+    margin-top: 20px;
 }
-textarea{
+form{
+    height: fit-content;
     width: 300px;
-}
-.workout{
-    background-image: linear-gradient(to bottom, rgb(255, 98, 0) , rgb(255, 196, 0));
-    width: 400px;
-    height: 500px;
-    border-radius: 25px;
-    overflow-x: scroll;
-}
-.workout::-webkit-scrollbar{
-    width: 0px;
-}
-.workout div{
-    padding: 15px;
-    font-size: 20px;
-}
-.wrk{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
-.diet{
-    background-image: linear-gradient(to bottom, rgb(0, 140, 255) , rgb(0, 247, 255));
-    width: 400px;
-    height: 500px;
-    border-radius: 25px;
-    overflow-x: scroll;
-}
-.diet::-webkit-scrollbar{
-    width: 0px;
-}
-.diet div{
-    padding: 10px;
-    font-size: 20px;
-}
-.dietbox:hover{
-    background-color: rgba(192, 192, 192, 0.772);
-    border-radius: 15px;
-}
-.wrkbox:hover{
-    background-color: rgba(192, 192, 192, 0.772);
-    border-radius: 15px;
-}
-.footerbtm{
-    background-color: rgb(125, 112, 112);
-    text-align: center;
+.sec2{
+    width: 500px;
+    height: fit-content;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(75, 74, 74, 0.395);
     color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 3vh;
-    
 }
-.btns{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
+.addcnt{
+    padding: 20px;
 }
-.editbtn{
-    width: 100px;
-    height: 40px;
-    border: 0px;
-    font-weight: bold;
-    background-color: rgb(250, 6, 6);
-    color: white;
+.workoutinput{
+    width: 200px;
+    height: 30px;
     border-radius: 10px;
+    margin: 10px;
 }
-.editbtn:hover{
-    background-color: white;
-    color: red;
+.dietinput{
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    margin: 10px;
 }
+.input1{
+    width: 200px;
+    height: 30px;
+    border-radius: 20px;
+    margin: 10px;
+    border: 0;
+}
+
 .savebtn{
     position: relative;
     top: 10px;
-    width: 100px;
-    height: 40px;
+    left: 70px;
+    width: 80px;
+    height: 30px;
     border: 0px;
     font-weight: bold;
-    background-color: green;
-    color: white;
+    background-color: rgb(249, 148, 7);
+    color: rgb(7, 7, 7);
     border-radius: 10px;
 }
 .savebtn:hover{

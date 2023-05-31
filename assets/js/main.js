@@ -6,7 +6,7 @@ const trainer_details = [
     Trainer_gender: "Male",
     trainer_age: "29",
     trainer_name: "aravin A",
-    trainer_number: "12345",
+    trainer_number: "9489809337",
     trainer_password: "1234",
     trainer_uuid: "0960bb6a-1b07-45fe-b3fb-e1d9b1b6f176",
   },
@@ -33,11 +33,12 @@ const user_details = [
     user_lastname: "Ajun",
     user_number: "7502869260",
     user_package: "+ Cardio(1000 rps)",
-    user_password: "mobiajun55",
+    user_password: "Ajunajun'05",
     user_photo: "https://iili.io/Hh5KRWu.md.jpg",
     user_service: "Weight Lose",
     user_uuid: "14030c01-7530-4c4b-a2c8-bd4afd3a0e10",
     user_weight: "79",
+    user_status: true,
   },
   {
     addressline1: "no-05",
@@ -51,13 +52,14 @@ const user_details = [
     user_gender: "Male",
     user_height: "174",
     user_lastname: "thamim",
-    user_number: "123",
+    user_number: "7502869261",
     user_package: "+ Cardio(1000 rps)",
-    user_password: "12345",
+    user_password: "7502869261",
     user_photo: "https://iili.io/HvJFkdv.md.jpg",
     user_service: "Weight Lose",
     user_uuid: "14030c01-7530-4c4b-a2c8-bd4d3a0e10",
     user_weight: "79",
+    user_status: true,
   },
   {
     addressline1: "No - 01",
@@ -67,17 +69,18 @@ const user_details = [
     pincode: "1234",
     state: "tamilnadu",
     user_age: "18",
-    user_firstname: "Sesslyn",
+    user_firstname: "Praveen",
     user_gender: "Female",
     user_height: "158",
-    user_lastname: "Johnson",
-    user_number: "123456",
+    user_lastname: "S",
+    user_number: "7502869262",
     user_package: "+ Cardio(1000 rps)",
-    user_password: "123",
-    user_photo: "https://iili.io/HvJx407.md.jpg",
+    user_password: "Ajunajun'05",
+    user_photo: "https://iili.io/Hh5KRWu.md.jpg",
     user_service: "Weight Gain",
     user_uuid: "14030c01-7530-4c4b-a2c8-fd3a0e10",
     user_weight: "51",
+    user_status: true,
   },
   {
     addressline1: "No - 16",
@@ -90,14 +93,15 @@ const user_details = [
     user_firstname: "Dhanush",
     user_gender: "Male",
     user_height: "168",
-    user_lastname: "Kowmart",
-    user_number: "1234567",
+    user_lastname: "A",
+    user_number: "7502869263",
     user_package: "+ Cardio(1000 rps)",
-    user_password: "123",
+    user_password: "Ajunajun'05",
     user_photo: "https://iili.io/HvJFkdv.md.jpg",
     user_service: "Weight Gain",
     user_uuid: "14030c01-7530-4c4b-a2c8-bd4afd3a0e10",
     user_weight: "67",
+    user_status: true,
   },
 ];
 
@@ -116,6 +120,7 @@ const plan_detail = [
     Snack_two: "Hard-boiled egg(s) and carrot sticks",
     Workouts: "Chest workout",
     client_id: "7502869260",
+    date: "2023-05-11",
     day: "Monday_plan",
     user_plan_uuid: "15301a85-1ced-45b2-8b67-7e7d205205e0",
     workout_five: "5.Chest Fly : 4 sets of 6-12 reps",
@@ -133,14 +138,15 @@ const plan_detail = [
     Snack_two: "Hard-boiled egg(s) and carrot sticks",
     Workouts: "Back workout",
     client_id: "7502869260",
+    date: "2023-05-12",
     day: "Tuesday_plan",
     user_plan_uuid: "15301a85-1ced-45b2-8b67-7e7d205205e0",
-    workout_five: "5.Chest Fly : 4 sets of 6-12 reps",
-    workout_four: "4.Weighted Pushups : 3 sets of 8-12 reps",
-    workout_one: "1.Barbell Bench Press : 4 sets of 6-12 reps",
+    workout_five: "5.Barbell Bench Press : 4 sets of 6-12 reps",
+    workout_four: "4.Incline DB Bench Press : 4 sets of 6-12 reps",
+    workout_one: "1.Chest Fly : 4 sets of 6-12 reps",
     workout_six: "6.Machine Fly : 3 sets of 8-12 reps",
     workout_three: "3.Weighted Dips : 3 sets of 8-12 reps",
-    workout_two: "2.Incline DB Bench Press : 4 sets of 6-12 reps",
+    workout_two: "2.Weighted Pushups : 3 sets of 8-12 reps",
   },
   {
     Breakfast: "Scrambled eggs, stir-fried veggies, and oatmeal.",
@@ -150,6 +156,7 @@ const plan_detail = [
     Snack_two: "Hard-boiled egg(s) and carrot sticks",
     Workouts: "Shoulder workout",
     client_id: "7502869260",
+    date: "2023-05-13",
     day: "Wednesday_plan",
     user_plan_uuid: "15301a85-1ced-45b2-8b67-7e7d205205e0",
     workout_five: "5.Chest Fly : 4 sets of 6-12 reps",
@@ -167,14 +174,15 @@ const plan_detail = [
     Snack_two: "Hard-boiled egg(s) and carrot sticks",
     Workouts: "Triceps workout",
     client_id: "7502869260",
+    date: "13 - 05 - 2023",
     day: "Thursday_plan",
     user_plan_uuid: "15301a85-1ced-45b2-8b67-7e7d205205e0",
-    workout_five: "5.Chest Fly : 4 sets of 6-12 reps",
-    workout_four: "4.Weighted Pushups : 3 sets of 8-12 reps",
-    workout_one: "1.Barbell Bench Press : 4 sets of 6-12 reps",
+    workout_five: "5.Barbell Bench Press : 4 sets of 6-12 reps",
+    workout_four: "4.Incline DB Bench Press : 4 sets of 6-12 reps",
+    workout_one: "1.Chest Fly : 4 sets of 6-12 reps",
     workout_six: "6.Machine Fly : 3 sets of 8-12 reps",
     workout_three: "3.Weighted Dips : 3 sets of 8-12 reps",
-    workout_two: "2.Incline DB Bench Press : 4 sets of 6-12 reps",
+    workout_two: "2.Weighted Pushups : 3 sets of 8-12 reps",
   },
   {
     Breakfast: "Scrambled eggs, stir-fried veggies, and oatmeal.",
@@ -184,6 +192,7 @@ const plan_detail = [
     Snack_two: "Hard-boiled egg(s) and carrot sticks",
     Workouts: "Biceps workout",
     client_id: "7502869260",
+    date: "14 - 05 - 2023",
     day: "Friday_plan",
     user_plan_uuid: "15301a85-1ced-45b2-8b67-7e7d205205e0",
     workout_five: "5.Chest Fly : 4 sets of 6-12 reps",
@@ -203,12 +212,12 @@ const plan_detail = [
     client_id: "7502869260",
     day: "Saturday_plan",
     user_plan_uuid: "15301a85-1ced-45b2-8b67-7e7d205205e0",
-    workout_five: "5.Chest Fly : 4 sets of 6-12 reps",
-    workout_four: "4.Weighted Pushups : 3 sets of 8-12 reps",
-    workout_one: "1.Barbell Bench Press : 4 sets of 6-12 reps",
+    workout_five: "5.Barbell Bench Press : 4 sets of 6-12 reps",
+    workout_four: "4.Incline DB Bench Press : 4 sets of 6-12 reps",
+    workout_one: "1.Chest Fly : 4 sets of 6-12 reps",
     workout_six: "6.Machine Fly : 3 sets of 8-12 reps",
     workout_three: "3.Weighted Dips : 3 sets of 8-12 reps",
-    workout_two: "2.Incline DB Bench Press : 4 sets of 6-12 reps",
+    workout_two: "2.Weighted Pushups : 3 sets of 8-12 reps",
   },
   {
     Breakfast: "Scrambled eggs, stir-fried veggies, and oatmeal.",
@@ -243,8 +252,9 @@ const workouts = [
     rep: "16-10",
     sets: "04",
     workout_uuid: "63b386ed-3a48-48eb-ad18-67895495762",
+    videolink:"https://www.youtube.com/embed/4Y2ZdHCOXok",
     workoutname: "Barbell Bench Press",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "../../assets/img/bench-dip-header-830x467.jpg",
   },
   {
     benifits:
@@ -253,8 +263,9 @@ const workouts = [
     rep: "12-10-08-06",
     sets: "04",
     workout_uuid: "63b386ed-3a48-48eb-ad18-67854957629",
+    videolink:"https://www.youtube.com/embed/SrqOu55lrYU",
     workoutname: "Incline Bench Press",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "../../assets/img/cable-rope-pushdown-header-830x467.jpg",
   },
   {
     benifits:
@@ -262,9 +273,10 @@ const workouts = [
     category: "chest_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/Y_7aHqXeCfQ",
     workout_uuid: "63b386ed-3a48-48eb-ad18-67895495729",
     workoutname: "Dumbbell Bench Press",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "../../assets/img/cable-triceps-kickback-header-830x467.jpg",
   },
   {
     benifits:
@@ -272,9 +284,10 @@ const workouts = [
     category: "chest_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/0xRvl4Qv3ZY",
     workout_uuid: "63b386ed-3a48-48eb-ad18-68954957629",
     workoutname: "Decline Press",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "../../assets/img/bent-over-row-header-830x467.jpg",
   },
   {
     benifits:
@@ -282,9 +295,10 @@ const workouts = [
     category: "chest_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/xUm0BiZCWlQ",
     workout_uuid: "63b386ed-3a48-48eb-ad18-6789557629",
     workoutname: "Machine Chest Press",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "../../assets/img/cable-triceps-kickback-header-830x467.jpg",
   },
   {
     benifits:
@@ -292,9 +306,10 @@ const workouts = [
     category: "chest_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/IODxDxX7oi4",
     workout_uuid: "63b386ed-3a48-48eb-ad18-6789595629",
     workoutname: "Push-Up",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "../../assets/img/barbell-drag-curl-header-2-830x467.jpg",
   },
   {
     benifits:
@@ -302,9 +317,10 @@ const workouts = [
     category: "abs_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/IODxDxX7oi4",
     workout_uuid: "63b386ed-3a48-48eb-a8-68959629",
     workoutname: "Hanging Knee Raise",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "https://picsum.photos/200/300?random=${i}",
   },
   {
     benifits:
@@ -312,9 +328,10 @@ const workouts = [
     category: "abs_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/IODxDxX7oi4",
     workout_uuid: "63b386ed-3a48-48eb-a8-78959562",
     workoutname: "Machine Crunch",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "https://picsum.photos/200/300?random=${i}",
   },
   {
     benifits:
@@ -322,9 +339,10 @@ const workouts = [
     category: "abs_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/IODxDxX7oi4",
     workout_uuid: "63b386ed-3a48-48eb-a8-789952",
     workoutname: "Pallof Press",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "https://picsum.photos/200/300?random=${i}",
   },
   {
     benifits:
@@ -332,9 +350,10 @@ const workouts = [
     category: "abs_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/IODxDxX7oi4",
     workout_uuid: "63b386ed-3a48-48eb-a8-859",
     workoutname: "Decline Crunch",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "https://picsum.photos/200/300?random=${i}",
   },
   {
     benifits:
@@ -342,9 +361,10 @@ const workouts = [
     category: "abs_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/IODxDxX7oi4",
     workout_uuid: "63b386ed-3a48-48eb-a8-7812359562",
     workoutname: "Russian Twist",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "https://picsum.photos/200/300?random=${i}",
   },
   {
     benifits:
@@ -352,9 +372,10 @@ const workouts = [
     category: "abs_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/IODxDxX7oi4",
     workout_uuid: "63b386ed-3a48-4eb-a8-823562",
     workoutname: "Squat",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "https://picsum.photos/200/300?random=${i}",
   },
   {
     benifits:
@@ -362,9 +383,10 @@ const workouts = [
     category: "back_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/IODxDxX7oi4",
     workout_uuid: "63b386ed-3a48-48eb-a8-3562",
     workoutname: "Deadlift",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "https://picsum.photos/200/300?random=${i}",
   },
   {
     benifits:
@@ -372,9 +394,10 @@ const workouts = [
     category: "back_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/IODxDxX7oi4",
     workout_uuid: "63b386ed-3a42618-48eb-a8-823562",
     workoutname: "Bent-Over Row",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "https://picsum.photos/200/300?random=${i}",
   },
   {
     benifits:
@@ -382,9 +405,10 @@ const workouts = [
     category: "back_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/IODxDxX7oi4",
     workout_uuid: "63b386ed-3a48-48eb-a8-823562",
     workoutname: "Pull-Up",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "https://picsum.photos/200/300?random=${i}",
   },
   {
     benifits:
@@ -392,9 +416,10 @@ const workouts = [
     category: "back_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/IODxDxX7oi4",
     workout_uuid: "63b386ed-3a48-48eb-a8-82153562",
     workoutname: "T-Bar Row",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "https://picsum.photos/200/300?random=${i}",
   },
   {
     benifits:
@@ -402,9 +427,10 @@ const workouts = [
     category: "back_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/IODxDxX7oi4",
     workout_uuid: "63b386ed-3a48-423eb-a8-823562",
     workoutname: "Seated Row",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "https://picsum.photos/200/300?random=${i}",
   },
   {
     benifits:
@@ -412,9 +438,10 @@ const workouts = [
     category: "back_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/IODxDxX7oi4",
     workout_uuid: "63b386ed-3a48-48eb-a8-823562",
-    workoutname: "Single-Arm Smith Machine Row",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutname: "Single-Arm Row",
+    workoutphoto: "https://picsum.photos/200/300?random=${i}",
   },
   {
     benifits:
@@ -422,9 +449,10 @@ const workouts = [
     category: "shoulder_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/IODxDxX7oi4",
     workout_uuid: "63b386ed-3a48-48eb125-a8-823562",
     workoutname: "Push-Press",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "https://picsum.photos/200/300?random=${i}",
   },
   {
     benifits:
@@ -432,9 +460,10 @@ const workouts = [
     category: "shoulder_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/IODxDxX7oi4",
     workout_uuid: "63b386ed-3a48-48eb-a8-82153562",
     workoutname: "Military Press",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "https://picsum.photos/200/300?random=${i}",
   },
   {
     benifits:
@@ -442,9 +471,10 @@ const workouts = [
     category: "shoulder_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/IODxDxX7oi4",
     workout_uuid: "63b386ed-3a48-48eb-a8-823562",
     workoutname: "Rear Delt Row",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "https://picsum.photos/200/300?random=${i}",
   },
   {
     benifits:
@@ -452,9 +482,10 @@ const workouts = [
     category: "shoulder_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/IODxDxX7oi4",
     workout_uuid: "63b31886ed-3a48-48eb-a8-823562",
     workoutname: "Seated Dumbbell Press",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "https://picsum.photos/200/300?random=${i}",
   },
   {
     benifits:
@@ -462,9 +493,10 @@ const workouts = [
     category: "shoulder_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/IODxDxX7oi4",
     workout_uuid: "63b3186ed-3a48-48e7b-a8-823562",
     workoutname: "Seated Row",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "https://picsum.photos/200/300?random=${i}",
   },
   {
     benifits:
@@ -472,9 +504,10 @@ const workouts = [
     category: "shoulder_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/IODxDxX7oi4",
     workout_uuid: "632b386ed-3a48-48e67b-a8-823562",
     workoutname: "Arnold Press",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "https://picsum.photos/200/300?random=${i}",
   },
   {
     benifits:
@@ -482,9 +515,10 @@ const workouts = [
     category: "bicep_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/IODxDxX7oi4",
     workout_uuid: "632b3824566ed-3a48-48e67b-a8-823562",
     workoutname: "Barbell Or EZ-Bar Curl",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "https://picsum.photos/200/300?random=${i}",
   },
   {
     benifits:
@@ -492,9 +526,10 @@ const workouts = [
     category: "bicep_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/IODxDxX7oi4",
     workout_uuid: "632b1386ed-3a48-448e67b-a8-8523562",
     workoutname: "Cable Curl",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "https://picsum.photos/200/300?random=${i}",
   },
   {
     benifits:
@@ -502,9 +537,10 @@ const workouts = [
     category: "bicep_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/IODxDxX7oi4",
     workout_uuid: "631732b386ed-3a48-48e67b-a8-823562",
     workoutname: "Dumbbell Curl",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "https://picsum.photos/200/300?random=${i}",
   },
   {
     benifits:
@@ -512,9 +548,10 @@ const workouts = [
     category: "bicep_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/IODxDxX7oi4",
     workout_uuid: "632b781386ed-3a48-48e67b9-a8-823562",
     workoutname: "Chin-Up",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "https://picsum.photos/200/300?random=${i}",
   },
   {
     benifits:
@@ -522,9 +559,10 @@ const workouts = [
     category: "bicep_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/IODxDxX7oi4",
     workout_uuid: "632b386ed-3a48-48e67b-a8-823562",
     workoutname: "Hammer Curl",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "https://picsum.photos/200/300?random=${i}",
   },
   {
     benifits:
@@ -532,9 +570,10 @@ const workouts = [
     category: "bicep_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/IODxDxX7oi4",
     workout_uuid: "632b16386ed-3a48-48e647b-a8-823562",
     workoutname: "Incline Curl",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "https://picsum.photos/200/300?random=${i}",
   },
   {
     benifits:
@@ -542,9 +581,10 @@ const workouts = [
     category: "tricep_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/IODxDxX7oi4",
     workout_uuid: "632b117936386ed-3a48-48e647b-a8-823562",
     workoutname: "Skullcrusher",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "https://picsum.photos/200/300?random=${i}",
   },
   {
     benifits:
@@ -552,9 +592,10 @@ const workouts = [
     category: "tricep_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/IODxDxX7oi4",
     workout_uuid: "632b16386ed-3a48-48e647b-a8-823234562",
     workoutname: "Close-Grip Bench Press",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "https://picsum.photos/200/300?random=${i}",
   },
   {
     benifits:
@@ -562,9 +603,10 @@ const workouts = [
     category: "tricep_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/IODxDxX7oi4",
     workout_uuid: "632b16386ed-3a48-48e647b-a8-823562",
     workoutname: "Triceps Dip",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "https://picsum.photos/200/300?random=${i}",
   },
   {
     benifits:
@@ -572,9 +614,10 @@ const workouts = [
     category: "tricep_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/IODxDxX7oi4",
     workout_uuid: "632b16386ed-3a48-48e628547b-a8-823562",
     workoutname: "Triceps Machine Dip",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "https://picsum.photos/200/300?random=${i}",
   },
   {
     benifits:
@@ -582,9 +625,10 @@ const workouts = [
     category: "tricep_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/IODxDxX7oi4",
     workout_uuid: "632b16386ed-3a48-48e647b-a8-8184323562",
     workoutname: "Dumbbell Overhead Triceps Extension",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "https://picsum.photos/200/300?random=${i}",
   },
   {
     benifits:
@@ -592,9 +636,10 @@ const workouts = [
     category: "tricep_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/IODxDxX7oi4",
     workout_uuid: "632b1667386ed-3a48-48e6247b-a8-823562",
     workoutname: "Single-Arm Cable Kick-Back",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "https://picsum.photos/200/300?random=${i}",
   },
   {
     benifits:
@@ -602,9 +647,10 @@ const workouts = [
     category: "leg_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/IODxDxX7oi4",
     workout_uuid: "632b1624867386ed-3a48-48e6247b-a8-823562",
     workoutname: "Barbell Back Squat",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "https://picsum.photos/200/300?random=${i}",
   },
   {
     benifits:
@@ -612,9 +658,10 @@ const workouts = [
     category: "leg_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/IODxDxX7oi4",
     workout_uuid: "632b1624867386ed-3a48-48e6247b-a8-823562",
     workoutname: "Barbell Front Squat",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "https://picsum.photos/200/300?random=${i}",
   },
   {
     benifits:
@@ -622,9 +669,10 @@ const workouts = [
     category: "leg_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/IODxDxX7oi4",
     workout_uuid: "632b1624867386ed-3a48-48e6247b-a8-823562",
     workoutname: "Split Squat",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "https://picsum.photos/200/300?random=${i}",
   },
   {
     benifits:
@@ -632,9 +680,10 @@ const workouts = [
     category: "leg_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/IODxDxX7oi4",
     workout_uuid: "632b1624867386ed-3a48-48e6247b-a8-823562",
     workoutname: "Lunge",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "https://picsum.photos/200/300?random=${i}",
   },
   {
     benifits:
@@ -642,9 +691,10 @@ const workouts = [
     category: "leg_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/IODxDxX7oi4",
     workout_uuid: "632b1624867386ed-3a48-48e6247b-a8-823562",
     workoutname: "Leg Press",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "https://picsum.photos/200/300?random=${i}",
   },
   {
     benifits:
@@ -652,9 +702,10 @@ const workouts = [
     category: "leg_workout",
     rep: "16-10",
     sets: "04",
+    videolink:"https://www.youtube.com/embed/IODxDxX7oi4",
     workout_uuid: "632b1624867386ed-3a48-48e6247b-a8-823562",
     workoutname: "Leg Curl",
-    workoutphoto: "https://source.unsplash.com/random/200x200?sig=${i}",
+    workoutphoto: "https://picsum.photos/200/300?random=${i}",
   },
 ];
 

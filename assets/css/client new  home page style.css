@@ -11,7 +11,7 @@ body {
 }
 a{
     text-decoration: none;
-    color: rgb(9, 9, 9);
+    color: #ba8764;
 }
 *{
     outline:none;
@@ -206,7 +206,7 @@ a{
 }
 h1{
     font-size: 60px;
-    color: red;
+    color: rgb(255, 98, 0);
 }
 .events{
     text-align: center;
@@ -231,11 +231,12 @@ h1{
     background-color: black;
 }
 h3{
-    color: red;
+    color: rgb(255, 98, 0);
     text-align: center;
     font-size: 60px;
     padding: 15px;
 }
+.scrol
 .column{
     display: flex;
     flex-direction: row;
@@ -255,7 +256,7 @@ h3{
     width: 300px;
     height: 300px;
     border-radius: 15px;
-    box-shadow: rgb(63, 154, 245) 0px 8px 24px;
+    box-shadow: rgb(220, 136, 84) 0px 2px 18px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -264,6 +265,7 @@ h3{
 }
 .reimg{
     border-radius: 50%;
+    width: 150px;
 }
 .scrol{
     display: flex;
@@ -283,7 +285,7 @@ h3{
     bottom: 100%;
     left: 0;
     right: 0;
-    background-color: rgb(241, 9, 9);
+    background-color: rgb(255, 98, 0);
     overflow: hidden;
     width: 100%;
     height:0;
@@ -318,9 +320,9 @@ h3{
 }
 .ft1{
     position: relative;
-    left: 20px;
+    left: 40px;
     width: 300px;
-    height: 400px;
+    /* height: 400px; */
 }
 .ft1,a{
     display: flex;
@@ -330,20 +332,19 @@ h3{
 .footer{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    background-color: rgb(10, 9, 9);
+    height: 310px;
+    /* justify-content: space-between; */
 }
 .ft3{
     position: relative;
-    left: 20px;
+    color: #ba8764;
+    left: 80px;
     width: 300px;
-    height: 400px;
+    /* height: 400px; */
 }
 .ft3 div{
-    padding: 10px;
-}
-.ft2{
-    width: 300px;
-    height: 400px;
+    padding: 15px;
 }
 .contact{
     display: flex;
@@ -352,12 +353,23 @@ h3{
 .contact i{
     padding: 10px;
 }
-footer{
-    background-color: rgb(215, 212, 212);
+.ft4{
+    position: relative;
+    left: 150px;
 }
-
+.Social{
+    display: flex;
+    flex-direction: row;
+}
+.ft2{
+    position: relative;
+    left: 250px;
+}
+h4{
+    color: #f57926;
+}
 .footerbtm{
-    background-color: rgb(135, 128, 128);
+    background-color: rgb(7, 7, 7);
     text-align: center;
     color: white;
 }

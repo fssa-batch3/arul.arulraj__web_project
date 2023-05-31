@@ -23,7 +23,7 @@ span{
     font-size: 15px;
 }
 section{
-    background-image: url(../img/MacBook\ Pro\ 16_\ -\ 1.png);
+    background-image: url(../img/registerback.jpg);
     width: 100%;
     height: 97vh;
     background-size: cover;
@@ -73,6 +73,7 @@ section div{
     border: solid 2px rgb(0, 255, 106);
 }
 h2{
+    color: white;
     text-align: center;
     font-size: 40px;
 }
@@ -82,7 +83,7 @@ h2{
     font-size: 20px;
     margin: auto;
     width: 450px;
-    background-color: rgb(151, 152, 153);
+    background-color: rgba(151, 152, 153, 0.566);
     box-shadow: 3px 3px 3px white;
     color: black;
     border-radius: 25px;
@@ -115,7 +116,7 @@ h2{
     text-align: center;
 }
 .footerbtm{
-    background-color: rgb(125, 112, 112);
+    background-color: rgb(8, 8, 8);
     text-align: center;
     color: white;
     display: flex;

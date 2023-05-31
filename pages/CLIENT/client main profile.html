@@ -33,30 +33,24 @@
             <section class="middle_section">
                 <article class="left_content">
                     <div class="input_feild">
-                        <label>Age : </label>
                         <input id="user_age" readonly type="number" class="input" placeholder="Age">
                     </div>
                     <div class="input_feild">
-                        <label>Height : </label>
                         <input id="user_height" readonly type="number" class="input" placeholder="Height In Cm">
                     </div>
                     <div class="input_feild1">
-                        <label>Weight : </label>
                         <input id="user_weight" readonly type="number" class="input" placeholder="Weight In Kg">
                     </div>
                 </article>
                 <article class="line"></article>
                 <article class="right_content">
                     <div class="input_feild">
-                        <label>Gender : </label>
                         <input id="user_gender" readonly class="input" id="Gender">
                     </div>
                     <div class="input_feild">
-                        <label>Service : </label>
                         <input id="user_service" readonly class="input" id="service">
                     </div>
                     <div class="input_feild1">
-                        <label>package : </label>
                         <input id="user_package" readonly class="input" id="package">
                     </div>
                 </article>
@@ -87,56 +81,7 @@
             </div>
         </footer>
 
-        <script>const number_id = JSON.parse(localStorage.getItem("number_id"));
-        const user_data = JSON.parse(localStorage.getItem("user_data"));
-
-        function login_data(e) {
-          return e.user_number == number_id;
-        }
-
-        const person_data = user_data.find(login_data);
-
-        document.getElementById(
-          "user_firstname"
-        ).innerText = `${person_data.user_firstname} ${person_data.user_lastname}`;
-        document.getElementById("user_number").innerText = person_data.user_number;
-        document.getElementById("user_age").value = person_data.user_age;
-        document.getElementById("user_weight").value = person_data.user_weight;
-        document.getElementById("user_height").value = person_data.user_height;
-        document.getElementById("user_package").value = person_data.user_package;
-        document.getElementById("user_service").value = person_data.user_service;
-        document.getElementById("user_gender").value = person_data.user_gender;
-        document.getElementById("addressline1").value = person_data.addressline1;
-        document.getElementById("addressline2").value = person_data.addressline2;
-        const a = document.getElementById("user_photo");
-        a.setAttribute("src", person_data.user_photo);
-        console.log(a);
-        document.getElementById("pincode").value = person_data.pincode;
-        document.getElementById("city").value = person_data.city;
-        document.getElementById("state").value = person_data.state;
-
-        // function del(e) {
-        //     if (confirm("Are you sure you want to delete the account")) {
-        //         const number_id = JSON.parse(localStorage.getItem("number_id"));
-        //         const user_data = JSON.parse(localStorage.getItem("user_data"));
-        //         function login_data(e) {
-        //             return e.user_number == number_id;
-        //         }
-        //         person_data = user_data.find(login_data);
-        //         const removedata = user_data.indexOf(person_data);
-        //         user_data.splice(removedata, 1);
-        //         localStorage.setItem("user_data", JSON.stringify(user_data));
-        //         window.location.href = "../../index.html";
-        //     }
-        // }
-
-        const userLogoutElement = document.getElementById("logOut");
-        userLogoutElement?.addEventListener("click", () => {
-          localStorage.removeItem("number_id");
-          // document.body.innerHTML = AfterLogin;
-          window.location.href = "../../index.html";
-        });
-    </script>
+        <script src="../../assets/js/userprofile.js"></script>
 
     </body>
 

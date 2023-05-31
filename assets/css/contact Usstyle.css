@@ -1,7 +1,9 @@
 body {
+    background-color: black;
     margin: 0px;
     width: 100%;
     height: 96vh;
+    color: white;
 }
 *{
   outline:none;
@@ -10,7 +12,7 @@ body {
   transition: all .2s ease-out;
 }
 .header{
-  background-color: rgba(180, 177, 177, 0.733);
+  background-color: rgba(234, 234, 234, 0.454);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -69,7 +71,6 @@ body {
     border: none;
     outline: none;
     color: rgb(6, 7, 7);
-
     margin-top: 9px;
 }
   
@@ -108,30 +109,30 @@ body {
 }
 .section{
     width: 100%;
-    height: 84%;
+    height: 91%;
 }
 .contactus{
     font-size: 40px;
-    color: red;
+    color: rgba(255, 98, 0, 0.646);
     font-weight: bold;
     padding-top: 50px;
 }
-.dr{
-    border: 1.5px solid silver;
-    width: 90px;
-    margin-top: 15px;
-}
 .get{
     font-size: 30px;
-    color: rgba(10, 10, 10, 0.589);
+    color: rgba(255, 98, 0, 0.89);
     font-weight: bold;
     padding-top: 25px;
 }
 .cnt{
+    background-color: rgba(172, 176, 176, 0.37);
+    text-align: center;
+    margin-top: 10%;
+    border-radius: 20px;
     font-size: 16px;
-    color: rgba(10, 10, 10, 0.349);
+    /* color: rgba(10, 10, 10, 0.349); */
     font-weight: bold;
-    padding-top: 25px;
+    width: 50%;
+    height: 500px;
 }
 button a{
     text-decoration: none;
@@ -142,16 +143,14 @@ button{
     border: 0;
     font-weight: bold;
     font-size: 20px;
-    margin-top: 50px;
+    margin-top: 60px;
     background-color: rgb(69, 90, 100);
     border-radius: 5px;
     width: 350px;
 
 }
 .msg{
-    position: relative;
-    bottom: 10px;
-    left: 5px;
+    margin-top: 20px;
 }
 button:hover{
     background-color: rgba(69, 90, 100, 0.744);
@@ -179,6 +178,7 @@ button:hover{
     position: relative;
     top: 50px;
     width: 400px;
+    border-radius: 20px;
     background-image: url(../img/team/insta.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -195,6 +195,14 @@ button:hover{
 .instaimg button:hover{
     background-color: rgb(99, 176, 253);
     color: white;
+}
+.footerbtm{
+    margin-top: 5px;
+    background-color: rgb(10, 9, 9);
+    text-align: center;
+    color: white;
+    height: 3vh;
+    
 }
 @media (max-width:420px){
     .menu{

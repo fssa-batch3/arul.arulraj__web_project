@@ -9,5 +9,8 @@
     "[html]": {
       "editor.defaultFormatter": "vscode.html-language-features"
     },
-    "files.eol":"\n"
+    "files.eol": "\n",
+    "[javascript]": {
+      "editor.defaultFormatter": "vscode.typescript-language-features"
+    }
   }

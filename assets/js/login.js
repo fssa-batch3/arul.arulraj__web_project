@@ -4,14 +4,15 @@ const signIn = (e) => {
 
   const user_number = document.getElementById("user_number").value;
   const user_password = document.getElementById("user_password").value;
-  const user_data = JSON.parse(localStorage.getItem("user_data")) || [];
+  // const user_data = JSON.parse(localStorage.getItem("user_data")) || [];
+  
   const exist = JSON.parse(localStorage.getItem("user_data")).some(
     (data) =>
       data.user_number.toLowerCase() == user_number &&
-      data.user_password == user_password
+      data.user_password == user_password && data.user_status !== false
   );
   if (!exist) {
-    alert("Incorrect login credentials");
+    alert("Incorrect login credentials OR your account has expired");
   } else {
     localStorage.setItem("number_id", JSON.stringify(user_number));
     alert("Login Successful..");
@@ -25,12 +26,12 @@ function register() {
 
 // Trainer login
 
-const trainerregistration = (e) => {
+const trainerlogin = (e) => {
   e.preventDefault();
 
   const trainer_number = document.getElementById("trainer_number").value;
   const trainer_password = document.getElementById("trainer_password").value;
-  const trainer_data = JSON.parse(localStorage.getItem("trainer_data")) || [];
+  // const trainer_data = JSON.parse(localStorage.getItem("trainer_data")) || [];
   const exist = JSON.parse(localStorage.getItem("trainer_data")).some(
     (data) =>
       data.trainer_number.toLowerCase() == trainer_number &&
@@ -41,6 +42,6 @@ const trainerregistration = (e) => {
   } else {
     localStorage.setItem("trainer_number", JSON.stringify(trainer_number));
     alert("Login Successful..");
-    location.href = "../TRAINER/trainerptofile.html";
+    location.href = "../TRAINER/Trainer Mainpage.html";
   }
 };
