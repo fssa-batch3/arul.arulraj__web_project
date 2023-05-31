@@ -1,0 +1,45 @@
+body {
+    color: black;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    /* background-image: url(https://c1.wallpaperflare.com/preview/112/406/444/food-diet-keto-ketodieta.jpg); */
+}
+.round{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+}
+.round2{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(216, 11, 11);
+}
+.round3{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(33, 181, 7);
+}
+.round4{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(34, 10, 195);
+}
+.round5{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(199, 15, 236);
+}
+.round6{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(221, 236, 9);
+}
+

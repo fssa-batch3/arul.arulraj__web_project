@@ -1,122 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>fitnesswebsite</title>
-        <link rel="stylesheet" href="../../assets/css/addmoretrainerstyle.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
-    <body>
-        <header class="header">
-            <div class="logo">
-                <img src="../../assets/img/logonew2.png" width="200px" alt="logo"/>
-            </div>
-         </header>
+
+<head>
+    <title>fitnesswebsite</title>
+    <link rel="stylesheet" href="../../assets/css/addmoretrainerstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="../../assets/img/logonew2.png" width="200px" alt="logo">
+        </div>
+    </header>
     <section>
-    <form role="form" onsubmit="trainerregistration(event)" >
-    <div  class="details">
-        <div>
-             <label>Trainer Name :</label>
-             <input id="trainer_name" type="name" id="name" required="true" placeholder="name" />
-        </div>
-        <div>
-                <label>age :</label>
-                <input pattern="[0-9{10}]+" id="trainer_age" placeholder="age"/>
-        </div>
-        <div>
-            <label>Gender :</label>
-            <select id="Trainer_gender" >
-            <option>Select</option>
-            <option>Male</option>
-            <option>Female</option>
-            </select>
-        </div>
-            <div>
-                <label>Address :</label>
-                <textarea id="Trainer_address"></textarea>
-            </div>
-            <div>
-                <label>Experience :</label>
-                <textarea id="Trainer_Experience"></textarea>
-               </div>
-            <div>
-                <label>Achivements :</label>
-                <textarea id="Trainer_Achivements"></textarea>
-            </div>
-            <div>
-            <label>PHONE NUMBER :</label>
-            <input id="trainer_number" pattern="[0-9{10}]+" required= "true" placeholder="Contact number"/>
-            </div>
-            <div>
-                <label>CREATE PASSWORD :</label>
-                <input id="trainer_password" type="password" required= "true" placeholder="#PASSWORD"/>
-            </div>
-            <div>
-                <label>CONFIRM PASSWORD :</label>
-                <input id="trainer_confirmpassword" type="password" required= "true" placeholder="#PASSWORD"/>
-            </div>
-            <div>
-            <label>Upload profile photo :</label>
-            <input type="file" />
-            <div>
-            <button type="submit">Submit</button>
-            </div>
+    <div class="container">
+        <header>Trainer Info
+            <span>Add new Trainers.</span>
+        </header>
+        <form role="form" onsubmit="trainerregistration(event)">
+            <div class="in-container">
+                <h2>Trainer Information</h2>
+                <div class="row">
+                    <div class="col2">
+                        <input type="text" id="trainer_name" name="firstname">
+                        <label for="name">Trainer Name :</label>
+                    </div>
+                    <div class="col2">
+                        <input pattern="[0-9{10}]+" id="trainer_age" placeholder="age">
+                        <label for="age">age :</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="text" id="profession">
+
+                    <label>Export At</label>
+                </div>
+                <div class="row">
+                    <div class="col2">
+                    <select id="Trainer_gender">
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                    <label for="Gender">Gender :</label>
+                    </div>
+                    <div class="col2">
+                        <select id="Trainer_location">
+                            <option>Chennai</option>
+                            <option>Kanniyakumari</option>
+                            <option>coimbatore</option>
+                        </select>
+                        <label for="Gender">location :</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col2">
+                        <input id="works">
+                        <label>Works</label>
+                    </div>
+                    <div class="col2">
+                        <input id="Trainer_address">
+                        <label for="Address">Address</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col2">
+                        <textarea id="Trainer_Experience"></textarea>
+                        <label>Experience :</label>
+                    </div>
+                    <div class="col2">
+                        <textarea id="Trainer_Achivements"></textarea>
+                        <label>Achivements :</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col2">
+                        <input id="trainer_number" pattern="[0-9{10}]+" required="true" placeholder="Contact number">
+                        <label>PHONE NUMBER :</label>
+                    </div>
+                    <div class="col2">
+                        <input id="trainer_password" type="password" required="true" placeholder="#PASSWORD">
+                        <label>CREATE PASSWORD :</label>
+                    </div>
+                </div>
+                <div class="rom">
+                    <div  class="col2">
+                        <input id="trainer_confirmpassword" type="password" required="true" placeholder="#PASSWORD">
+                        <label>CONFIRM PASSWORD :</label>
+                    </div>
+                <div class="col2">
+                    <input type="text" id="image" name="contactnum">
+                    <label>Image</label>
+                </div>
+                </div>
+                <h2>About Trainer</h2>
+                <div class="row">
+                    <label class="about" for="orderid">About</label>
+                    <textarea id="about" name="orderid"></textarea>
+                </div>
+                <div class="row">
+                    <button type="submit">Submit</button>
+                </div>
             </div>
         </form>
-    </section>
-    <script>
-
-        function trainerregistration(e){
-        
-            e.preventDefault();
-
-            let trainer_name = document.getElementById("trainer_name").value;
-                trainer_age = document.getElementById("trainer_age").value;  
-                trainer_number = document.getElementById("trainer_number").value; 
-                trainer_password = document.getElementById("trainer_password").value; 
-                trainer_confirmpassword = document.getElementById("trainer_confirmpassword").value; 
-                Trainer_address = document.getElementById("Trainer_address").value;
-                Trainer_gender = document.getElementById("Trainer_gender").value;
-                Trainer_Experience = document.getElementById("Trainer_Experience").value;
-                Trainer_Achivements = document.getElementById("Trainer_Achivements").value;
-                trainer_uuid=uuidv4();
-
-            let trainer_data = JSON.parse(localStorage.getItem('trainer_data')) || [];
-
-            let exist = trainer_data.length &&
-            JSON.parse(localStorage.getItem('trainer_data')).some(data =>data.trainer_number.toLowerCase() == trainer_number.toLowerCase());
-
-        if(!exist){
-        if(trainer_password == trainer_confirmpassword){
-            trainer_data.push({
-            trainer_name: trainer_name,
-            trainer_age:  trainer_age,
-            trainer_number: trainer_number,
-            trainer_password: trainer_password,
-            trainer_confirmpassword: trainer_confirmpassword,
-            Trainer_address: Trainer_address,
-            Trainer_gender: Trainer_gender,
-            Trainer_Experience: Trainer_Experience,
-            trainer_uuid: trainer_uuid,
-        });
-
-        localStorage.setItem('trainer_data', JSON.stringify(trainer_data));
-        document.querySelector('form').reset();
-        document.getElementById('trainer_number').focus();
-        alert("New Trainer Added successfully");
-        window.location.href = "../ADMIN/trainerlist.html";
-        }
-        else{
-            alert("Confirmpassword is not correct!!!")
-        }
-    }
-    else{
-        alert('Sorry the User already Exist!! \n Try with different Phone number or email');
-        document.querySelector('form').reset();
-    }
-    
-    }
-
-        </script>
+        </section>
+        <script src="../../assets/js/addmoretrainer.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
-    </body>
-    </html>
+</body>
+
+</html>

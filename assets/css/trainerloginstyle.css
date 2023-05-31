@@ -1,7 +1,7 @@
 body {
     margin: 0;
     width: 100%;
-    height: 90vh;
+    height: 97vh;
     background-size: cover;
 }
 
@@ -12,73 +12,177 @@ body {
     transition: all .2s ease-out;
   }
 .header{
-    background-color: rgba(180, 177, 177, 0.475);
+    background-color: rgba(180, 177, 177, 0.315);
 }
 .logo{
     margin-left: 15px;
 }
 .section{
-    background-image: url(../img/danielle-cerullo-CQfNt66ttZM-unsplash.jpg);
+    background-image: url(../img/loginbackground.jpg);
     width: 100%;
     height: 100%;
     background-size: cover;
 }
+h1{
+    font-weight: bolder;
+    font-size: 40px;
+}
 h2{
     text-align: center;
+    font-size: 40px;
+}
+h3{
+    font-size: 20px;
+    font-weight: 200;
+}
+form{
+    position: relative;
+    top: 15%;
 }
 .details{
     position: relative;
-    top: 15%;
-    font-size: 25px;
-    text-align: center;
-    margin: auto;
-    width: 300px;
+    left: 20%;
+    padding: 0%;
+    width: 800px;
     height: 450px;
-    background-image: linear-gradient(to bottom, rgb(156, 153, 153),rgb(248, 247, 247));
-    box-shadow: 3px 3px 3px white;
-    color: black;
+    display: flex;
+    flex-direction: row;
+    background-image: linear-gradient(to bottom, rgba(156, 153, 153, 0.459),rgba(248, 247, 247, 0.737));
     border-radius: 25px;
+
+}
+.logindetails{
+    padding: 0%;
+    font-size: 20px;
+    width: 400px;
+    height: 450px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.registerdetails{
+    padding: 0%;
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(240, 248, 255, 0.532);
+    width: 400px;
+    height: 450px;
+    color: black;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 .details:hover{
     transform: translateY(-10px);
     transition: 0.5s;
     box-shadow: 5px 5px 18px #888888;
 }
-.input{
-    height: 30px;
-    
-}
-.input2{
-    height: 30px;
-}
-section div{
+.details div{
     padding: 10px;
 }
-.submit{
+.input{
+    text-align: center;
+    width: 350px;
+    height: 50px;
+    font-size: larger;
+    border-radius: 10px;
+    border: none;
+}
+.input2{
+    text-align: center;
+    width: 350px;
+    height: 50px;
+    font-size: larger;
+    border-radius: 10px;
+    border: none;
+}
+.input::placeholder{
+    font-size: 20px;
+ 
+}
+.input:focus{
+    border: solid 2px rgb(0, 255, 106);
+}
+.input2::placeholder{
+    font-size: 20px;
+}
+.input2:focus{ 
+    border: solid 2px rgb(0, 255, 106);
+}
+.btn{
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
     background-color: black;
     color: white;
-    border-radius: 10px;
-    width: 70px;
-    height: 30px;
-    position: relative;
+    font-size: larger;
     top: 20px;
+    position: relative;
+    left: 20%;
 }
-.submit:hover{
+.btn:hover{
     background-color: white;
     color: black;
 }
-.or{
-    text-align: center;
+.btn2{
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    font-size: larger;
+    background-color: black;
+    color: white;
     position: relative;
-    top: 20px;
+    top: 15px;
+}
+.btn2:hover{
+    background-color: white;
+    color: black;
 }
 .footerbtm{
-    background-color: rgb(125, 112, 112);
+    background-color: rgb(11, 10, 10);
     text-align: center;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 10vh;
-    
+    height: 3vh;
+}
+@media (max-width:420px){
+    .header{
+        display: none;
+    }
+    .section{
+        background-image: url(../img/team/login\ background.jpg);
+    }
+    form{
+        position: relative;
+        top: 25%;
+    }
+    .details{
+        position: relative;
+        left: 0px;
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 350px;
+        height: 550px;
+        background-image: linear-gradient(to bottom, rgb(156, 153, 153),rgb(248, 247, 247));
+        box-shadow: 3px 3px 3px white;
+        color: black;
+    }
+    .logindetails{
+        position: relative;
+        left: 0px;
+        border-top-right-radius: 0px;
+    }
+    .registerdetails{
+        width: 350px;
+        height: 450px;
+        border-top-right-radius: 0px;
+    }
 }

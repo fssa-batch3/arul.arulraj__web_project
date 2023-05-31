@@ -1,7 +1,8 @@
 body {
     margin: 0px;
     width: 100%;
-    background-color: whitesmoke;
+    height: 99%;
+    background-image: url(../img/registerback.jpg);
   }
 *{
   outline:none;
@@ -14,45 +15,18 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-content: center;
-    background-color: rgba(180, 177, 177, 0.733);
+    background-color: rgba(180, 177, 177, 0.379);
   }
 .clientlistbtn{
     position: relative;
     top: 20px;
     right: 20px;
   }
-.listbtn{
-    background-image: linear-gradient(to right,red,rgb(82, 69, 69));
-    color: white;
-    width: 100px;
-    height: 40px;
-    font-weight: bold;
-    border: 0px;
-    border-radius: 10px;
-}
-.listbtn:hover{
-    background-image: linear-gradient(to right,rgb(82, 69, 69),red);
-    color: white;
-}
-.addwrkbtn{
-    background-image: linear-gradient(to right,rgb(82, 69, 69),red);
-    color: white;
-    margin-right: 10px;
-    width: 200px;
-    height: 40px;
-    font-weight: bold;
-    border: 0px;
-    border-radius: 10px;
-}
-.addwrkbtn:hover{
-    background-image: linear-gradient(to right,red,rgb(82, 69, 69));
-    color: white;
-}
   .logo{
   margin-left: 15px;
   }
 section{
-    height: 81vh;
+    height: 87vh;
 
 }
 .usericon{
@@ -129,7 +103,7 @@ section{
     margin-left: 10px;
 }
 .cnt{
-    background-color: rgb(163, 157, 157);
+    background-color: rgba(163, 157, 157, 0.742);
     border-radius: 10px;
 }
 .btns{
@@ -146,7 +120,7 @@ section{
     height: 40px;
     border: 0px;
     font-weight: bold;
-    background-color: green;
+    background-color: rgb(255, 109, 4);
     color: white;
     border-radius: 10px;
 }
@@ -177,7 +151,7 @@ section{
     font-weight: bold;
     border: 0px;
     border-radius: 10px;
-    background-color: rgb(255, 128, 0);
+    background-color: rgb(255, 0, 0);
     color: white;
 
 }
@@ -187,12 +161,10 @@ section{
     border: 0.5px solid gray;
 }
 .footerbtm{
-    background-color: rgb(125, 112, 112);
+    background-color: rgb(12, 11, 11);
     text-align: center;
     color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 10vh;
+    margin-top: 5px;
+    height: 3vh;
     
 }
